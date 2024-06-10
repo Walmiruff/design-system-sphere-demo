@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { DssI18nModule } from '@dss/components/i18n';
 
+import { DssI18nModule } from '@dss/components/i18n';
 import { DssDropdownModule } from '@dss/components/dropdown';
 import { DssFormFieldModule } from '@dss/components/form-field';
 import { DssIconModule } from '@dss/components/icon';
@@ -24,6 +25,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     DssI18nModule.forRoot({ language: 'pt-BR' }),
     DssIconModule,
     DssToggleModule,
