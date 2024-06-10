@@ -1,9 +1,14 @@
-<nav>
-  <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/components">Componentes</a></li>
-    <li><a routerLink="/contact">Contact</a></li>
-  </ul>
-</nav>
+<header class="dss-display-flex dss-align-items-center dss-header dss-position-relative">
+  <div class="dss-m-2 logo"></div>
+  <nav class="dss-ml-auto">
+    <ul class="dss-display-flex dss-align-items-center">
+      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white" routerLink="/home" routerLinkActive="active" >Home</a></li>
+      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white" routerLink="/components" routerLinkActive="active" >Components</a></li>
+      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white" routerLink="/contact" routerLinkActive="active" >Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-<router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'components', loadChildren: () => import('./components/components.module').then(m => m.ComponentsModule)},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
 

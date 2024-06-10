@@ -2,10 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ComponentsRoutingModule } from './components/components-routing.module';
+import { DssI18nModule } from '@dss/components/i18n';
+
+import { DssDropdownModule } from '@dss/components/dropdown';
+import { DssFormFieldModule } from '@dss/components/form-field';
+import { DssIconModule } from '@dss/components/icon';
+import { DssToggleModule } from '@dss/components/toggle';
+import { DssTypographyModule } from '@dss/components/typography';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component'
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +23,13 @@ import { ContactComponent } from './contact/contact.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DssI18nModule.forRoot({ language: 'pt-BR' }),
+    DssIconModule,
+    DssToggleModule,
+    DssTypographyModule,
+    DssFormFieldModule,
+    DssDropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
