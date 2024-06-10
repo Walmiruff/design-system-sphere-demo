@@ -28,9 +28,17 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@dss/style",
+                "output": "assets"
+              }
             ],
             "styles": [
+              "./node_modules/@dss/style/css/fonts.min.css",
+              "./node_modules/@dss/style/css/icons.min.css",
+              "./node_modules/@dss/style/css/only-style.min.css",
               "src/styles.scss"
             ],
             "scripts": []
