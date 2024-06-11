@@ -43,15 +43,15 @@ export class DatepickerComponent implements OnInit {
   public input10: any = '';
   public input11: any = '';
 
-  public formGroup: FormGroup;
-  public datepicker = '08/05/2009';
+  public formGroup: FormGroup | any;
+  public datepicker = '08/05/2022';
   public datepickerRange = { start: '01/11/2022', end: '10/11/2022' };
-  public datepickerRangeFc: FormControl;
+  public datepickerRangeFc: FormControl | any;
 
-  public rangeInDays: number;
+  public rangeInDays: number | any;
 
-  @ViewChild('calendar') public calendar: DssCalendarComponent;
-  @ViewChild('datepickerRange8') public datepickerRange8: DssDatepickerRangeComponent;
+  @ViewChild('calendar') public calendar: DssCalendarComponent | any;
+  @ViewChild('datepickerRange8') public datepickerRange8: DssDatepickerRangeComponent | any;
 
   public ngOnInit(): void {
     // eslint-disable-next-line @typescript-eslint/unbound-method

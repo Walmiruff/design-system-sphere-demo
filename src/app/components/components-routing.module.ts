@@ -108,6 +108,26 @@ export const routes: Routes = [
         loadChildren: () => import('./drawer/drawer.module').then((m) => m.DrawerModule),
         data: { label: 'Drawer' },
       },
+      {
+        path: 'cascader',
+        loadChildren: () => import('./field/cascader/cascader.module').then((m) => m.CascaderModule),
+        data: { label: 'Cascader' },
+      },
+      {
+        path: 'checkboxes',
+        loadChildren: () => import('./field/checkbox/checkbox.module').then((m) => m.CheckboxModule),
+        data: { label: 'Checkboxes' },
+      },
+      {
+        path: 'datepicker',
+        loadChildren: () => import('./field/datepicker/datepicker.module').then((m) => m.DatepickerModule),
+        data: { label: 'Datepicker' },
+      },
+      {
+        path: 'dropdown',
+        loadChildren: () => import('./field/dropdown/dropdown.module').then((m) => m.DropdownModule),
+        data: { label: 'Dropdown' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

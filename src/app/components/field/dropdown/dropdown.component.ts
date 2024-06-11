@@ -10,27 +10,11 @@ interface CustomizedInterface extends DssOptionInterface {
   icon: string;
 }
 
-const teams: Array<DssOptionInterface> = [
-  { value: 'Internacional', viewValue: 'Internacional' },
-  { value: 'Vasco', viewValue: 'Vasco' },
-  { value: 'Atlético-MG', viewValue: 'Atlético-MG' },
-  { value: 'Palmeiras', viewValue: 'Palmeiras' },
-  { value: 'São Paulo', viewValue: 'São Paulo' },
-  { value: 'Santos', viewValue: 'Santos' },
-  { value: 'Fluminense', viewValue: 'Fluminense' },
-  { value: 'Bahia', viewValue: 'Bahia' },
-  { value: 'Grêmio', viewValue: 'Grêmio' },
-  { value: 'Athletico-PR', viewValue: 'Athletico-PR' },
-  { value: 'Botafogo', viewValue: 'Botafogo' },
-  { value: 'Bragantino', viewValue: 'Bragantino' },
-  { value: 'Flamengo', viewValue: 'Flamengo' },
-  { value: 'Corinthians', viewValue: 'Corinthians' },
-  { value: 'Goiás', viewValue: 'Goiás' },
-  { value: 'Fortaleza', viewValue: 'Fortaleza' },
-  { value: 'Atlético-GO', viewValue: 'Atlético-GO' },
-  { value: 'Sport', viewValue: 'Sport' },
-  { value: 'Ceará', viewValue: 'Ceará' },
-  { value: 'Coritiba', viewValue: 'Coritiba' },
+const teams: Array<CustomizedInterface> = [
+  { value: 'Internacional', viewValue: 'Internacional', icon: 'trophy'},
+  { value: 'Vasco', viewValue: 'Vasco', icon: 'trophy' },
+  { value: 'Atlético-MG', viewValue: 'Atlético-MG', icon: 'trophy' },
+  { value: 'Palmeiras', viewValue: 'Palmeiras', icon: 'trophy' },
 ];
 
 const pokemons: Array<DssOptionGroupInterface> = [
@@ -116,26 +100,26 @@ export class DropdownComponent implements OnInit {
     ...teams,
   ];
 
-  public selectedTeam: string;
+  public selectedTeam: string | any;
 
-  public selectedTeams: Array<string>;
+  public selectedTeams: Array<string> | any;
 
-  public selectedFilterTeams: Array<string>;
+  public selectedFilterTeams: Array<string> | any;
 
-  public selectedTeamsAll: Array<string>;
+  public selectedTeamsAll: Array<string> | any;
 
   public selectedTeam1 = { value: 'São Paulo', viewValue: 'São Paulo' };
 
-  public selectedTeam2: string;
+  public selectedTeam2: string | any;
 
   public selectedTeams3 = [
     'São Paulo',
     'Corinthians',
   ];
 
-  public pokemon;
+  public pokemon: any;
 
-  public pokemonFilter;
+  public pokemonFilter: any;
 
   public pokemonGroups: Array<DssOptionGroupInterface> = pokemons;
 
@@ -144,18 +128,17 @@ export class DropdownComponent implements OnInit {
     ...pokemons,
   ];
 
-  public selectedPokemon: Array<string>;
+  public selectedPokemon: Array<string> | any;
 
-  public selectedFilterGroupPokemon: Array<string>;
+  public selectedFilterGroupPokemon: Array<string> | any;
 
-  public selectedPokemonAll: Array<string>;
+  public selectedPokemonAll: Array<string> | any;
 
-  public selectedTeamCustomized: CustomizedInterface;
+  public selectedTeamCustomized: CustomizedInterface | any;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   public teamsCustomized = (teams as Array<CustomizedInterface>).map((team) => ({
-    icon: 'trophy',
     ...team,
   }));
 
@@ -163,21 +146,21 @@ export class DropdownComponent implements OnInit {
 
   public selectedOptionLarge = new FormControl('');
 
-  public months$: Observable<Array<DssOptionInterface>>;
+  public months$: Observable<Array<DssOptionInterface> | any> = of([{value:'', viewValue:''}]);
 
-  public selectedMonth: Array<string>;
+  public selectedMonth: Array<string> | any;
 
-  public selectedMonths: Array<string>;
+  public selectedMonths: Array<string> | any;
 
   public textDropdown1 = 'Mês';
 
   public textDropdown2 = 'Meses';
 
-  public monthGroups$: Observable<Array<DssOptionGroupInterface>>;
+  public monthGroups$: Observable<Array<DssOptionGroupInterface> | any> = of([{name:'', options:[{value:'', viewValue:''}]}]);
 
-  public selectedMonthGroups: Array<string>;
+  public selectedMonthGroups: Array<string> | any;
 
-  public selectedMonthsGroups: Array<string>;
+  public selectedMonthsGroups: Array<string> | any;
 
   public selectedFilterPokemon = '';
 
@@ -228,7 +211,7 @@ export class DropdownComponent implements OnInit {
 
   private setMonths(): void {
     this.months$ = (this._translationService.get('CALENDAR.MONTHS') as Observable<unknown>).pipe(
-      map((data) => {
+      map((data: any) => {
         const array = [];
         for (const [
           key,
@@ -243,7 +226,7 @@ export class DropdownComponent implements OnInit {
 
   private setMonthGroups(): void {
     this.monthGroups$ = (this._translationService.get('CALENDAR.MONTHS') as Observable<unknown>).pipe(
-      map((data) => {
+      map((data: any) => {
         const array = [];
         for (const [
           key,

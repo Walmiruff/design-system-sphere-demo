@@ -368,7 +368,7 @@ export class CascaderComponent implements OnInit {
     },
   ];
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private formBuilder: FormBuilder) { }
 
