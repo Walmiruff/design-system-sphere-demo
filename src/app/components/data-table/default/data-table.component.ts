@@ -88,7 +88,7 @@ export class DataTableDefaultComponent {
     { name: '62 - Junkheap', cpf: '482.724.060-47', code: 'C97JK1K', age: 33, nationality: 'Cybertron' },
   ];
 
-  public compareAges(a: Record<string, number>, b: Record<string, number>): number {
+  public compareAges(a: Record<string, number | any>, b: Record<string, number | any>): number | any {
     const currentColumnValueA = a['age'] || 0;
     const currentColumnValueB = b['age'] || 0;
     return currentColumnValueA - currentColumnValueB;

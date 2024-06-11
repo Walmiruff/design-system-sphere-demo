@@ -16,7 +16,7 @@ export interface DataSourceInterface {
 export class DataTableWithCheckboxComponent implements OnInit {
   public input = '';
 
-  public dataSource: Array<DataSourceInterface> = [];
+  public dataSource: Array<DataSourceInterface> | any = [];
 
   public ngOnInit(): void {
     const mock = [

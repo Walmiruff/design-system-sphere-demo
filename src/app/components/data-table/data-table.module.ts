@@ -16,7 +16,6 @@ import { DataTableFixedComponent } from './fixed/data-table.component';
 import { DataTableWithCheckboxComponent } from './with-checkbox/data-table-directive.component';
 import { DataTableWithCheckboxAndServiceComponent } from './with-checkbox/data-table-service.component';
 import { DataTableWithRadioComponent } from './with-radio/data-table-directive.component';
-import { DataTableWithRadioAndServiceComponent } from './with-radio/data-table-service.component';
 
 const ROUTES: Routes = [
   {
@@ -26,7 +25,6 @@ const ROUTES: Routes = [
       { path: 'default', component: DataTableDefaultComponent },
       { path: 'with-checkbox-service', component: DataTableWithCheckboxAndServiceComponent },
       { path: 'with-checkbox-directive', component: DataTableWithCheckboxComponent },
-      { path: 'with-radio-service', component: DataTableWithRadioAndServiceComponent },
       { path: 'with-radio-directive', component: DataTableWithRadioComponent },
       { path: 'actions', component: DataTableActionsComponent },
       { path: 'fixed', component: DataTableFixedComponent },
@@ -42,7 +40,6 @@ const ROUTES: Routes = [
     DataTableDefaultComponent,
     DataTableFixedComponent,
     DataTableWithCheckboxAndServiceComponent,
-    DataTableWithRadioAndServiceComponent,
     DataTableWithCheckboxComponent,
     DataTableWithRadioComponent,
     DataTableColumnFilterComponent,
