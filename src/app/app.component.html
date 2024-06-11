@@ -1,16 +1,16 @@
 <header class="dss-display-flex dss-align-items-center dss-header dss-position-relative">
   <div class="dss-m-2 logo"></div>
   <nav class="dss-ml-auto">
-    <ul class="dss-display-flex dss-align-items-center">
-      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white" routerLink="/home" routerLinkActive="active" >Home</a></li>
-      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white" routerLink="/components" routerLinkActive="active" >Components</a></li>
-      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white" routerLink="/contact" routerLinkActive="active" >Contact</a></li>
+    <ul class="dss-display-flex dss-align-items-center app-ul-custom">
+      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white app-link-custom" routerLink="/home" routerLinkActive="active" >Home</a></li>
+      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white app-link-custom" routerLink="/components" routerLinkActive="active" >Components</a></li>
+      <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white app-link-custom" routerLink="/contact" routerLinkActive="active" >Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <div class="dss-position-absolute dss-top-2 dss-right-0 dss-display-inline-flex dss-align-items-center">
-  <div class="js-change-lang  dss-mt-1 dss-mr-1" style="width: 160px; right: 160px">
+  <div class="dss-mt-1 dss-mr-1" style="width: 160px; right: 160px">
     <dss-form-field>
       <dss-dropdown [(ngModel)]="selectedItem" (selectionChange)="onOptionSelected($event)" [options]="languages" [raw]="true">
         <span *dssOption="let option">{{ option.viewValue }}</span>
@@ -19,7 +19,7 @@
     </dss-form-field>
   </div>
   <div class=" dss-mt-1 dss-display-inline-flex dss-align-items-center">
-    <dss-toggle class="js-toggle-theme" [checked]="true" (change)="changeTheme($event)"></dss-toggle>
+    <dss-toggle [checked]="true" (change)="changeTheme($event)"></dss-toggle>
     <span dssIcon [name]="theme === 'default' ? 'sunny' : 'moon'" class="dss-ml-0.5"></span>
   </div>
 </div>

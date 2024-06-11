@@ -4,11 +4,14 @@
     padding-inline: 12px;
 }
 
-li {
+.app-li-custom {
     list-style: none;
+    a {
+        color: rgb(74, 117, 241) !important;
+    }
 }
 
-a {
+.app-link-custom {
     display: inherit;
     text-decoration: none;
 }
