@@ -1,0 +1,122 @@
+<h2 dssTypography type="figure1">Datepicker</h2>
+<br />
+<br />
+<h3 dssTypography type="h3">Default</h3>
+<br />
+<dss-datepicker [(ngModel)]="input1"></dss-datepicker>
+<div>Input: {{ input1 }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Com eventos</h3>
+<br />
+<dss-datepicker [(ngModel)]="input2" [eventDates]="event"></dss-datepicker>
+<div>Input: {{ input2 }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Final de semana desabilitado</h3>
+<br />
+<dss-datepicker (datepickerChange)="input3 = $event" [disabledDaysWeek]="disabledDaysWeek"></dss-datepicker>
+<div>Input: {{ input3 }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Data mínima e máxima</h3>
+<br />
+<dss-datepicker (datepickerChange)="input4 = $event" [minDate]="minDate" [maxDate]="maxDate"></dss-datepicker>
+<div>Input: {{ input4 }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Desabilitado</h3>
+<br />
+<dss-datepicker
+  [(ngModel)]="input2"
+  (datepickerChange)="input5 = $event"
+  [minDate]="minDate"
+  [maxDate]="maxDate"
+  [disabled]="true"
+></dss-datepicker>
+<div>Input: {{ input5 }}</div>
+<br />
+<br />
+<h2 dssTypography type="figure1">Datepicker Range</h2>
+<br />
+<br />
+<h3 dssTypography type="h3">Default</h3>
+<br />
+<dss-datepicker-range [(ngModel)]="input6"></dss-datepicker-range>
+<div>Input: {{ input6 | json }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Desabilitado</h3>
+<br />
+<dss-datepicker-range (datepickerRangeChange)="input7 = $event" [disabled]="true"></dss-datepicker-range>
+<div>Input: {{ input7 | json }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Datepicker e Datepicker Range no formulário</h3>
+<br />
+<form [formGroup]="formGroup" (submit)="send()">
+  <dss-datepicker formControlName="datepicker" openDirection="up" [disabledDaysWeek]="disabledDaysWeek"></dss-datepicker>
+  <br />
+  <dss-datepicker-range [formControl]="datepickerRangeFc" openDirection="up" [minDate]="minDate" [maxDate]="maxDate"></dss-datepicker-range>
+  <br />
+  <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+</form>
+<br />
+<br />
+<h3 dssTypography type="h3">Template de Filtros</h3>
+<br />
+<dss-datepicker-range #datepickerRange8 (datepickerRangeChange)="input8 = $event; rangeInDays = undefined">
+  <!-- Filter -->
+  <dss-datepicker-range-filter [title]="'Período'">
+    <dss-tag-list>
+      <dss-tag [isActive]="rangeInDays === -7" [isFilter]="true" (click)="setRange(-7)">Últimos 7 dias</dss-tag>
+      <dss-tag [isActive]="rangeInDays === -15" [isFilter]="true" (click)="setRange(-15)">Últimos 15 dias</dss-tag>
+      <dss-tag [isActive]="rangeInDays === -30" [isFilter]="true" (click)="setRange(-30)">Últimos 30 dias</dss-tag>
+
+      <dss-tag [isActive]="rangeInDays === 7" [isFilter]="true" (click)="setRange(7)" class="dss-separator">Próximos 7 dias</dss-tag>
+      <dss-tag [isActive]="rangeInDays === 15" [isFilter]="true" (click)="setRange(15)">Próximos 15 dias</dss-tag>
+      <dss-tag [isActive]="rangeInDays === 30" [isFilter]="true" (click)="setRange(30)">Próximos 30 dias</dss-tag>
+    </dss-tag-list>
+  </dss-datepicker-range-filter>
+</dss-datepicker-range>
+<div>Input: {{ input8 | json }}</div>
+<div>Atalho selecionado: {{ rangeInDays | json }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Exibindo um Calendário por Vez no Datepicker Range</h3>
+<br />
+<dss-datepicker-range [mobileView]="true" openDirection="up"></dss-datepicker-range>
+<br />
+<br />
+<h3 dssTypography type="h3">Dias desabilitados</h3>
+<br />
+<dss-datepicker (datepickerChange)="input9 = $event" [disabledDays]="disabledDays"></dss-datepicker>
+<div>Input: {{ input9 }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Datepicker com outputs openDatepicker e closeDatepicker</h3>
+<br />
+<dss-datepicker (openDatepicker)="toggleDatepicker('aberto')" (closeDatepicker)="toggleDatepicker('fechado')"></dss-datepicker>
+<br />
+<br />
+<h3 dssTypography type="h3">Datepicker Range com outputs openDatepicker e closeDatepicker</h3>
+<br />
+<dss-datepicker-range (openDatepicker)="toggleDatepicker('aberto')" (closeDatepicker)="toggleDatepicker('fechado')"></dss-datepicker-range>
+<br />
+<br />
+<h3 dssTypography type="h3">Range Limit</h3>
+<br />
+<dss-datepicker-range [(ngModel)]="input10" [rangeLimit]="10" errorMessage="Data inválida"></dss-datepicker-range>
+<div>Input: {{ input10 | json }}</div>
+
+<h3 dssTypography type="h3">Apenas meses e ano</h3>
+<br />
+<dss-datepicker
+  [isOnlyMonthYear]="true"
+  [(ngModel)]="input11"
+  [format]="'mm/yyyy'"
+  [minDate]="minDate"
+  [maxDate]="maxDate"
+></dss-datepicker>
+<div>Input: {{ input11 }}</div>
+<br />

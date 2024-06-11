@@ -1,0 +1,30 @@
+<h2 dssTypography type="figure1">Progress Loader</h2>
+<br>
+<br>
+<h2 dssTypography type="h3">Default</h2>
+<br>
+<br>
+<dss-progress-loader [isError]="isError" [isSuccess]="isSuccess" [value]="value1">
+  <span *ngIf="!isSuccess">Carregando... {{ (value1 / 100) | percent }}</span>
+  <span *ngIf="isSuccess">Upload feito com sucesso!</span>
+</dss-progress-loader>
+<br>
+<br>
+<button dssFilledButton (click)="upload()">Enviar</button>
+<br>
+<br>
+<br>
+<h2 dssTypography type="h3">Error</h2>
+<br>
+<br>
+<dss-progress-loader [isError]="true" [value]="value2">
+  Erro ao fazer upload!
+</dss-progress-loader>
+<br>
+<br>
+<h2 dssTypography type="h3">Sucesso</h2>
+<br>
+<br>
+<dss-progress-loader [isSuccess]="true" [value]="value3">
+  Upload feito com sucesso!
+</dss-progress-loader>

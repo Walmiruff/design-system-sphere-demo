@@ -1,0 +1,88 @@
+<h2 dssTypography type="figure1">Input</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-form-field>
+  <input type="text" [formControl]="input1">
+  <label dssLabel>Text field</label>
+  <span dssIcon name="alphabetical-order"></span>
+  <span dssHint>Dica</span>
+</dss-form-field>
+<div>{{ input1.value }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Icon Left</h3>
+<br>
+<dss-form-field>
+  <input type="text" [(ngModel)]="input2">
+  <label dssLabel>Text field</label>
+  <span dssIcon name="alphabetical-order" rtlt="left"></span>
+  <span dssHint>Dica</span>
+</dss-form-field>
+<div>{{ input2 }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Disabled</h3>
+<br>
+<dss-form-field>
+  <input type="text" [(ngModel)]="input3" [disabled]="disabled">
+  <label dssLabel>Text field</label>
+  <span dssIcon name="alphabetical-order"></span>
+  <span dssHint>Dica</span>
+</dss-form-field>
+<div>{{ input3 }}</div>
+<br>
+<br>
+<dss-form-field>
+  <input type="text" [(ngModel)]="input4" [disabled]="disabled">
+  <label dssLabel>Text field</label>
+  <span dssIcon name="alphabetical-order"></span>
+  <span dssHint>Dica</span>
+</dss-form-field>
+<br>
+<button dssFilledButton (click)="testDisabled()">testDisabled</button>
+<br>
+<br>
+<h3 dssTypography type="h3">Form</h3>
+<br>
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-form-field [isError]="isError('name')" [isSuccess]="isSuccess('name')">
+    <input type="text" formControlName="name">
+    <label dssLabel>Nome</label>
+    <span dssHint>Nome completo</span>
+    <span *ngIf="formGroup.get('name').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br>
+  <dss-form-field [isError]="formGroup.get('email').invalid" [isSuccess]="formGroup.get('email').valid">
+    <input type="text" formControlName="email">
+    <label dssLabel>E-mail</label>
+    <span dssIcon name="email"></span>
+    <span dssHint>Informe um e-mail válido</span>
+    <span *ngIf="formGroup.get('email').errors?.required" dssError>Campo obrigatório!</span>
+    <span *ngIf="formGroup.get('email').errors?.email" dssError>E-mail inválido!</span>
+    <span *ngIf="formGroup.get('email').errors?.minlength" dssError>Mínimo de 2 caracteres!</span>
+  </dss-form-field>
+  <br>
+  <dss-form-field [isError]="formGroup.get('address').invalid">
+    <input type="text" formControlName="address">
+    <label dssLabel>Endereço</label>
+    <span dssIcon name="location" rtlt="left"></span>
+    <span dssIcon name="account-user"></span>
+    <span dssHint>Informe um endereço</span>
+    <span *ngIf="formGroup.get('address').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br>
+  <dss-form-field [isError]="formGroup.get('dropdownForm').invalid">
+    <dss-dropdown formControlName="dropdownForm" [optionGroups]="optGroups">
+      <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+      <span *dssOption="let option">{{ option.viewValue }}</span>
+    </dss-dropdown>
+    <label dssLabel>Selecione as opções</label>
+    <span *ngIf="formGroup.get('dropdownForm').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br>
+  <button dssOutlineButton >Enviar</button>
+</form>
+<br>
+<br>

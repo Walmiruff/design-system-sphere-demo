@@ -1,0 +1,160 @@
+<h2 dssTypography type="figure1">Mask</h2>
+<br />
+<br />
+<h3 dssTypography type="h3">Usando padrões pré definidos</h3>
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input1" dssMask="CPF" />
+  <label dssLabel>CPF</label>
+  <span dssIcon name="document"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input1 }}</p>
+<br />
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input2" dssMask="CNPJ" />
+  <label dssLabel>CNPJ</label>
+  <span dssIcon name="document"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input2 }}</p>
+<br />
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input3" dssMask="CPF_CNPJ" />
+  <label dssLabel>CPF ou CNPJ</label>
+  <span dssIcon name="document"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input3 }}</p>
+<br />
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input4" dssMask="CEP" />
+  <label dssLabel>CEP</label>
+  <span dssIcon name="document"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input4 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Montando seu padrão</h3>
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input5" dssMask="+55 (dd) ddddd-dddd" />
+  <label dssLabel>Celular</label>
+  <span dssIcon name="phone"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input5 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Montando seu padrão com duas possibilidades</h3>
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input6" [dssMask]="['+55 (dd) dddd-dddd', '+55 (dd) ddddd-dddd']" />
+  <label dssLabel>Telefone ou Celular</label>
+  <span dssIcon name="phone"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input6 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Apenas dígitos</h3>
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input7" dssMask="d*" />
+  <label dssLabel>Apenas Números</label>
+  <span dssIcon name="direct-money"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input7 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Apenas letras</h3>
+<br />
+<dss-form-field>
+  <input type="text" [(ngModel)]="input8" dssMask="S*" />
+  <label dssLabel>Apenas Letras</label>
+  <span dssIcon name="alphabetical-order"></span>
+  <span dssHint>Digite apenas letras</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input8 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Digite letras e números</h3>
+<br />
+<dss-form-field>
+  <input type="text" [(ngModel)]="input9" dssMask="A*" />
+  <label dssLabel>Digite Letras ou Números</label>
+  <span dssIcon name="alphabetical-order"></span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input9 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Usando uma função para transformar o resultado</h3>
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input10" dssMask="p*" [maskPattern]="pattern" />
+  <label dssLabel>Código</label>
+  <span dssIcon name="qr-code"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<p dssTypography type="body">{{ input10 }}</p>
+<br />
+<br />
+<h3 dssTypography type="h3">Em um formulário</h3>
+<br />
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <dss-form-field [isError]="isError('name')" [isSuccess]="isSuccess('name')">
+    <input type="text" formControlName="name" dssMask="U* U* U* U* U*" />
+    <label dssLabel>Nome</label>
+    <span dssIcon name="account-user"></span>
+    <span dssHint>Nome Igual no Cartão</span>
+    <span *ngIf="formGroup.get('name').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br />
+  <dss-form-field [isError]="isError('card')" [isSuccess]="isSuccess('card')">
+    <input type="tel" inputmode="number" formControlName="card" dssMask="dddd dddd dddd dddd" />
+    <label dssLabel>Número do Cartão</label>
+    <span dssIcon name="card"></span>
+    <span dssHint>Digite apenas números</span>
+    <span *ngIf="formGroup.get('card').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br />
+  <dss-form-field [isError]="isError('cvv')" [isSuccess]="isSuccess('cvv')">
+    <input type="tel" inputmode="number" formControlName="cvv" dssMask="ddd" />
+    <span dssIcon name="cvv-number"></span>
+    <label dssLabel>CVV</label>
+    <span dssHint>Código de segurança</span>
+    <span *ngIf="formGroup.get('cvv').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br />
+  <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+</form>
+<br />
+<br />
+<h3 dssTypography type="h3">Desabilitado</h3>
+<br />
+<dss-form-field>
+  <input type="tel" inputmode="number" [(ngModel)]="input12" dssMask="CPF" [disabled]="true" />
+  <label dssLabel>CPF</label>
+  <span dssIcon name="document"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br />
+<br />
+<h3 dssTypography type="h3">Usando como Pipe</h3>
+<br />
+<p dssTypography type="body">CPF: {{ input11 | dssMask: 'CPF' }}</p>

@@ -1,0 +1,14 @@
+<h2 dssTypography type="figure1">Rate</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-rate (rate)="numberRate = $event"></dss-rate>
+<br>
+<br>
+<span *ngIf="numberRate > 0">Rate: {{ numberRate }}</span>
+<br>
+<br>
+<h3 dssTypography type="h3">Iniciar com item selecionado</h3>
+<br>
+<dss-rate [selectedValue]="2"></dss-rate>

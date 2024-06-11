@@ -1,0 +1,70 @@
+<dss-data-table [dataSource]="dataSource">
+  <header dssDataTableHeader>
+    <h3 dssDataTableTitle>Data Table - Usando Diretivas (Flame >= 1.18.3)</h3>
+    <dss-form-field>
+      <input type="text" [(ngModel)]="input" placeholder="Buscar na Tabela" />
+      <span dssIcon name="search" rtlt="left"></span>
+    </dss-form-field>
+  </header>
+  <table>
+    <ng-container>
+      <th *dssHeaderCell>
+        <dss-checkbox dssDataTableCheckboxAll></dss-checkbox>
+      </th>
+      <td *dssCell="let row">
+        <dss-checkbox
+          dssDataTableCheckboxRow
+          [dataTableRow]="row"
+          [checked]="row.selected"
+          (change)="row.selected = $event.checked"
+        ></dss-checkbox>
+      </td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell dssSort column="name">Nome</th>
+      <td *dssCell="let element">{{ element.name }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell>CPF</th>
+      <td *dssCell="let element">{{ element.cpf }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell dssSort column="code">Registro</th>
+      <td *dssCell="let element">{{ element.code }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell dssSort column="age">Idade</th>
+      <td *dssCell="let element">{{ element.age }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell>Nacionalidade</th>
+      <td *dssCell="let element">{{ element.nationality }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell></th>
+      <ng-container *dssCellActions="let element; let indexRow = indexRow">
+        <ul dssFlyoutMenu>
+          <li dssFlyoutMenuItem>
+            <a href="#" dssFlyoutMenuLink>
+              <span dssIcon name="add-1px"></span>
+              <span dssFlyoutMenuLabel>Adicionar</span>
+            </a>
+          </li>
+          <li dssFlyoutMenuItem>
+            <a href="#" dssFlyoutMenuLink>
+              <span dssIcon name="edit"></span>
+              <span dssFlyoutMenuLabel>Editar</span>
+            </a>
+          </li>
+          <li dssFlyoutMenuItem>
+            <a href="#" dssFlyoutMenuLink>
+              <span dssIcon name="trash-bin"></span>
+              <span dssFlyoutMenuLabel>Excluir</span>
+            </a>
+          </li>
+        </ul>
+      </ng-container>
+    </ng-container>
+  </table>
+  <dss-pagination optionDefault="10"></dss-pagination>
+</dss-data-table>

@@ -1,0 +1,33 @@
+<h2 dssTypography type="figure1">Calendar</h2>
+<br />
+<br />
+<section class="js-container-calendar-date">
+  <br />
+  <br />
+  <h4 dssTypography type="figure4">Apenas Date</h4>
+  <br />
+  <br />
+  <dss-calendar #calendar1 [eventDates]="eventosExemplo1" [disabledDaysWeek]="disabledDays"></dss-calendar>
+</section>
+<section class="js-container-calendar-event-date">
+  <br />
+  <br />
+  <h4 dssTypography type="figure4">Apenas EventDate</h4>
+  <br />
+  <br />
+  <dss-calendar #calendar2 [eventDates]="eventosExemplo2" [disabledDaysWeek]="disabledDays"></dss-calendar>
+</section>
+<section class="js-container-calendar-all">
+  <br />
+  <br />
+  <h4 dssTypography type="figure4">Array com Ambos</h4>
+  <br />
+  <br />
+  <dss-calendar
+    #calendar3
+    [eventDates]="eventosExemplo3"
+    [disabledDaysWeek]="disabledDays"
+    [minDate]="minDate"
+    [maxDate]="maxDate"
+  ></dss-calendar>
+</section>

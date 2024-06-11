@@ -1,0 +1,45 @@
+<button dssFilledButton (click)="open1 = true">Drawer - Default</button>
+<br>
+<br>
+<button dssFilledButton (click)="open2 = true">Drawer - Default (only header)</button>
+<br>
+<br>
+<button dssFilledButton (click)="open3 = true">Drawer - Default (only footer)</button>
+<br>
+<br>
+<dss-drawer [open]="open1" (closeDrawer)="open1 = $event" [closeSelf]="false" describedby="desc-drawer">
+  <dss-drawer-header>Drawer Title</dss-drawer-header>
+  <dss-drawer-body>
+    <div id="desc-drawer" class="dss-screen-reader">Um exemplo de descrição do drawer apenas para leitor de tela</div>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolore fugit laborum laudantium magnam maxime officiis omnis quae quaerat quibusdam, recusandae repellendus saepe temporibus voluptas voluptatibus! Ad aliquid consequatur deserunt.</p>
+      <br>
+    </ng-container>
+  </dss-drawer-body>
+  <dss-drawer-footer>
+    <button dssOutlineButton>Cancelar</button>
+    <button dssFilledButton>Prosseguir</button>
+  </dss-drawer-footer>
+</dss-drawer>
+<dss-drawer [open]="open2" (closeDrawer)="open2 = $event">
+  <dss-drawer-header>Drawer Title</dss-drawer-header>
+  <dss-drawer-body>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolore fugit laborum laudantium magnam maxime officiis omnis quae quaerat quibusdam, recusandae repellendus saepe temporibus voluptas voluptatibus! Ad aliquid consequatur deserunt.</p>
+      <br>
+    </ng-container>
+  </dss-drawer-body>
+</dss-drawer>
+<dss-drawer [open]="open3" (closeDrawer)="open3 = $event" autoFocus="confirm">
+  <dss-drawer-body>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolore fugit laborum laudantium magnam maxime officiis omnis quae quaerat quibusdam, recusandae repellendus saepe temporibus voluptas voluptatibus! Ad aliquid consequatur deserunt.</p>
+      <br>
+    </ng-container>
+  </dss-drawer-body>
+  <dss-drawer-footer>
+    <button dssOutlineButton>Cancelar</button>
+    <button dssFilledButton id="confirm">Prosseguir</button>
+  </dss-drawer-footer>
+</dss-drawer>
+

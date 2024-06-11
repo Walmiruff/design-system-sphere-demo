@@ -1,0 +1,13 @@
+.sample-search-button {
+  --clickable-area-size: 44px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  display: grid;
+  font: inherit;
+  min-height: var(--clickable-area-size);
+  min-width: var(--clickable-area-size);
+  outline-color: #bde3ea;
+  outline-offset: -2px;
+  place-items: center;
+}

@@ -1,0 +1,36 @@
+<h2 dssTypography type="figure1">Treeview</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default (3 Níveis)</h3>
+<br>
+<br>
+<div>
+  <button dssFilledButton (click)="expandAll()" style="margin-right: 16px;">Expandir Tudo</button>
+  <button dssFilledButton (click)="collapseAll()">Fechar Tudo</button>
+</div>
+<br>
+<dss-treeview [treeData]="treeDataBasic">
+  <ng-container *dssTreeviewLevel="let data">
+    <p>{{ data.viewValue }}</p>
+  </ng-container>
+</dss-treeview>
+<br>
+<br>
+<h3 dssTypography type="h3">Iniciar com nível aberto</h3>
+<br>
+<br>
+<dss-treeview [treeData]="treeDataBasic2">
+  <ng-container *dssTreeviewLevel="let data">
+    <p>{{ data.viewValue }}</p>
+  </ng-container>
+</dss-treeview>
+<br>
+<br>
+<h3 dssTypography type="h3">Com checkbox</h3>
+<br>
+<br>
+<dss-treeview [treeData]="treeDataCheckbox">
+  <ng-container *dssTreeviewLevel="let data">
+    <dss-checkbox [value]="data.value" [label]="data.viewValue" [checked]="data.checked" (change)="data.checked = $event.checked"></dss-checkbox>
+  </ng-container>
+</dss-treeview>

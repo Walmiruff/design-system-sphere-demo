@@ -1,0 +1,21 @@
+<h2 dssTypography type="figure1">Pagination</h2>
+<br />
+<h3 dssTypography type="h3">pageCount = 5 (default)</h3>
+<br />
+<dss-pagination></dss-pagination>
+<br />
+<h3 dssTypography type="h3">pageCount > 5</h3>
+<br />
+<dss-pagination [hasIconInitAndEnd]="true" [pageCount]="10"></dss-pagination>
+<br />
+<dss-pagination [pageCount]="6"></dss-pagination>
+<br />
+<h3 dssTypography type="h3">pageCount < 5</h3>
+<br />
+<dss-pagination [pageCount]="2"></dss-pagination>
+<br />
+<dss-pagination [pageCount]="1"></dss-pagination>
+<br />
+<h3 dssTypography type="h3">Iniciar com uma página diferente</h3>
+<br />
+<dss-pagination [selected]="3"></dss-pagination>

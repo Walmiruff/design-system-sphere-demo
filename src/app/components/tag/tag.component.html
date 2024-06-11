@@ -1,0 +1,58 @@
+<h2 dssTypography type="figure1">Tag</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-tag-list>
+  <dss-tag [isActive]="true">Dragon Ball</dss-tag>
+  <dss-tag>One Piece</dss-tag>
+  <dss-tag>Naruto</dss-tag>
+  <dss-tag [disabled]="true">Pokémon</dss-tag>
+  <dss-tag>Cavaleiro dos Zodíaco</dss-tag>
+  <dss-tag>Death Note</dss-tag>
+  <dss-tag>Neon Genesis Evangelion</dss-tag>
+  <dss-tag>Fullmetal Alchemist</dss-tag>
+</dss-tag-list>
+<br>
+<br>
+<h3 dssTypography type="h3">Input Tag</h3>
+<br>
+<dss-form-field>
+  <dss-tag-list>
+    <dss-tag *ngFor="let fruit of fruits" [removable]="true" (removed)="removeFruit(fruit)">{{ fruit.name }}</dss-tag>
+    <input dssTagInput type="text" (tagEnd)="addFruit($event)" [separatorKeyCodes]="separatorKeysCodes">
+  </dss-tag-list>
+  <span dssLabel>Frutas</span>
+  <span dssHint>Escreva suas frutas preferidas</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Input Tag Disabled</h3>
+<br>
+<dss-form-field>
+  <dss-tag-list [disabled]="true">
+    <dss-tag [disabled]="true"></dss-tag>
+    <input dssTagInput disabled type="text">
+  </dss-tag-list>
+  <span dssLabel>Frutas</span>
+  <span dssHint>Escreva suas frutas preferidas</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Input Tag no Formulário</h3>
+<br>
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-form-field [isError]="formGroup.invalid" [isSuccess]="formGroup.valid">
+    <dss-tag-list formControlName="animes">
+      <dss-tag *ngFor="let anime of animes.value" [removable]="true" (removed)="removeAnime(anime)">{{ anime.name }}</dss-tag>
+      <input dssTagInput type="text" (tagEnd)="addAnime($event)" [separatorKeyCodes]="separatorKeysCodes">
+    </dss-tag-list>
+    <label dssLabel>Animes</label>
+    <span dssIcon name="santander"></span>
+    <span dssHint>Escreva seus animes preferidos</span>
+    <span *ngIf="formGroup.get('animes').errors?.required" dssError>Campo obrigatório!</span>
+    <span *ngIf="formGroup.get('animes').errors?.minlength" dssError>É necessário no mínimo 2 animes</span>
+  </dss-form-field>
+  <br>
+  <button dssOutlineButton [disabled]="formGroup.invalid">Enviar</button>
+</form>

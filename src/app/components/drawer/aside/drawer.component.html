@@ -1,0 +1,55 @@
+<button dssFilledButton (click)="open1 = true">Drawer - Aside</button>
+<br>
+<br>
+<button dssFilledButton (click)="open2 = true">Drawer - Aside (only header)</button>
+<br>
+<br>
+<button dssFilledButton (click)="open3 = true">Drawer - Aside (only footer)</button>
+<br>
+<br>
+<dss-drawer [aside]="true" [open]="open1" [closeSelf]="false" (closeDrawer)="open1 = $event">
+  <dss-drawer-header>Drawer Title</dss-drawer-header>
+  <dss-drawer-body>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolore fugit laborum laudantium magnam
+        maxime
+        officiis omnis quae quaerat quibusdam, recusandae repellendus saepe temporibus voluptas voluptatibus! Ad
+        aliquid
+        consequatur deserunt.</p>
+      <br>
+    </ng-container>
+  </dss-drawer-body>
+  <dss-drawer-footer>
+    <button dssOutlineButton>Cancelar</button>
+    <button dssFilledButton>Prosseguir</button>
+  </dss-drawer-footer>
+</dss-drawer>
+<dss-drawer [aside]="true" [open]="open2" (closeDrawer)="open2 = $event">
+  <dss-drawer-header>Drawer Title</dss-drawer-header>
+  <dss-drawer-body>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolore fugit laborum laudantium magnam
+        maxime
+        officiis omnis quae quaerat quibusdam, recusandae repellendus saepe temporibus voluptas voluptatibus! Ad
+        aliquid
+        consequatur deserunt.</p>
+      <br>
+    </ng-container>
+  </dss-drawer-body>
+</dss-drawer>
+<dss-drawer [aside]="true" [open]="open3" (closeDrawer)="open3 = $event">
+  <dss-drawer-body>
+    <ng-container *ngFor="let paragraph of paragraphs">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, dolore fugit laborum laudantium magnam
+        maxime
+        officiis omnis quae quaerat quibusdam, recusandae repellendus saepe temporibus voluptas voluptatibus! Ad
+        aliquid
+        consequatur deserunt.</p>
+      <br>
+    </ng-container>
+  </dss-drawer-body>
+  <dss-drawer-footer>
+    <button dssOutlineButton>Cancelar</button>
+    <button dssFilledButton>Prosseguir</button>
+  </dss-drawer-footer>
+</dss-drawer>

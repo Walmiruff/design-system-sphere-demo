@@ -1,0 +1,74 @@
+<h2 dssTypography type="figure1">Logo</h2>
+<section>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Santander</h3>
+  <br />
+  <ul class="dss-display-inline-flex dss-flex-wrap" style="gap: 16px; list-style: none">
+    <li
+      class="dss-display-inline-flex dss-align-items-center dss-flex-column dss-p-0.5"
+      style="width: 300px"
+      *ngFor="let logo of santanderLogos"
+    >
+      <dss-logo [type]="logo"></dss-logo>
+      <p dssTypography type="caption">Type: {{ logo }}</p>
+    </li>
+  </ul>
+  <br />
+  <br />
+  <br />
+  <ul class="dss-display-inline-flex dss-flex-wrap" style="gap: 16px; list-style: none">
+    <li
+      class="dss-display-inline-flex dss-align-items-center dss-flex-column dss-p-0.5"
+      style="background-color: #d8d8d8; width: 300px"
+      *ngFor="let logo of santanderLogos"
+    >
+      <dss-logo [type]="logo" color="white"></dss-logo>
+      <p dssTypography type="caption">Type: {{ logo }}</p>
+    </li>
+  </ul>
+</section>
+<section>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Cartões</h3>
+  <br />
+  <ul class="dss-display-inline-flex dss-flex-wrap" style="gap: 16px; list-style: none">
+    <li
+      class="dss-display-inline-flex dss-align-items-center dss-flex-column dss-p-0.5"
+      style="width: 150px"
+      *ngFor="let logo of cardLogos"
+    >
+      <dss-logo [type]="logo"></dss-logo>
+      <p dssTypography type="caption">Type: {{ logo }}</p>
+    </li>
+  </ul>
+</section>
+<section>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Banco</h3>
+  <br />
+  <ul class="dss-display-inline-flex dss-flex-wrap" style="gap: 16px; list-style: none">
+    <li
+      class="dss-display-inline-flex dss-align-items-center dss-flex-column dss-p-0.5"
+      style="width: 150px"
+      *ngFor="let logo of bankLogos"
+    >
+      <dss-logo [type]="logo"></dss-logo>
+      <p dssTypography type="caption">Type: {{ logo }}</p>
+    </li>
+  </ul>
+</section>
+<section>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Outros Tamanhos</h3>
+  <br />
+  <ul class="dss-display-inline-flex dss-flex-wrap" style="gap: 16px; list-style: none">
+    <li class="dss-display-inline-flex dss-align-items-center dss-flex-column dss-p-0.5" style="width: 300px" *ngFor="let size of sizes">
+      <dss-logo type="santander-icon" [size]="size"></dss-logo>
+      <p dssTypography type="caption">Size: {{ size }}</p>
+    </li>
+  </ul>
+</section>

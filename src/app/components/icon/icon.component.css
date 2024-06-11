@@ -1,0 +1,27 @@
+.icons {
+  padding: 32px;
+}
+
+.icons__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icons__item {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 8px;
+  padding: 4px 8px;
+  width: calc(33% - 16px);
+}
+
+.icons__item > div,
+.icons__not-found {
+  margin-bottom: 16px;
+  margin-top: 10px;
+  text-align: center;
+}

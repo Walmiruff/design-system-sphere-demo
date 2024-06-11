@@ -1,0 +1,20 @@
+<h2 dssTypography type="figure1">Breadcrumb</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<br>
+<dss-breadcrumb [items]="items">
+  <a *dssBreadcrumbItem="let item" [href]="item.url">{{ item.label }}</a>
+  <h1 *dssBreadcrumbItemTitle="let item">{{ item.title }}</h1>
+</dss-breadcrumb>
+<br>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">Sem Título</h3>
+<br>
+<br>
+<dss-breadcrumb [items]="items">
+  <a *dssBreadcrumbItem="let item" [href]="item.url">{{ item.label }}</a>
+</dss-breadcrumb>

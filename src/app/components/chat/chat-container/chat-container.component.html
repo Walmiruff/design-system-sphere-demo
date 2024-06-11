@@ -1,0 +1,42 @@
+<h2 dssTypography type="figure1">Chat Container</h2>
+<br>
+<br>
+<main style="margin: -16px;">
+  <h3 dssTypography type="h3">Default</h3>
+  <br>
+  <br>
+  <dss-chat-container>
+    <dss-chat-container-header>Título do Chat</dss-chat-container-header>
+    <dss-chat-container-body>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at consequatur consequuntur, deserunt dolorum excepturi minus mollitia nulla odit, rem suscipit totam? Dignissimos, dolores voluptates. Consectetur ducimus eveniet iste nisi.
+    </dss-chat-container-body>
+    <dss-chat-container-footer>
+      <dss-form-field>
+        <textarea dssChatTextarea type="text" [(ngModel)]="input" aria-label="chat"></textarea>
+      </dss-form-field>
+    </dss-chat-container-footer>
+  </dss-chat-container>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Mensagem quando usado com Quick Reply</h3>
+  <br>
+  <br>
+  <dss-chat-container>
+    <dss-chat-container-header>Título do Chat</dss-chat-container-header>
+    <dss-chat-container-body>
+      <dss-quick-reply-group>
+        <dss-quick-reply *ngFor="let option of options" [value]="option.value">{{ option.label }}</dss-quick-reply>
+      </dss-quick-reply-group>
+    </dss-chat-container-body>
+    <dss-chat-container-footer [isQuickReply]="true"></dss-chat-container-footer>
+  </dss-chat-container>
+</main>

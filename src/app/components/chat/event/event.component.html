@@ -1,0 +1,49 @@
+<h2 dssTypography type="figure1">Event</h2>
+<br>
+<br>
+<main style="margin: -16px;">
+  <h3 dssTypography type="h3">Default</h3>
+  <br>
+  <br>
+  <dss-event>
+    <span dssIcon name="account-people"></span>
+    <span>O atendimento foi transferido para o suporte técnico - 11:23</span>
+  </dss-event>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Atenção</h3>
+  <br>
+  <br>
+  <dss-event>
+    <span dssIcon name="circle-attention-filled"></span>
+    <span>Algumas mensagens estão indisponíveis, re-carregue o chat para recebe-las</span>
+  </dss-event>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Info</h3>
+  <br>
+  <br>
+  <dss-event>
+    <span dssIcon name="circle-information-filled"></span>
+    <span>Você possui mensagens que não foram lidas</span>
+  </dss-event>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Alert</h3>
+  <br>
+  <br>
+  <dss-event [type]="'alert'">
+    <span dssIcon name="circle-attention-filled"></span>
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doem por incididunt ut labore et dolore magna aliqua.</span>
+    <button dssButton>Baixar aquivo</button>
+  </dss-event>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Alert sem Ícone</h3>
+  <br>
+  <br>
+  <dss-event [type]="'alert'">
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doem por incididunt ut labore et dolore magna aliqua.</span>
+    <button dssButton>Baixar aquivo</button>
+  </dss-event>
+</main>

@@ -1,0 +1,237 @@
+<h2 dssTypography type="figure1">Card Option (Option Select)</h2>
+<br>
+<br>
+<section class="js-container-card-option-number">
+  <h3 dssTypography type="h3">Card Option - Number</h3>
+  <dss-card-option type="number">
+    <dss-checkbox name="number" [(ngModel)]="cardOption1"></dss-checkbox>
+    <span dssIcon name="document-svg"></span>
+    <dss-card-option-label>SVG</dss-card-option-label>
+    <dss-card-option-number>999,99</dss-card-option-number>
+  </dss-card-option>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption1 }}</div>
+  <dss-card-option-list>
+    <dss-card-option type="number">
+      <dss-radio-group name="card-option-number-radio" [(ngModel)]="cardOption2" [options]="options[0]"></dss-radio-group>
+      <span dssIcon name="document-xls"></span>
+      <dss-card-option-label>XLS</dss-card-option-label>
+      <dss-card-option-number>999,99</dss-card-option-number>
+    </dss-card-option>
+    <dss-card-option type="number">
+      <dss-radio-group name="card-option-number-radio" [(ngModel)]="cardOption2" [options]="options[1]"></dss-radio-group>
+      <span dssIcon name="document-doc"></span>
+      <dss-card-option-label>DOC</dss-card-option-label>
+      <dss-card-option-number>999,99</dss-card-option-number>
+    </dss-card-option>
+    <dss-card-option type="number">
+      <dss-radio-group name="card-option-number-radio" [(ngModel)]="cardOption2" [options]="options[2]"></dss-radio-group>
+      <span dssIcon name="document-ppt"></span>
+      <dss-card-option-label>PPT</dss-card-option-label>
+      <dss-card-option-number>999,99</dss-card-option-number>
+    </dss-card-option>
+  </dss-card-option-list>
+  <br>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption2 }}</div>
+  <br>
+  <br>
+</section>
+<section class="js-container-card-option-credit-card">
+  <h3 dssTypography type="h3">Card Option - Text & Icon (Credit Card)</h3>
+  <dss-card-option type="text">
+    <dss-checkbox name="text" [(ngModel)]="cardOption3"></dss-checkbox>
+    <span dssIcon name="card"></span>
+    <dss-card-option-label>Cartão final 1980</dss-card-option-label>
+    <dss-card-option-description>Master Card</dss-card-option-description>
+  </dss-card-option>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption3 }}</div>
+  <br>
+  <dss-card-option-list>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption4" [options]="optionsCreditCard[0]"></dss-radio-group>
+      <span dssIcon name="card"></span>
+      <dss-card-option-label>Cartão final {{ optionsCreditCard[0][0].value }}</dss-card-option-label>
+      <dss-card-option-description>Master Card</dss-card-option-description>
+    </dss-card-option>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption4" [options]="optionsCreditCard[1]"></dss-radio-group>
+      <span dssIcon name="card"></span>
+      <dss-card-option-label>Cartão final {{ optionsCreditCard[1][0].value }}</dss-card-option-label>
+      <dss-card-option-description>Hipercard</dss-card-option-description>
+    </dss-card-option>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption4" [options]="optionsCreditCard[2]"></dss-radio-group>
+      <span dssIcon name="card"></span>
+      <dss-card-option-label>Cartão final {{ optionsCreditCard[2][0].value }}</dss-card-option-label>
+      <dss-card-option-description>Dinners</dss-card-option-description>
+    </dss-card-option>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption4" [options]="optionsCreditCard[3]"></dss-radio-group>
+      <span dssIcon name="card"></span>
+      <dss-card-option-label>Cartão final {{ optionsCreditCard[3][0].value }}</dss-card-option-label>
+      <dss-card-option-description>Visa</dss-card-option-description>
+    </dss-card-option>
+  </dss-card-option-list>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption4 }}</div>
+  <br>
+  <br>
+</section>
+<section class="js-container-card-option-text">
+  <h3 dssTypography type="h3">Card Option - Text</h3>
+  <dss-card-option type="text">
+    <dss-checkbox name="text" [(ngModel)]="cardOption9"></dss-checkbox>
+    <dss-card-option-label>Label</dss-card-option-label>
+    <dss-card-option-description>Descrição</dss-card-option-description>
+  </dss-card-option>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption9 }}</div>
+  <br>
+  <dss-card-option-list>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption10" [options]="optionsText[0]"></dss-radio-group>
+      <dss-card-option-label>Opção 1</dss-card-option-label>
+      <dss-card-option-description>Descrição</dss-card-option-description>
+    </dss-card-option>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption10" [options]="optionsText[1]"></dss-radio-group>
+      <dss-card-option-label>Opção 2</dss-card-option-label>
+      <dss-card-option-description>Descrição</dss-card-option-description>
+    </dss-card-option>
+    <dss-card-option type="text">
+      <dss-radio-group name="card-option-text-radio" [(ngModel)]="cardOption10" [options]="optionsText[2]"></dss-radio-group>
+      <dss-card-option-label>Opção 3</dss-card-option-label>
+      <dss-card-option-description>Descrição</dss-card-option-description>
+    </dss-card-option>
+  </dss-card-option-list>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption10 }}</div>
+  <br>
+  <br>
+</section>
+<section class="js-container-card-option-icon">
+  <h3 dssTypography type="h3">Card Option - Icon</h3>
+  <dss-card-option type="icon">
+    <dss-checkbox name="icon" [(ngModel)]="cardOption5"></dss-checkbox>
+    <span dssIcon name="password-typing"></span>
+    <dss-card-option-label>Lock</dss-card-option-label>
+  </dss-card-option>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption5 }}</div>
+  <br>
+  <dss-card-option-list>
+    <dss-card-option type="icon">
+      <dss-radio-group name="card-option-icon-radio" [(ngModel)]="cardOption6" [options]="optionsIcons[0]"></dss-radio-group>
+      <span dssIcon name="security-block"></span>
+      <dss-card-option-label>Atenção</dss-card-option-label>
+    </dss-card-option>
+    <dss-card-option type="icon">
+      <dss-radio-group name="card-option-icon-radio" [(ngModel)]="cardOption6" [options]="optionsIcons[1]"></dss-radio-group>
+      <span dssIcon name="security-error"></span>
+      <dss-card-option-label>Fechar</dss-card-option-label>
+    </dss-card-option>
+    <dss-card-option type="icon">
+      <dss-radio-group name="card-option-icon-radio" [(ngModel)]="cardOption6" [options]="optionsIcons[2]"></dss-radio-group>
+      <span dssIcon name="security-verified"></span>
+      <dss-card-option-label>Ok</dss-card-option-label>
+    </dss-card-option>
+    <dss-card-option type="icon">
+      <dss-radio-group name="card-option-icon-radio" [(ngModel)]="cardOption6" [options]="optionsIcons[3]"></dss-radio-group>
+      <span dssIcon name="security-open"></span>
+      <dss-card-option-label>Abrir</dss-card-option-label>
+    </dss-card-option>
+  </dss-card-option-list>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption6 }}</div>
+  <br>
+  <br>
+</section>
+<section class="js-container-card-option-feature">
+  <h3 dssTypography type="h3">Card Option - Feature</h3>
+  <dss-card-option type="feature">
+    <dss-checkbox name="feature" [(ngModel)]="cardOption7"></dss-checkbox>
+    <dss-card-option-label>Basic</dss-card-option-label>
+    <dss-card-option-number>999,99</dss-card-option-number>
+    <dss-card-option-feature *ngFor="let feature of features.basicFeatures" [check]="feature.check">
+      {{ feature.label }}
+    </dss-card-option-feature>
+  </dss-card-option>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption7 }}</div>
+  <br>
+  <dss-card-option-list>
+    <dss-card-option type="feature">
+      <dss-radio-group name="card-option-feature-radio" [(ngModel)]="cardOption8" [options]="optionsFeature[0]"></dss-radio-group>
+      <dss-card-option-label>Basic</dss-card-option-label>
+      <dss-card-option-number>999,99</dss-card-option-number>
+      <dss-card-option-feature *ngFor="let feature of features.basicFeatures" [check]="feature.check">
+        {{ feature.label }}
+      </dss-card-option-feature>
+    </dss-card-option>
+    <dss-card-option type="feature">
+      <dss-radio-group name="card-option-feature-radio" [(ngModel)]="cardOption8" [options]="optionsFeature[1]"></dss-radio-group>
+      <dss-card-option-label>Master</dss-card-option-label>
+      <dss-card-option-number>999,99</dss-card-option-number>
+      <dss-card-option-feature *ngFor="let feature of features.masterFeatures" [check]="feature.check">
+        {{ feature.label }}
+      </dss-card-option-feature>
+    </dss-card-option>
+    <dss-card-option type="feature">
+      <dss-radio-group name="card-option-feature-radio" [(ngModel)]="cardOption8" [options]="optionsFeature[2]"></dss-radio-group>
+      <dss-card-option-label>Blaster</dss-card-option-label>
+      <dss-card-option-number>999,99</dss-card-option-number>
+      <dss-card-option-feature *ngFor="let feature of features.blasterFeatures" [check]="feature.check">
+        {{ feature.label }}
+      </dss-card-option-feature>
+    </dss-card-option>
+  </dss-card-option-list>
+  <br>
+  <div dssTypography type="body">Card Option: {{ cardOption8 }}</div>
+  <br>
+</section>
+<section class="js-container-card-option-form">
+  <h3 dssTypography type="h3">Form</h3>
+  <br>
+  <form [formGroup]="formGroup" (submit)="send()">
+    <dss-card-option-list>
+      <dss-card-option type="number">
+        <dss-radio-group name="card-option-number-radio-form" formControlName="file" [options]="optionsForm[0]"></dss-radio-group>
+        <span dssIcon name="document-xls"></span>
+        <dss-card-option-label>XLS</dss-card-option-label>
+        <dss-card-option-number>999,99</dss-card-option-number>
+      </dss-card-option>
+      <dss-card-option type="number">
+        <dss-radio-group name="card-option-number-radio-form" formControlName="file" [options]="optionsForm[1]"></dss-radio-group>
+        <span dssIcon name="document-doc"></span>
+        <dss-card-option-label>DOC</dss-card-option-label>
+        <dss-card-option-number>999,99</dss-card-option-number>
+      </dss-card-option>
+      <dss-card-option type="number">
+        <dss-radio-group name="card-option-number-radio-form" formControlName="file" [options]="optionsForm[2]"></dss-radio-group>
+        <span dssIcon name="document-ppt"></span>
+        <dss-card-option-label>PPT</dss-card-option-label>
+        <dss-card-option-number>999,99</dss-card-option-number>
+      </dss-card-option>
+    </dss-card-option-list>
+    <br>
+    <div>
+      <dss-card-option type="text">
+        <dss-checkbox name="text" formControlName="cardMasterCard"></dss-checkbox>
+        <span dssIcon name="card"></span>
+        <dss-card-option-label>Cartão final 1980</dss-card-option-label>
+        <dss-card-option-description>Master Card</dss-card-option-description>
+      </dss-card-option>
+      <dss-card-option type="text">
+        <dss-checkbox name="text" formControlName="cardVisa"></dss-checkbox>
+        <span dssIcon name="card"></span>
+        <dss-card-option-label>Cartão final 1990</dss-card-option-label>
+        <dss-card-option-description>Visa</dss-card-option-description>
+      </dss-card-option>
+    </div>
+    <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+  </form>
+  <br>
+  <div dssTypography type="body">Card Option: {{ formGroup.get('file').value }}, Master: {{ formGroup.get('cardMasterCard').value }}, Visa: {{ formGroup.get('cardVisa').value }}</div>
+</section>

@@ -1,0 +1,22 @@
+<h2 dssTypography type="figure1">Dialog</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<br>
+<button dssButton (click)="open = true">Dialog</button>
+<br>
+<br>
+<br>
+<dss-dialog [open]="open" describedby="desc-dialog">
+  <dss-dialog-header>
+    <div>Dialog Title</div>
+  </dss-dialog-header>
+  <dss-dialog-body>
+    <p id="desc-dialog">So feel been kept be at gate. Be september it extensive oh concluded of certainty. In read most gate at body held it ever</p>
+  </dss-dialog-body>
+  <dss-dialog-footer>
+    <button dssOutlineButton (click)="open = false">Cancelar</button>
+    <button [routerLink]="['/default']" dssFilledButton>Ir pra Home</button>
+  </dss-dialog-footer>
+</dss-dialog>

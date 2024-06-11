@@ -1,0 +1,29 @@
+<h2 dssTypography type="figure1">Chat</h2>
+<br>
+<ul dssTypography type="body">
+  <li *ngFor="let item of items">
+    <a [routerLink]="item.link" [class.pending]="item.pending">{{ item.label }}</a>
+  </li>
+</ul>
+<br>
+<br>
+<router-outlet></router-outlet>
+<br>
+<br>
+<br>
+<br>
+<br>
+<dss-chat [open]="openChat" (closeChat)="closeChat()">
+  <dss-chat-container>
+    <dss-chat-container-header>Título do Chat</dss-chat-container-header>
+    <dss-chat-container-body></dss-chat-container-body>
+    <dss-chat-container-footer [isQuickReply]="loadingMessages" textQuickReply="Carregando mensagens de exemplo..." (clickSend)="send()">
+      <dss-form-field>
+        <input dssChatTextarea type="text" [(ngModel)]="input" aria-label="chat">
+      </dss-form-field>
+    </dss-chat-container-footer>
+  </dss-chat-container>
+</dss-chat>
+<button dssFabButton (click)="initChat()" style="bottom: 24px; position: fixed; right: 24px; z-index: 1000;">
+  <span dssIcon name="chat"></span>
+</button>

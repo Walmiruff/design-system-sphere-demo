@@ -1,0 +1,62 @@
+<h2 dssTypography type="figure1">Statistic</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-statistic>
+  <dss-statistic-header>
+    <dss-statistic-title>Statistic Title</dss-statistic-title>
+    <dss-statistic-value>99.000,00</dss-statistic-value>
+  </dss-statistic-header>
+  <span dssIcon name="circle-help-filled"></span>
+  <dss-statistic-item *ngFor="let item of items1">
+    <dss-statistic-item-label>{{ item.label }}</dss-statistic-item-label>
+    <dss-statistic-item-value>{{ item.value | currency:'BRL' }}</dss-statistic-item-value>
+  </dss-statistic-item>
+</dss-statistic>
+<br>
+<br>
+<h3 dssTypography type="h3">List</h3>
+<br>
+<dss-statistic>
+  <dss-statistic-item *ngFor="let item of items2" status="{{ item.value < 0 ? 'negative' : 'positive' }}">
+    <dss-statistic-item-label>{{ item.label }}</dss-statistic-item-label>
+    <dss-statistic-item-value>
+      {{ item.value | percent: '2.2' }} <span dssStatusArrow status="{{ item.value < 0 ? 'negative' : 'positive' }}" direction="{{ item.value < 0 ? 'bottom' : 'top' }}"></span>
+    </dss-statistic-item-value>
+  </dss-statistic-item>
+</dss-statistic>
+<br>
+<br>
+<h3 dssTypography type="h3">Spaced</h3>
+<br>
+<dss-statistic type="spaced">
+  <dss-statistic-header>
+    <dss-statistic-title>Statistic Title</dss-statistic-title>
+    <dss-statistic-value>99.000,00</dss-statistic-value>
+  </dss-statistic-header>
+  <dss-statistic-item *ngFor="let item of items3" status="{{ item.value < 0 ? 'negative' : 'positive' }}">
+    <dss-statistic-item-label>{{ item.label }}</dss-statistic-item-label>
+    <dss-statistic-item-value>
+      {{ item.value | percent: '2.2' }} <span dssStatusArrow status="{{ item.value < 0 ? 'negative' : 'positive' }}" direction="{{ item.value < 0 ? 'bottom' : 'top' }}"></span>
+    </dss-statistic-item-value>
+  </dss-statistic-item>
+</dss-statistic>
+<br>
+<br>
+<h3 dssTypography type="h3">Inline</h3>
+<br>
+<dss-statistic type="inline">
+  <dss-statistic-header>
+    <dss-statistic-title>Statistic Title 1</dss-statistic-title>
+    <dss-statistic-value>99.000,00</dss-statistic-value>
+  </dss-statistic-header>
+  <dss-statistic-header>
+    <dss-statistic-title>Statistic Title 2</dss-statistic-title>
+    <dss-statistic-value>99.000,00</dss-statistic-value>
+  </dss-statistic-header>
+  <dss-statistic-header>
+    <dss-statistic-title>Statistic Title 3</dss-statistic-title>
+    <dss-statistic-value>99.000,00</dss-statistic-value>
+  </dss-statistic-header>
+</dss-statistic>

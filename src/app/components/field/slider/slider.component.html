@@ -1,0 +1,96 @@
+<h2 dssTypography type="figure1">Slider</h2>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<br>
+<dss-slider [(ngModel)]="value1">
+  <dss-slider-label>Escala</dss-slider-label>
+  <dss-slider-value>{{ value1 }}</dss-slider-value>
+  <dss-slider-min>0</dss-slider-min>
+  <dss-slider-max>100</dss-slider-max>
+</dss-slider>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">Range</h3>
+<br>
+<br>
+<dss-slider [(ngModel)]="value2" [range]="true" [min]="min" [max]="max">
+  <dss-slider-label>Aluguel</dss-slider-label>
+  <dss-slider-value>de {{ value2[0] | currency:'BRL' }} à {{ value2[1] | currency:'BRL' }}</dss-slider-value>
+  <dss-slider-min>
+    <div>Mínimo</div>
+    <div>{{ min | currency:'BRL' }}</div>
+  </dss-slider-min>
+  <dss-slider-max>
+    <div class="dss-text-right">Máximo</div>
+    <div class="dss-text-right">{{ max | currency:'BRL' }}</div>
+  </dss-slider-max>
+</dss-slider>
+<br>
+<button dssButton (click)="updateMinMax()">Atualizar Min e Max</button>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">Slider Input</h3>
+<br>
+<br>
+<dss-slider [(ngModel)]="value3">
+  <dss-slider-label>Escala</dss-slider-label>
+  <dss-slider-value>{{ value3 }}</dss-slider-value>
+  <dss-slider-min>0</dss-slider-min>
+  <dss-slider-max>100</dss-slider-max>
+  <input dssSliderInput type="text" inputmode="numeric" [(ngModel)]="value3">
+</dss-slider>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">Disabled</h3>
+<br>
+<br>
+<dss-slider [disabled]="true">
+  <dss-slider-label>Escala</dss-slider-label>
+  <dss-slider-value>{{ value4 }}</dss-slider-value>
+  <dss-slider-min>0</dss-slider-min>
+  <dss-slider-max>100</dss-slider-max>
+</dss-slider>
+<br>
+<br>
+<dss-slider [disabled]="true" [(ngModel)]="value5" [range]="true" [min]="1000" [max]="10000">
+  <dss-slider-label>Aluguel</dss-slider-label>
+  <dss-slider-value>de {{ value5[0] | currency:'BRL' }} à {{ value5[1] | currency:'BRL' }}</dss-slider-value>
+  <dss-slider-min>
+    <div>Mínimo</div>
+    <div>R$ 1.000,00</div>
+  </dss-slider-min>
+  <dss-slider-max>
+    <div style="text-align: right">Máximo</div>
+    <div style="text-align: right">R$ 10.000,00</div>
+  </dss-slider-max>
+</dss-slider>
+<br>
+<br>
+<dss-slider [disabled]="true" [(ngModel)]="value6">
+  <dss-slider-label>Escala</dss-slider-label>
+  <dss-slider-value>{{ value6 }}</dss-slider-value>
+  <dss-slider-min>0</dss-slider-min>
+  <dss-slider-max>100</dss-slider-max>
+  <input dssSliderInput type="text" inputmode="numeric" disabled [(ngModel)]="value6">
+</dss-slider>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">Form</h3>
+<br>
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-slider formControlName="slider">
+    <dss-slider-label>Escala</dss-slider-label>
+    <dss-slider-value>{{ formGroup.get('slider').value }}</dss-slider-value>
+    <dss-slider-min>0</dss-slider-min>
+    <dss-slider-max>100</dss-slider-max>
+  </dss-slider>
+  <br>
+  <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+</form>

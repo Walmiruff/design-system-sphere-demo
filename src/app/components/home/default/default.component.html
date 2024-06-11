@@ -1,0 +1,5 @@
+<ul dssTypography type="body">
+  <li *ngFor="let item of items">
+    <a [routerLink]="item.link" [class.pending]="item.pending">{{ item.label }}</a>
+  </li>
+</ul>

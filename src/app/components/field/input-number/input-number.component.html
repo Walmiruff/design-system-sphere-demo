@@ -1,0 +1,126 @@
+<h2 dssTypography type="figure1">Input Number</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="Valor" [(ngModel)]="input1" dssInputNumber>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<div dssTypography type="body">{{ input1 }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Com dssIconClear</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="Valor" [(ngModel)]="inputClear" dssInputNumber>
+  <span dssHint>Digite apenas números</span>
+  <span dssIconClear type="text">Limpar</span>
+</dss-form-field>
+<br>
+<div dssTypography type="body">{{ inputClear }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Ícone</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="Valor" [(ngModel)]="input2" dssInputNumber>
+  <span dssIcon name="bag-of-money-dollar"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<div dssTypography type="body">{{ input2 }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Símbolo de Dolar</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="Valor" [(ngModel)]="input3" dssInputNumber [options]="{ prefix: '$ ' }">
+  <span dssIcon name="bag-of-money-dollar"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<div dssTypography type="body">{{ input3 }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Desabilitado</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="Valor" [(ngModel)]="input4" [disabled]="true" dssInputNumber>
+  <span dssIcon name="bag-of-money-dollar"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<div dssTypography type="body">{{ input4 }}</div>
+<br>
+<br>
+<h3 dssTypography type="h3">Em um Formulário</h3>
+<br>
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <dss-form-field [isError]="isError('input5')">
+    <input type="tel" inputmode="numeric" aria-label="Valor" formControlName="input5" dssInputNumber>
+    <span dssHint>Digite apenas números</span>
+  </dss-form-field>
+  <br>
+  <div dssTypography type="body">{{ formGroup.get('input5').value | currency: 'BRL' }}</div>
+  <br>
+  <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+</form>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Label</h3>
+<br>
+<dss-form-field>
+  <input id="input-number-6" type="tel" inputmode="numeric" [(ngModel)]="input6" dssInputNumber>
+  <label dssLabel for="input-number-6">Valor</label>
+  <span dssIcon name="bag-of-money-dollar"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Mím (0) e Max (10)</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="value" [(ngModel)]="input7" dssInputNumber [options]="{ min: 0, max: 10 }">
+  <span dssIcon name="bag-of-money-dollar"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Número Negativo</h3>
+<br>
+<dss-form-field>
+  <input type="tel" inputmode="numeric" aria-label="value" [(ngModel)]="input8" dssInputNumber>
+  <span dssIcon name="bag-of-money-dollar"></span>
+  <span dssHint>Digite apenas números</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Label no campo</h3>
+<br>
+<dss-form-field>
+  <input
+    id="input-number-9"
+    type="tel"
+    inputmode="numeric"
+    [(ngModel)]="input9"
+    dssInputNumber
+    [options]="{ prefix: '$ ' }"
+  />
+  <label dssLabel for="input-number-9">Renda mensal</label>
+</dss-form-field>
+<br>
+{{ input9 }}
+<br>
+<br>
+<h3 dssTypography type="h3">Em um Formulário com label no campo</h3>
+<br>
+<form [formGroup]="formGroup">
+  <dss-form-field [isError]="isError('input10')">
+    <input type="tel" inputmode="numeric" formControlName="input10" dssInputNumber>
+    <label dssLabel for="input-number-10">Renda mensal</label>
+  </dss-form-field>
+  <br>
+</form>
+<div dssTypography type="body">{{ formGroup.get('input10').value | currency: 'BRL' }}</div>

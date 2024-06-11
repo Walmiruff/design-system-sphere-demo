@@ -1,0 +1,75 @@
+<h2 dssTypography type="figure1">Text Area</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-form-field>
+  <textarea [(ngModel)]="textArea1" maxlength="256"></textarea>
+  <label dssLabel>Mensagem</label>
+  <span dssHint align="start">*Preenchimento obrigatório</span>
+  <span dssHint align="end">{{ textArea1.length }}/256</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Sem Contador</h3>
+<br>
+<dss-form-field>
+  <textarea [(ngModel)]="textArea2"></textarea>
+  <label dssLabel>Mensagem</label>
+  <span dssHint>*Preenchimento obrigatório</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Desabilitado</h3>
+<br>
+<dss-form-field>
+  <textarea [(ngModel)]="textArea3" [disabled]="true"></textarea>
+  <label dssLabel>Mensagem</label>
+  <span dssHint align="end">{{ textArea3.length }}/256</span>
+</dss-form-field>
+<br>
+<br>
+<dss-form-field>
+  <textarea [(ngModel)]="textArea4" [disabled]="true"></textarea>
+  <label dssLabel>Mensagem</label>
+  <span dssHint>*Preenchimento obrigatório</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Em um Formulário</h3>
+<br>
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-form-field [isError]="formGroup.invalid" [isSuccess]="formGroup.valid">
+    <textarea formControlName="textArea5" maxlength="25"></textarea>
+    <label dssLabel>Label</label>
+    <span dssIcon name="accelerator"></span>
+    <span dssHint>Dica</span>
+    <span dssHint align="end">{{formGroup.get('textArea5').value?.length}}/25</span>
+    <span *ngIf="formGroup.get('textArea5').errors?.required" dssError>Campo obrigatório!</span>
+    <span *ngIf="formGroup.get('textArea5').errors?.minlength" dssError>Mínimo de 2 caracteres!</span>
+  </dss-form-field>
+  <br>
+  <button dssOutlineButton>Enviar</button>
+</form>
+<br>
+<br>
+<h3 dssTypography type="h3">Com MaxLength e Status de Erro</h3>
+<br>
+<dss-form-field>
+  <textarea [(ngModel)]="textArea6" data-maxlength="25"></textarea>
+  <label dssLabel>Mensagem</label>
+  <span dssHint align="start">*Preenchimento obrigatório</span>
+  <span dssHint align="end">{{ textArea6.length }}/25</span>
+  <span *ngIf="textArea6.length > 25" dssError>Máximo de 25 caracteres</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Opção para Limpar</h3>
+<br>
+<dss-form-field>
+  <textarea [(ngModel)]="textArea7" maxlength="256"></textarea>
+  <label dssLabel>Mensagem</label>
+  <span dssIconClear></span>
+  <span dssHint align="start">*Preenchimento obrigatório</span>
+  <span dssHint align="end">{{ textArea7?.length ? textArea7?.length : 0 }}/256</span>
+</dss-form-field>

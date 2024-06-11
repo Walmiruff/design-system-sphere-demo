@@ -1,0 +1,122 @@
+<div class="dss-display-flex dss-pt-sm-1.5 dss-pt-md-3">
+  <header dssHeader>
+    <span
+      class="dss-display-inline-block"
+      style="cursor: pointer"
+      tabindex="1"
+      dssIcon
+      name="burger-menu-1px"
+      size="medium"
+      dssTypography
+      color="white"
+      (click)="expanded = !expanded"
+    ></span>
+  </header>
+  <dss-menu [expanded]="expanded">
+    <dss-menu-item
+      *ngFor="let item of menu"
+      [disabled]="item?.disabled"
+      [selected]="page === item.title"
+      (click)="open($event, item.title, item.link)"
+    >
+      <span *ngIf="item.icon" dssIcon [name]="item.icon.name" dssTypography [color]="item.icon?.color"></span>
+      <dss-menu-item-title [isBold]="item?.isBold">{{ item.title }}</dss-menu-item-title>
+      <dss-menu-item-description *ngIf="item?.description" [highlight]="item.description?.highlight">
+        {{ item.description.value }}
+      </dss-menu-item-description>
+      <ng-container [ngTemplateOutlet]="templateSubmenu" [ngTemplateOutletContext]="{ item: item }"></ng-container>
+    </dss-menu-item>
+    <dss-menu-item (click)="expanded = !expanded" [toggleMenu]="true">
+      <span dssIcon [name]="expanded ? 'arrow-left' : 'arrow-right'"></span>
+    </dss-menu-item>
+  </dss-menu>
+
+  <ng-template #templateSubmenu let-item="item">
+    <dss-submenu *ngIf="item?.submenu" (goBackSelect)="goBack()">
+      <span *ngIf="item.icon" dssIcon [name]="item.icon.name" dssTypography [color]="item.icon?.color"></span>
+      <dss-submenu-title>{{ item.title }}</dss-submenu-title>
+      <dss-menu-item
+        *ngFor="let subitem of item.submenu"
+        [disabled]="subitem?.disabled"
+        [selected]="page === subitem.title"
+        (click)="open($event, subitem.title, subitem.link)"
+      >
+        <span *ngIf="subitem.icon" dssIcon [name]="subitem.icon.name" dssTypography [color]="subitem.icon?.color"></span>
+        <dss-menu-item-title [isBold]="subitem?.isBold">{{ subitem.title }}</dss-menu-item-title>
+        <dss-menu-item-description *ngIf="subitem?.description" [highlight]="subitem.description?.highlight">
+          {{ subitem.description.value }}
+        </dss-menu-item-description>
+        <ng-container [ngTemplateOutlet]="templateSubmenu" [ngTemplateOutletContext]="{ item: subitem }"></ng-container>
+      </dss-menu-item>
+    </dss-submenu>
+  </ng-template>
+
+  <main class="dss-py-0.5">
+    <ul dssTypography type="body">
+      <li><a [routerLink]="['/default']">Default</a></li>
+      <li><a [routerLink]="['/old']">Old</a></li>
+    </ul>
+
+    <h2 dssTypography type="figure1">Menu</h2>
+
+    <ul dssTypography type="body">
+      <li><a href="#" [routerLink]="['investments']">Investimentos</a></li>
+      <li><a href="#" [routerLink]="['loans']">Empréstimos</a></li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <h3 dssTypography type="h3" class="dss-text-capitalize">{{ page }}</h3>
+    <br />
+    <br />
+    <p dssTypography type="body">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores, dolore in sapiente sint sunt vero? Amet autem culpa
+      deleniti dolorem ducimus error explicabo, ipsa minus possimus quidem rem, tempore!
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Asperiores enim explicabo fuga mollitia reiciendis rerum sed, similique. A at cum dignissimos minima odio officia voluptas voluptate.
+      Ab aperiam earum error expedita possimus ut voluptatibus? Ea ex in quos?
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Adipisci aliquam beatae, dolore eveniet odit repellendus reprehenderit sapiente sunt unde voluptatibus! Alias animi dolore dolorem
+      doloremque eaque eos error harum iure labore magni nulla porro, quasi recusandae similique sunt!
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Aliquid atque beatae cumque eaque esse explicabo fugiat illum ipsam, laboriosam laborum molestiae molestias neque nesciunt nobis quasi
+      quo recusandae sapiente sequi sint tempore temporibus tenetur voluptatibus. Dignissimos, eaque voluptatem.
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Culpa eligendi exercitationem placeat ratione! Accusamus, adipisci at eaque eligendi enim error labore magnam minima nam nemo nobis,
+      odit quae quaerat quia quidem quod reprehenderit. Animi doloremque fuga in obcaecati.
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque delectus fugiat incidunt iusto labore quia. Ab at doloremque
+      hic perferendis quia! Asperiores dolore eaque facilis fuga hic magnam similique.
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Ab accusantium adipisci aliquid aspernatur at atque dignissimos, dolor doloremque facere ipsa iusto minus modi nam neque nesciunt
+      nihil nobis nulla, pariatur perferendis quae quis saepe veniam vero voluptas voluptate?
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Assumenda cumque, cupiditate deserunt distinctio, labore laboriosam laborum magni nam nobis pariatur perferendis quam quas quis quos
+      saepe temporibus tenetur totam. Amet blanditiis doloribus eaque impedit, labore odio unde vitae!
+    </p>
+    <br />
+    <p dssTypography type="body">
+      A accusamus asperiores assumenda consequuntur, deserunt dignissimos dolore eveniet excepturi libero magnam, maiores minima mollitia
+      natus necessitatibus obcaecati perferendis quod quos rerum saepe sequi tempora tempore tenetur veritatis voluptate voluptates.
+    </p>
+    <br />
+    <p dssTypography type="body">
+      Aperiam assumenda doloremque eligendi explicabo fuga hic impedit ipsa, maxime necessitatibus nemo nisi obcaecati omnis possimus quos,
+      reprehenderit similique, vel! Ad beatae dolorum et iure nam quas quia repellendus tempora?
+    </p>
+  </main>
+</div>

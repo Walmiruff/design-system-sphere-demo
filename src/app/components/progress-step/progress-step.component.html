@@ -1,0 +1,46 @@
+<h2 dssTypography type="figure1">Progress Step</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<br>
+<dss-progress-step [activeSteps]="activeSteps1">
+  <dss-progress-step-item>Etapa 1</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 2</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 3</dss-progress-step-item>
+</dss-progress-step>
+<button dssOutlineButton (click)="goBack('activeSteps1')">Voltar</button>
+&nbsp;&nbsp;
+<button dssFilledButton (click)="progress('activeSteps1')">Avançar</button>
+<br>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">With Numbers</h3>
+<br>
+<dss-progress-step [itemsNumber]="true" [activeSteps]="activeSteps2">
+  <dss-progress-step-item>Etapa 1</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 2</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 3</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 4</dss-progress-step-item>
+</dss-progress-step>
+<button dssOutlineButton (click)="goBack('activeSteps2')">Voltar</button>
+&nbsp;&nbsp;
+<button dssFilledButton (click)="progress('activeSteps2')">Avançar</button>
+<br>
+<br>
+<br>
+<br>
+<h3 dssTypography type="h3">With Number and Item Active</h3>
+<br>
+<dss-progress-step [itemsNumber]="true" [activeSteps]="activeSteps3">
+  <dss-progress-step-item>Etapa 1</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 2</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 3</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 4</dss-progress-step-item>
+  <dss-progress-step-item>Etapa 5</dss-progress-step-item>
+</dss-progress-step>
+<br>
+<button dssOutlineButton (click)="goBack('activeSteps3')">Voltar</button>
+&nbsp;&nbsp;
+<button dssFilledButton (click)="progress('activeSteps3')">Avançar</button>
+

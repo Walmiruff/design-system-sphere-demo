@@ -1,0 +1,91 @@
+<div style="padding-bottom: 500px">
+  <h2 dssTypography type="figure1">Search Bar</h2>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">No Header</h3>
+  <br />
+  <br />
+  <header
+    class="dss-position-relative dss-display-flex dss-justify-content-between dss-align-items-center dss-p-1"
+    dssHeader
+    dssTypography
+    type="body"
+    color="white"
+    style="min-height: 64px"
+  >
+    <div class="dss-display-flex dss-align-items-center dss-justify-content-between">
+      <span dssIcon name="santander" size="large" dssTypography color="white"></span>
+      <h1 class="dss-display-sm-none dss-display-md-block dss-ml-0.5">Santander</h1>
+    </div>
+    <ul class="dss-display-flex dss-gap-md-1" style="list-style: none">
+      <li class="dss-display-flex dss-align-items-center dss-mr-md-1">
+        <dss-search-bar [header]="true">
+          <input type="text" dssSearchBarInput (searchValue)="filter1($event)" />
+          <dss-autocomplete>
+            <dss-autocomplete-item *ngFor="let option of filteredOptions1; index as i">
+              <dss-autocomplete-item-title>{{ option.title }}</dss-autocomplete-item-title>
+              <dss-autocomplete-item-subtitle>{{ option.subtitle }}</dss-autocomplete-item-subtitle>
+            </dss-autocomplete-item>
+            <dss-autocomplete-item-last *ngFor="let option of latestSearches1; index as i">
+              <dss-autocomplete-item-title>{{ option.title }}</dss-autocomplete-item-title>
+            </dss-autocomplete-item-last>
+          </dss-autocomplete>
+        </dss-search-bar>
+      </li>
+      <li class="dss-display-flex dss-align-items-center dss-mr-md-1">
+        <button class="sample-search-button">
+          <span class="dss-display-sm-none dss-display-md-block">Notificações</span>
+          <span class="dss-display-md-none" dssIcon name="assisted-navigation" dssTypography color="white"></span>
+        </button>
+      </li>
+      <li class="dss-display-flex dss-align-items-center">
+        <button class="sample-search-button">
+          <span class="dss-display-sm-none dss-display-md-block">Acessar</span>
+          <span class="dss-display-md-none" dssIcon name="accelerator" dssTypography color="white"></span>
+        </button>
+      </li>
+    </ul>
+  </header>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Abrindo para cima</h3>
+  <br />
+  <br />
+  <dss-search-bar>
+    <input type="text" dssSearchBarInput (searchValue)="filter2($event)" />
+    <dss-autocomplete openDirection="up">
+      <dss-autocomplete-item *ngFor="let option of filteredOptions2; index as i">
+        <dss-autocomplete-item-title>{{ option.title }}</dss-autocomplete-item-title>
+        <dss-autocomplete-item-subtitle>{{ option.subtitle }}</dss-autocomplete-item-subtitle>
+      </dss-autocomplete-item>
+    </dss-autocomplete>
+  </dss-search-bar>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Sem Autocomplete</h3>
+  <br />
+  <br />
+  <dss-search-bar>
+    <input type="text" dssSearchBarInput (searchValue)="filter3($event)" />
+  </dss-search-bar>
+  <br />
+  <br />
+  <ng-container *ngIf="filteredOptions3?.length > 0">
+    <dss-list type="text">
+      <dss-list-item *ngFor="let option of filteredOptions3" (click)="selectedItem3 = option">
+        <dss-list-item-title>{{ option.title }} - {{ option.subtitle }}</dss-list-item-title>
+        <dss-list-item-actions></dss-list-item-actions>
+      </dss-list-item>
+    </dss-list>
+  </ng-container>
+  <br />
+  <div>{{ selectedItem3 | json }}</div>
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Desabilitado</h3>
+  <br />
+  <br />
+  <dss-search-bar [disabled]="true">
+    <input type="text" disabled dssSearchBarInput />
+  </dss-search-bar>
+</div>

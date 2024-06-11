@@ -1,0 +1,103 @@
+<h2 dssTypography type="figure1">Radio Group</h2>
+<br>
+<br>
+<h2 dssTypography type="h3">Default (Com Options)</h2>
+<br>
+<br>
+<dss-radio-group name="radio-1" [options]="options" [(ngModel)]="value1"></dss-radio-group>
+<br>
+<div>{{ value1 }}</div>
+<br>
+<br>
+<h2 dssTypography type="h3">Desabilitado (With Options)</h2>
+<br>
+<br>
+<dss-radio-group name="radio-2" [disabled]="true" [options]="options" [(ngModel)]="value2"></dss-radio-group>
+<br>
+<div>{{ value2 }}</div>
+<br>
+<br>
+<h2 dssTypography type="h3">Default (Com Radio Button e Bordar)</h2>
+<br>
+<dss-radio-group [(ngModel)]="value3">
+  <dss-radio-button value="1" [hasDivider]="true">Option 1</dss-radio-button>
+  <dss-radio-button value="2" [hasDivider]="true">Option 2</dss-radio-button>
+</dss-radio-group>
+<br>
+<div>{{ value3 }}</div>
+<br>
+<br>
+<h2 dssTypography type="h3">Desabilitado (Com Radio Button)</h2>
+<br>
+<dss-radio-group [(ngModel)]="value4">
+  <dss-radio-button value="1" [disabled]="true">Option 1</dss-radio-button>
+  <dss-radio-button value="2" [disabled]="true">Option 2</dss-radio-button>
+</dss-radio-group>
+<br>
+<br>
+<h2 dssTypography type="h3">Form (Com Radio Button)</h2>
+<br>
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-radio-group formControlName="value6">
+    <dss-radio-button value="1">Option 1</dss-radio-button>
+    <dss-radio-button value="2">Option 2</dss-radio-button>
+  </dss-radio-group>
+  <br>
+  <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+</form>
+<br>
+<br>
+<h2 dssTypography type="h3">Com mais de uma linha na label</h2>
+<br>
+<br>
+<dss-radio-group>
+  <dss-radio-button value="1">
+    Option 1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto at aut deserunt dolorum error facilis iste magnam, nam nemo non nostrum, numquam optio, quis quo tenetur totam? Quaerat, recusandae.
+    Amet assumenda beatae commodi deserunt dolor ipsum molestiae nemo, neque nesciunt nulla provident quae sapiente similique sunt velit. A ad dolorem facilis impedit ipsa nobis possimus quam quia quis ullam?
+  </dss-radio-button>
+  <dss-radio-button value="2">Option 2</dss-radio-button>
+</dss-radio-group>
+<br>
+<br>
+<h2 dssTypography type="h3">Acessibilidade</h2>
+<br>
+<br>
+<label id="tbb" dssTypography type="body">The Big Bang: The Theory</label>
+<dss-radio-group [(ngModel)]="value5" ariaLabelledBy="tbb">
+  <dss-radio-button value="penny">Penny</dss-radio-button>
+  <dss-radio-button value="sheldon">Sheldon</dss-radio-button>
+  <dss-radio-button value="leonard">Leonard</dss-radio-button>
+</dss-radio-group>
+<br>
+<br>
+<h2 dssTypography type="h3">Com conteúdo após o Radio Button</h2>
+<br>
+<dss-radio-group [(ngModel)]="value6">
+  <dss-radio-button value="1">
+    Option 1
+
+    <dss-radio-button-after-content>
+      <div class="dss-grid dss-justify-content-between dss-align-items-center dss-no-gutter">
+        <span dssTypography type="caption">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula.
+        </span>
+
+        <button dssButton>Leia mais</button>
+      </div>
+    </dss-radio-button-after-content>
+  </dss-radio-button>
+
+  <dss-radio-button value="2">
+    Option 2
+
+    <dss-radio-button-after-content>
+      <div class="dss-grid dss-justify-content-between dss-align-items-center dss-no-gutter">
+        <span dssTypography type="caption">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus.
+        </span>
+
+        <button dssButton>Leia mais</button>
+      </div>
+    </dss-radio-button-after-content>
+  </dss-radio-button>
+</dss-radio-group>

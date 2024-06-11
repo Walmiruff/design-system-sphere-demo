@@ -6,10 +6,10 @@ import { routes } from './components-routing.module';
   styleUrls: ['./components.component.scss']
 })
 export class ComponentsComponent implements OnInit {
-  public routes = routes[0].children;
+  public routes: any;
   constructor() { }
 
   ngOnInit(): void {
-    console.log('routes', this.routes);
+    this.routes = routes[0].children?.sort((a, b) => (a.path || '').localeCompare(b.path || ''));
   }
 }

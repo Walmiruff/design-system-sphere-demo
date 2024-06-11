@@ -1,0 +1,25 @@
+[class*='dss-col'] > div:not(.dss-grid),
+[class*='dss-gap'] > div {
+  background-color: #F0F0F0;
+  border: 1px solid #CCCCCC;
+  padding: 8px;
+  text-align: center;
+}
+
+[class*='dss-gap'] > div {
+  height: 200px;
+  line-height: 192px;
+  min-width: 200px;
+  width: calc((100% / 6) - 24px);
+}
+
+.dss-grid[style*="height"] {
+  background-color: #444444;
+  border-radius: 4px;
+}
+
+.container-examples .dss-grid-container-center,
+.container-examples .dss-grid-container-left,
+.container-examples .dss-grid-container-fluid {
+  background-color: #6F7779;
+}

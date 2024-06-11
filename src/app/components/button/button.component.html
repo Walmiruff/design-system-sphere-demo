@@ -1,0 +1,240 @@
+<h2 dssTypography type="figure1">Button</h2>
+<br>
+<br>
+<div class="js-hidden">Count: {{ count }}</div>
+<h4 dssTypography type="figure4" class="js-hidden">Tag: button</h4>
+<section class="js-container-button-text">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Text</h3>
+  <br>
+  <br>
+  <button dssButton (click)="addCount()">Text Button</button>
+  <br>
+  <br>
+  <button dssButton (click)="addCount()" disabled>Text Button</button>
+</section>
+<section class="js-container-button-primary">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Primary</h3>
+  <br>
+  <br>
+  <button dssFilledButton (click)="addCount()">Primary button</button>
+  <br>
+  <br>
+  <button dssFilledButton (click)="addCount()" disabled>Primary button</button>
+  <br>
+  <br>
+  <button dssFilledButton [isSmall]="true" (click)="addCount()">Primary button small</button>
+  <br>
+  <br>
+  <button dssFilledButton [isSmall]="true" (click)="addCount()" disabled>Primary button small</button>
+</section>
+<section class="js-container-button-secondary">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Secondary</h3>
+  <br>
+  <br>
+  <button dssOutlineButton (click)="addCount()">Secondary button</button>
+  <br>
+  <br>
+  <button dssOutlineButton (click)="addCount()" disabled>Secondary button</button>
+  <br>
+  <br>
+  <button dssOutlineButton [isSmall]="true" (click)="addCount()">Secondary button small</button>
+  <br>
+  <br>
+  <button dssOutlineButton [isSmall]="true" (click)="addCount()" disabled>Secondary button small</button>
+</section>
+<section class="js-container-button-fab">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Fab</h3>
+  <br>
+  <br>
+  <button dssFabButton (click)="addCount()">
+    <span dssIcon name="chat"></span>
+  </button>
+  <br>
+  <br>
+  <button dssFabButton (click)="addCount()" disabled>
+    <span dssIcon name="chat"></span>
+  </button>
+</section>
+<section class="js-container-button-webview">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">WebView</h3>
+  <br>
+  <br>
+  <button dssButton (click)="addCount()" class="dss-webview">Text Button</button>
+  <br>
+  <br>
+  <button dssFilledButton (click)="addCount()" class="dss-webview">Primary Button</button>
+  <br>
+  <br>
+  <button dssOutlineButton (click)="addCount()" class="dss-webview">Secondary Button</button>
+  <br>
+  <br>
+</section>
+<section class="js-container-button-large-text">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Botão com texto grande</h3>
+  <br>
+  <br>
+  <button dssButton (click)="addCount()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda
+    consequatur consequuntur culpa cumque cupiditate doloremque, eum, exercitationem explicabo hic in labore nihil
+    officia optio perferendis quibusdam quod repellat unde.</button>
+  <br>
+  <br>
+  <button dssFilledButton (click)="addCount()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+    deleniti obcaecati perspiciatis porro quae quis repellat? Cumque eaque, expedita labore molestiae, non praesentium
+    quae quia quidem reprehenderit tempore voluptas voluptatibus!</button>
+  <br>
+  <br>
+  <button dssOutlineButton (click)="addCount()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+    deleniti obcaecati perspiciatis porro quae quis repellat? Cumque eaque, expedita labore molestiae, non praesentium
+    quae quia quidem reprehenderit tempore voluptas voluptatibus!</button>
+</section>
+<section class="js-container-icon-button">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Botão com Ícone</h3>
+  <br>
+  <br>
+  <button dssIconButton (click)="addCount()">
+    <span dssIcon name="block-in-a-circle"></span>Icon Button
+  </button>
+  <br>
+  <br>
+  <button dssIconButton (click)="addCount()">
+    <span dssIcon name="add-in-a-circle"></span>Icon Button
+  </button>
+  <br>
+  <br>
+  <button dssIconButton (click)="addCount()" disabled>
+    <span dssIcon name="add-in-a-circle"></span>Icon Button
+  </button>
+</section>
+<br>
+<br>
+<h4 dssTypography type="figure4" class="js-hidden">Tag: a</h4>
+<section class="js-container-button-text">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Text</h3>
+  <br>
+  <br>
+  <a href="#" dssButton (click)="addCount($event)">Text button</a>
+  <br>
+  <br>
+  <a href="#" dssButton (click)="addCount($event)" tabindex="-1" disabled>Text button</a>
+</section>
+<section class="js-container-button-primary">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Primary</h3>
+  <br>
+  <br>
+  <a href="#" dssFilledButton (click)="addCount($event)">Primary button</a>
+  <br>
+  <br>
+  <a href="#" dssFilledButton (click)="addCount($event)" tabindex="-1" disabled="">Primary button</a>
+</section>
+<section class="js-container-button-secondary">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Secondary</h3>
+  <br>
+  <br>
+  <a href="#" dssOutlineButton (click)="addCount($event)">Secondary button</a>
+  <br>
+  <br>
+  <a href="#" dssOutlineButton (click)="addCount($event)" tabindex="-1" disabled>Secondary button</a>
+</section>
+<section class="js-container-button-fab">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Fab</h3>
+  <br>
+  <br>
+  <a href="#" dssFabButton (click)="addCount($event)">
+    <span dssIcon name="chat"></span>
+  </a>
+  <br>
+  <br>
+  <a href="#" dssFabButton (click)="addCount($event)" tabindex="-1" disabled>
+    <span dssIcon name="chat"></span>
+  </a>
+</section>
+<section class="js-container-button-webview">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">WebView</h3>
+  <br>
+  <br>
+  <a href="#" dssButton (click)="addCount($event)" class="dss-webview">Text Button</a>
+  <br>
+  <br>
+  <a href="#" dssFilledButton (click)="addCount($event)" class="dss-webview">Primary Button</a>
+  <br>
+  <br>
+  <a href="#" dssOutlineButton (click)="addCount($event)" class="dss-webview">Secondary Button</a>
+  <br>
+  <br>
+</section>
+<section class="js-container-button-large-text">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Botão com texto grande</h3>
+  <br>
+  <br>
+  <a href="#" dssButton (click)="addCount($event)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+    assumenda consequatur consequuntur culpa cumque cupiditate doloremque, eum, exercitationem explicabo hic in labore
+    nihil officia optio perferendis quibusdam quod repellat unde.</a>
+  <br>
+  <br>
+  <a href="#" dssFilledButton (click)="addCount($event)">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur deleniti obcaecati perspiciatis porro quae quis repellat? Cumque eaque, expedita labore molestiae, non
+    praesentium quae quia quidem reprehenderit tempore voluptas voluptatibus!</a>
+  <br>
+  <br>
+  <a href="#" dssOutlineButton (click)="addCount($event)">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Aspernatur deleniti obcaecati perspiciatis porro quae quis repellat? Cumque eaque, expedita labore molestiae, non
+    praesentium quae quia quidem reprehenderit tempore voluptas voluptatibus!</a>
+</section>
+<section class="js-container-icon-button">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Botão com Ícone</h3>
+  <br>
+  <br>
+  <a href="#" dssIconButton (click)="addCount($event)">
+    <span dssIcon name="block-in-a-circle"></span>Icon Button
+  </a>
+  <br>
+  <br>
+  <a href="#" dssIconButton (click)="addCount($event)">
+    <span dssIcon name="add-in-a-circle"></span>Icon Button
+  </a>
+  <br>
+  <br>
+  <a href="#" dssIconButton (click)="addCount($event)" disabled>
+    <span dssIcon name="add-in-a-circle"></span>Icon Button
+  </a>
+</section>

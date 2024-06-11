@@ -1,0 +1,60 @@
+<h2 dssTypography type="figure1">Content Loader</h2>
+<br />
+<br />
+<h3 dssTypography type="h3">Usando para carregar parte de um conteúdo</h3>
+<br />
+<br />
+<dss-accordion>
+  <dss-accordion-item #dssAccordionItem (opened)="openAccordion()" (closed)="closeAccordion()">
+    <div role="button" tabindex="0" dssAccordionItemTitle (keyup.enter)="dssAccordionItem.expand()">Clique para carregar o conteúdo</div>
+    <ng-container dssAccordionItemBody>
+      <div aria-atomic="true" aria-live="polite">
+        {{ bodyAccordion }}
+      </div>
+      <dss-content-loader [show]="showDefault" [path]="'assets/' + theme + '/content-loader/default.json'"></dss-content-loader>
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br />
+<br />
+<h3 dssTypography type="h3">Botão de feedback - Erro</h3>
+<br />
+<br />
+<button dssOutlineButton (click)="feedback('error')" style="width: 250px">
+  <dss-content-loader [show]="showFeedbackError" [isError]="isError" [path]="'assets/' + theme + '/content-loader/default.json'">
+    <dss-content-loader-text>Copiar número do cartão</dss-content-loader-text>
+    <dss-content-loader-feedback>Não foi possível copiar</dss-content-loader-feedback>
+  </dss-content-loader>
+</button>
+<br />
+<br />
+<button dssButton (click)="clear('error')" [disabled]="!isError">Reset botão de feedback - Erro</button>
+<br />
+<br />
+<h3 dssTypography type="h3">Botão de feedback - Sucesso</h3>
+<br />
+<br />
+<button dssFilledButton (click)="feedback('success')" style="width: 250px">
+  <dss-content-loader
+    [show]="showFeedbackSuccess"
+    [isSuccess]="isSuccess"
+    [isContrast]="true"
+    [path]="'assets/' + theme + '/content-loader/default.json'"
+  >
+    <dss-content-loader-text>Copiar número do cartão</dss-content-loader-text>
+    <dss-content-loader-feedback>Número copiado</dss-content-loader-feedback>
+  </dss-content-loader>
+</button>
+<br />
+<br />
+<button dssButton (click)="clear('success')" [disabled]="!isSuccess">Reset botão de feedback - Sucesso</button>
+<br />
+<br />
+<h3 dssTypography type="h3">Loader no botão</h3>
+<br />
+<br />
+<button dssFilledButton (click)="submit()" [disabled]="showLoadingSubmitting">
+  <dss-content-loader [show]="showLoadingSubmitting" [isContrast]="true" [path]="'assets/' + theme + '/content-loader/default.json'">
+    <dss-content-loader-text>Buscar</dss-content-loader-text>
+  </dss-content-loader>
+</button>

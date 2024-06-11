@@ -1,0 +1,145 @@
+<h2 dssTypography type="figure1">Upload</h2>
+<br />
+<br />
+<h3 dssTypography type="h3">Padrão</h3>
+<br />
+<dss-upload name="files1" [label]="'Solte os arquivos aqui ou clique para fazer upload.'" [(arrayOfFiles)]="files1"></dss-upload>
+<br />
+<dss-list type="text">
+  <dss-list-item *ngFor="let file of files1; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFile(i, 'files1')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>
+<br />
+<h3 dssTypography type="h3">Com Ícone</h3>
+<br />
+<dss-upload
+  name="files2"
+  icon="enter-fullscreen"
+  [label]="'Solte os arquivos aqui ou clique para fazer upload.'"
+  [(arrayOfFiles)]="files2"
+></dss-upload>
+<br />
+<dss-list type="text">
+  <dss-list-item *ngFor="let file of files2; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFile(i, 'files2')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>
+<br />
+<h3 dssTypography type="h3">Desabilitado</h3>
+<br />
+<dss-upload
+  name="files3"
+  [label]="'Solte os arquivos aqui ou clique para fazer upload.'"
+  [(arrayOfFiles)]="files3"
+  [disabled]="true"
+></dss-upload>
+<br />
+<br />
+<h3 dssTypography type="h3">Com NgModel</h3>
+<br />
+<dss-upload name="filesList1" [label]="'Solte os arquivos aqui ou clique para fazer upload.'" [(ngModel)]="filesList1"></dss-upload>
+<br />
+<dss-list type="text">
+  <dss-list-item *ngFor="let file of files4; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFileList(i, 'filesList1')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>
+<br />
+<br />
+<h3 dssTypography type="h3">Em um Formulário</h3>
+<br />
+<form [formGroup]="formGroup">
+  <dss-upload name="filesList2" [label]="'Solte os arquivos aqui ou clique para fazer upload.'" formControlName="upload"></dss-upload>
+</form>
+<br />
+<dss-list type="text" class="dss-display-block dss-mb-1">
+  <dss-list-item *ngFor="let file of formGroup.get('upload').value; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFileList(i, 'upload')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>
+<button dssFilledButton (click)="submit()" [disabled]="formGroup.invalid">Enviar</button>
+<br />
+<br />
+<h3 dssTypography type="h3">Apenas imagens</h3>
+<br />
+<dss-upload
+  name="filesList2"
+  [label]="'Solte os arquivos de imagem aqui ou clique para fazer upload.'"
+  [(ngModel)]="filesList2"
+  accept="image/*"
+></dss-upload>
+<br />
+<dss-list type="text">
+  <dss-list-item *ngFor="let file of files5; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFileList(i, 'filesList2')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>
+<br />
+<br />
+<h3 dssTypography type="h3">Com limite de tamanho</h3>
+<br />
+<dss-upload
+  name="filesList3"
+  [label]="'Solte os arquivos de imagem aqui ou clique para fazer upload. Tamanho máximo 100KB'"
+  [(ngModel)]="filesList3"
+  accept="image/*"
+  [maxFileSize]="100000"
+></dss-upload>
+<br />
+<dss-list type="text">
+  <dss-list-item *ngFor="let file of files6; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFileList(i, 'filesList3')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>
+<br />
+<br />
+<h3 dssTypography type="h3">Limite de arquivos</h3>
+<br />
+<dss-upload
+  name="files7"
+  [label]="'Solte os arquivos aqui ou clique para fazer upload. No máximo 2 arquivos.'"
+  [(arrayOfFiles)]="files7"
+  [fileLimit]="2"
+></dss-upload>
+<br />
+<dss-list type="text">
+  <dss-list-item *ngFor="let file of files7; let i = index">
+    <dss-list-item-title>{{ file.name }}</dss-list-item-title>
+    <dss-list-item-actions>
+      <button dssIconButton aria-label="Excluir" (click)="removeFile(i, 'files7')">
+        <span dssIcon name="trash-bin" class="dss-m-0" aria-hidden="true"></span>
+      </button>
+    </dss-list-item-actions>
+  </dss-list-item>
+</dss-list>

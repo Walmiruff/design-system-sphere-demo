@@ -1,0 +1,57 @@
+<h2 dssTypography type="figure1">Quick Reply</h2>
+<br>
+<br>
+<main style="margin: -16px;">
+  <h3 dssTypography type="h3">Default</h3>
+  <br>
+  <br>
+  <div style="height: 250px;">
+    <dss-quick-reply-group [(ngModel)]="input1">
+      <dss-quick-reply *ngFor="let option of options" [value]="option.value">{{ option.label }}</dss-quick-reply>
+    </dss-quick-reply-group>
+    <br>
+    <div dssTypography type="body">{{ input1 }}</div>
+  </div>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Um Selecionado</h3>
+  <br>
+  <br>
+  <div style="height: 250px;">
+    <dss-quick-reply-group>
+      <dss-quick-reply
+        *ngFor="let option of options"
+        [value]="option.value"
+        [checked]="option.value === 3"
+      >
+        {{ option.label }}
+      </dss-quick-reply>
+    </dss-quick-reply-group>
+  </div>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Em um Formulário</h3>
+  <br>
+  <br>
+  <div style="height: 250px;">
+    <form [formGroup]="formGroup" *ngIf="options.length">
+      <dss-quick-reply-group formControlName="input3">
+        <dss-quick-reply *ngFor="let option of options" [value]="option.value">{{ option.label }}</dss-quick-reply>
+      </dss-quick-reply-group>
+    </form>
+    <br>
+    <div *ngIf="options.length" dssTypography type="body">{{ formGroup.get('input3').value }}</div>
+  </div>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Mudar Seleção</h3>
+  <br>
+  <br>
+  <div style="height: 250px;">
+    <dss-quick-reply-group [(ngModel)]="input4" [onlyOne]="false">
+      <dss-quick-reply *ngFor="let option of options" [value]="option.value">{{ option.label }}</dss-quick-reply>
+    </dss-quick-reply-group>
+    <br>
+    <div dssTypography type="body">{{ input4 }}</div>
+  </div>
+</main>

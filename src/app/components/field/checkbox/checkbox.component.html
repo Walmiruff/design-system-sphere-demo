@@ -1,0 +1,64 @@
+<h2 dssTypography type="figure1">Checkbox</h2>
+<br>
+<br>
+<h2 dssTypography type="h3">Default</h2>
+<br>
+<br>
+<dss-checkbox
+  name="checkbox-1"
+  label="Checkbox"
+></dss-checkbox>
+<br>
+<br>
+<h2 dssTypography type="h3">Checked</h2>
+<br>
+<br>
+<div style="display: flex; align-items: center">
+  <dss-checkbox
+    name="checkbox-2"
+    label="Checkbox"
+    [(ngModel)]="checkbox1"
+  ></dss-checkbox> - {{ checkbox1 }}
+</div>
+<br>
+<br>
+<h2 dssTypography type="h3">Indeterminate</h2>
+<br>
+<br>
+<dss-checkbox
+  name="checkbox-3"
+  label="Checkbox"
+  [indeterminate]="true"
+  [(ngModel)]="checkbox2"
+></dss-checkbox>
+<br>
+<br>
+<h2 dssTypography type="h3">Disabled</h2>
+<br>
+<br>
+<dss-checkbox
+  name="checkbox-4"
+  label="Checkbox"
+  [checked]="true"
+  [disabled]="true"
+></dss-checkbox>
+<dss-checkbox
+  name="checkbox-5"
+  label="Checkbox"
+  [indeterminate]="true"
+  [disabled]="true"
+></dss-checkbox>
+<dss-checkbox
+  name="checkbox-6"
+  label="Checkbox"
+  [disabled]="true"
+></dss-checkbox>
+<br>
+<br>
+<h2 dssTypography type="h3">Com mais de uma linha na label</h2>
+<br>
+<br>
+<dss-checkbox name="checkbox-7">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto at aut deserunt dolorum error facilis iste magnam, nam nemo non nostrum, numquam optio, quis quo tenetur totam? Quaerat, recusandae.
+  Amet assumenda beatae commodi deserunt dolor ipsum molestiae nemo, neque nesciunt nulla provident quae sapiente similique sunt velit. A ad dolorem facilis impedit ipsa nobis possimus quam quia quis ullam?
+</dss-checkbox>

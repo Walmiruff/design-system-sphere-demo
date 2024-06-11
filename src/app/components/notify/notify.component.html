@@ -1,0 +1,56 @@
+<h2 dssTypography type="figure1">Notify</h2>
+<br />
+<br />
+<h2 dssTypography type="h3">Default</h2>
+<br />
+<br />
+<button dssFilledButton (click)="openNotify1 = true">Notify 1</button>
+<br />
+<br />
+<dss-notify [open]="openNotify1" (closeNotify)="openNotify1 = $event">
+  <dss-notify-header>
+    <span dssIcon name="block-in-a-circle"></span>
+    <dss-notify-title>Título da Notificação 1</dss-notify-title>
+  </dss-notify-header>
+  <dss-notify-body>
+    <p>Uneasy barton seeing remark happen his has. Am possible offering at contempt mr distance stronger as an attachment excellence.</p>
+  </dss-notify-body>
+</dss-notify>
+<br />
+<br />
+<button dssFilledButton (click)="openNotify2 = true">Notify 2</button>
+<br />
+<br />
+<dss-notify [open]="openNotify2" (closeNotify)="openNotify2 = $event">
+  <dss-notify-header>
+    <span dssIcon name="block-in-a-circle"></span>
+    <dss-notify-title>Título da Notificação 2</dss-notify-title>
+  </dss-notify-header>
+  <dss-notify-body>
+    <p>Uneasy barton seeing remark happen his has. Am possible offering at contempt mr distance stronger as an attachment excellence.</p>
+  </dss-notify-body>
+  <dss-notify-footer>
+    <button dssButton (click)="openNotify2 = false">Action</button>
+  </dss-notify-footer>
+</dss-notify>
+<br />
+<br />
+<button dssFilledButton (click)="openNotify3 = true">Notify 3</button>
+<br />
+<br />
+<dss-notify [open]="openNotify3" (closeNotify)="openNotify3 = $event">
+  <dss-notify-header>
+    <span dssIcon name="block-in-a-circle"></span>
+    <dss-notify-title>Título da Notificação 3</dss-notify-title>
+  </dss-notify-header>
+  <dss-notify-body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid assumenda, atque aut beatae dolorum eaque est exercitationem fugit
+      harum hic incidunt iure officiis omnis perferendis quisquam repellat, sapiente, tenetur.
+    </p>
+  </dss-notify-body>
+  <dss-notify-footer>
+    <button dssButton (click)="openNotify3 = false">Ignorar</button>
+    <button dssButton>Action</button>
+  </dss-notify-footer>
+</dss-notify>

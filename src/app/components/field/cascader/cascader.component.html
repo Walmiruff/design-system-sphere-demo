@@ -1,0 +1,87 @@
+<h2 dssTypography type="figure1">Cascader</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default (3 Levels)</h3>
+<br>
+<br>
+<dss-form-field>
+  <dss-cascader [(ngModel)]="cascader1" [options]="options">
+    <ng-container *dssCascaderLevel="let option">
+      <dss-option [value]="option.value">{{ option.viewValue }}</dss-option>
+    </ng-container>
+  </dss-cascader>
+  <label dssLabel>Selecione uma cidade</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">2 Levels</h3>
+<br>
+<dss-form-field>
+  <dss-cascader [(ngModel)]="cascader2" [options]="options2">
+    <ng-container *dssCascaderLevel="let option">
+      <dss-option [value]="option.value">{{ option.viewValue }}</dss-option>
+    </ng-container>
+  </dss-cascader>
+  <label dssLabel>Selecione uma cidade</label>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">4 Levels</h3>
+<br>
+<dss-form-field>
+  <dss-cascader [(ngModel)]="cascader5" [options]="options3">
+    <ng-container *dssCascaderLevel="let option">
+      <dss-option [value]="option.value">{{ option.viewValue }}</dss-option>
+    </ng-container>
+  </dss-cascader>
+  <label dssLabel>Selecione uma cidade</label>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Disabled</h3>
+<br>
+<dss-form-field>
+  <dss-cascader [(ngModel)]="cascader3" [options]="options" [disabled]="true">
+    <ng-container *dssCascaderLevel="let option">
+      <dss-option [value]="option.value">{{ option.viewValue }}</dss-option>
+    </ng-container>
+  </dss-cascader>
+  <label dssLabel>Selecione uma cidade</label>
+</dss-form-field>
+<br>
+<br>
+<h3 dssTypography type="h3">Selected</h3>
+<br>
+<dss-form-field>
+  <dss-cascader [(ngModel)]="cascader4" [options]="options">
+    <ng-container *dssCascaderLevel="let option">
+      <dss-option [value]="option.value">{{ option.viewValue }}</dss-option>
+    </ng-container>
+  </dss-cascader>
+  <label dssLabel>Selecione uma cidade</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br>
+<p dssTypography type="body">{{ cascader4 }}</p>
+<br>
+<br>
+<h3 dssTypography type="h3">Form</h3>
+<br>
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-form-field [isError]="formGroup.invalid" [isSuccess]="formGroup.valid">
+    <dss-cascader formControlName="cascaderForm" [options]="options" openDirection="up">
+      <ng-container *dssCascaderLevel="let option">
+        <dss-option [value]="option.value">{{ option.viewValue }}</dss-option>
+      </ng-container>
+    </dss-cascader>
+    <label dssLabel>Selecione uma cidade</label>
+    <span dssHint>Selecione um pais, estado e cidade</span>
+    <span *ngIf="formGroup.get('cascaderForm').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br>
+  <button dssFilledButton [disabled]="formGroup.invalid">Enviar</button>
+  <br>
+  <br>
+  <p dssTypography type="body">{{ formGroup.get('cascaderForm').value }}</p>
+</form>

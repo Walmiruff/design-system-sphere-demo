@@ -1,0 +1,11 @@
+.dss-position-relative {
+  background-color: #F0F0F0;
+  height: 200px;
+}
+
+.dss-position-absolute {
+  background-color: #222222;
+  border-radius: 4px;
+  height: 32px;
+  width: 32px;
+}

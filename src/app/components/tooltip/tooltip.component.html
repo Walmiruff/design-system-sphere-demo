@@ -1,0 +1,143 @@
+<h2 dssTypography type="figure1">Tooltip</h2>
+<br />
+<br />
+<section class="js-container-tooltip-default">
+  <h3 dssTypography type="h3">Default</h3>
+  <br />
+  <br />
+  <div class="box">
+    <button dssOutlineButton dssTooltip="Tooltip top left" tooltipPosition="topLeft">Top Left</button>
+    <button dssOutlineButton dssTooltip="Tooltip top" tooltipPosition="top">Top</button>
+    <button dssOutlineButton dssTooltip="Tooltip top right" tooltipPosition="topRight">Top Right</button>
+  </div>
+  <div class="box">
+    <button dssOutlineButton dssTooltip="Tooltip left top" tooltipPosition="leftTop">Left Top</button>
+    <button dssOutlineButton dssTooltip="Tooltip right top" tooltipPosition="rightTop">Right Top</button>
+  </div>
+  <div class="box">
+    <button dssOutlineButton dssTooltip="Tooltip left" tooltipPosition="left">Left</button>
+    <button dssOutlineButton dssTooltip="Tooltip right" tooltipPosition="right">Right</button>
+  </div>
+  <div class="box">
+    <button dssOutlineButton dssTooltip="Tooltip left bottom" tooltipPosition="leftBottom">Left Bottom</button>
+    <button dssOutlineButton dssTooltip="Tooltip right bottom" tooltipPosition="rightBottom">Right Bottom</button>
+  </div>
+  <div class="box">
+    <button dssOutlineButton dssTooltip="Tooltip bottom left" tooltipPosition="bottomLeft">Bottom Left</button>
+    <button dssOutlineButton dssTooltip="Tooltip bottom" tooltipPosition="bottom">Bottom</button>
+    <button dssOutlineButton dssTooltip="Tooltip bottom right" tooltipPosition="bottomRight">Bottom Right</button>
+  </div>
+</section>
+<section class="js-container-tooltip-white">
+  <br />
+  <br />
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Branco</h3>
+  <br />
+  <br />
+  <div class="box">
+    <button dssFilledButton dssTooltip="Tooltip top left" tooltipPosition="topLeft" tooltipStyle="light">Top Left</button>
+    <button dssFilledButton dssTooltip="Tooltip top" tooltipPosition="top" tooltipStyle="light">Top</button>
+    <button dssFilledButton dssTooltip="Tooltip top right" tooltipPosition="topRight" tooltipStyle="light">Top Right</button>
+  </div>
+  <div class="box">
+    <button dssFilledButton dssTooltip="Tooltip left top" tooltipPosition="leftTop" tooltipStyle="light">Left Top</button>
+    <button dssFilledButton dssTooltip="Tooltip right top" tooltipPosition="rightTop" tooltipStyle="light">Right Top</button>
+  </div>
+  <div class="box">
+    <button dssFilledButton dssTooltip="Tooltip left" tooltipPosition="left" tooltipStyle="light">Left</button>
+    <button dssFilledButton dssTooltip="Tooltip right" tooltipPosition="right" tooltipStyle="light">Right</button>
+  </div>
+  <div class="box">
+    <button dssFilledButton dssTooltip="Tooltip left bottom" tooltipPosition="leftBottom" tooltipStyle="light">Left Bottom</button>
+    <button dssFilledButton dssTooltip="Tooltip right bottom" tooltipPosition="rightBottom" tooltipStyle="light">Right Bottom</button>
+  </div>
+  <div class="box">
+    <button dssFilledButton dssTooltip="Tooltip bottom left" tooltipPosition="bottomLeft" tooltipStyle="light">Bottom Left</button>
+    <button dssFilledButton dssTooltip="Tooltip bottom" tooltipPosition="bottom" tooltipStyle="light">Bottom</button>
+    <button dssFilledButton dssTooltip="Tooltip bottom right" tooltipPosition="bottomRight" tooltipStyle="light">Bottom Right</button>
+  </div>
+</section>
+<section class="js-container-tooltip-icon">
+  <br />
+  <br />
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Ícone</h3>
+  <br />
+  <br />
+  <span
+    dssIcon
+    name="bell"
+    dssTooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores consectetur dignissimos eveniet ex
+    inventore laudantium, minus, nam pariatur possimus quam repellat repudiandae velit. Delectus excepturi nesciunt
+    praesentium provident quia?"
+    tooltipPosition="right"
+  ></span>
+</section>
+<section class="js-container-tooltip-input">
+  <br />
+  <br />
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Input</h3>
+  <br />
+  <br />
+  <dss-form-field>
+    <input type="text" [(ngModel)]="input1" dssTooltip="Digite alguma coisa..." tooltipPosition="topLeft" />
+    <label dssLabel style="pointer-events: none">Input com tooltip</label>
+    <span dssHint>Passe o mouse para uma dica</span>
+  </dss-form-field>
+</section>
+<section class="js-container-tooltip-focus">
+  <br />
+  <br />
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Input & Focus</h3>
+  <br />
+  <br />
+  <dss-form-field>
+    <input type="text" [(ngModel)]="input2" dssTooltip="Digite alguma coisa..." tooltipPosition="top" tooltipEvent="focus" />
+    <label dssLabel>Input com tooltip</label>
+    <span dssHint>Acesse o input para uma dica</span>
+  </dss-form-field>
+  <br />
+  <br />
+  <dss-form-field>
+    <input
+      type="text"
+      [(ngModel)]="input4"
+      dssTooltip="Digite alguma coisa..."
+      tooltipPosition="top"
+      tooltipEvent="focus"
+      tooltipStyle="light"
+    />
+    <label dssLabel>Input com tooltip</label>
+    <span dssHint>Acesse o input para uma dica</span>
+  </dss-form-field>
+</section>
+<section class="js-container-tooltip-html">
+  <br />
+  <br />
+  <h3 dssTypography type="h3">Com HTML</h3>
+  <br />
+  <br />
+  <dss-form-field>
+    <input
+      aria-label="tooltip"
+      type="text"
+      [(ngModel)]="input3"
+      dssTooltip="Clique <a href='#' style='color: #fff;'>aqui</a> para colar o código."
+      tooltipPosition="topLeft"
+      [tooltipHtml]="true"
+      (tooltipHtmlClick)="addCode($event, 'Flame')"
+    />
+    <label dssLabel style="pointer-events: none">Input com tooltip</label>
+  </dss-form-field>
+  <br />
+  {{ input3 }}
+  <br />
+  <br />
+</section>

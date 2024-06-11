@@ -1,0 +1,52 @@
+<dss-data-table [dataSource]="dataSource">
+  <header dssDataTableHeader>
+    <h3 dssDataTableTitle>Data Tables</h3>
+    <dss-form-field>
+      <input type="text" [(ngModel)]="input" placeholder="Buscar na Tabela" />
+      <span dssIcon name="search" rtlt="left"></span>
+    </dss-form-field>
+  </header>
+  <table>
+    <ng-container>
+      <th *dssHeaderCell dssSort column="name">Nome</th>
+      <td *dssCell="let element">{{ element.name }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell>CPF</th>
+      <td *dssCell="let element">{{ element.cpf }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell dssSort column="code">Registro</th>
+      <td *dssCell="let element">{{ element.code }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell dssSort column="age">Idade</th>
+      <td *dssCell="let element">{{ element.age }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell>Nacionalidade</th>
+      <td *dssCell="let element">{{ element.nationality }}</td>
+    </ng-container>
+    <ng-container>
+      <th *dssHeaderCell></th>
+      <td *dssCell="let element; let indexRow = indexRow">
+        <ul>
+          <li>
+            <a href="#"><span dssIcon name="add-1px"></span></a>
+          </li>
+          <li>
+            <a href="#"><span dssIcon name="edit"></span></a>
+          </li>
+        </ul>
+      </td>
+    </ng-container>
+  </table>
+  <dss-pagination optionDefault="10"></dss-pagination>
+  <dss-data-table-not-found>
+    <div dssTypography type="body" style="align-items: center; display: flex; flex-direction: column; margin: 32px">
+      <span dssIcon name="search" size="extra-large"></span>
+      <p dssTypography type="figure3">Nenhum resultado encontrado</p>
+      <p dssTypography type="caption">Tente refazer a busca com outras palavras</p>
+    </div>
+  </dss-data-table-not-found>
+</dss-data-table>

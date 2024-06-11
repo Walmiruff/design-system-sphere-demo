@@ -1,0 +1,137 @@
+<h2 dssTypography type="figure1">Message</h2>
+<br>
+<br>
+<main style="margin: -16px;">
+  <h3 dssTypography type="h3">Atendente</h3>
+  <br>
+  <br>
+  <dss-message>
+    <span dssIcon name="santander" dssAvatar></span>
+    <span dssMessageAttendant>Deadpool - 16:20</span>
+    <dss-message-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat
+      rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non
+      perferendis quo quos repellendus, sequi?
+    </dss-message-content>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Atendente com Ícone de Atenção</h3>
+  <br>
+  <br>
+  <dss-message>
+    <span dssIcon name="santander" dssAvatar></span>
+    <span dssMessageAttendant>Deadpool - 16:20</span>
+    <dss-message-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat
+      rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non
+      perferendis quo quos repellendus, sequi?
+    </dss-message-content>
+    <span dssIcon name="circle-attention-filled"></span>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Atendente com Ícone de Info</h3>
+  <br>
+  <br>
+  <dss-message>
+    <span dssMessageAttendant>Deadpool - 16:20</span>
+    <dss-message-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat
+      rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non
+      perferendis quo quos repellendus, sequi?
+    </dss-message-content>
+    <span dssIcon name="circle-information-filled"></span>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Atendente com Ícone</h3>
+  <br>
+  <br>
+  <dss-message>
+    <span dssMessageAttendant>Deadpool - 16:20</span>
+    <dss-message-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat
+      rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non
+      perferendis quo quos repellendus, sequi?
+    </dss-message-content>
+    <span dssIcon name="account-people"></span>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Mensagem indisponível</h3>
+  <br>
+  <br>
+  <dss-message type="not-available">
+    <dss-message-content>
+      Mensagem não disponível
+    </dss-message-content>
+    <span dssIcon name="circle-attention-filled"></span>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Cliente - Lido</h3>
+  <br>
+  <br>
+  <dss-message [sent]="true">
+    <span dssMessageUser>Cisne Negro - 16:21</span>
+    <dss-message-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat
+      rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non
+      perferendis quo quos repellendus, sequi?
+    </dss-message-content>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Cliente - Enviado</h3>
+  <br>
+  <br>
+  <dss-message [sent]="false">
+    <span dssMessageUser>Cisne Negro - 16:22</span>
+    <dss-message-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat
+      rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non
+      perferendis quo quos repellendus, sequi?
+    </dss-message-content>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Cliente - Customizado</h3>
+  <br>
+  <br>
+  <dss-message [sent]="false">
+    <span dssMessageUser>Cisne Negro - 16:22</span>
+    <dss-message-content>
+      <div class="icon-pdf"><span dssIcon name="document-pdf"></span>&nbsp;documento.pdf</div>
+      <div class="msg-pdf">30mb</div>
+    </dss-message-content>
+  </dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Loading</h3>
+  <br>
+  <br>
+  <dss-message type="loading"></dss-message>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Opções</h3>
+  <br>
+  <br>
+  <dss-message type="options">
+    <dss-message-option>
+      <button dssButton>Sugestão 1</button>
+    </dss-message-option>
+    <dss-message-option>
+      <button dssButton>Sugestão 2</button>
+    </dss-message-option>
+    <dss-message-option>
+      <button dssButton>Sugestão 3</button>
+    </dss-message-option>
+    <dss-message-option>
+      <button dssButton>Sugestão 4</button>
+    </dss-message-option>
+    <dss-message-option>
+      <button dssButton>Sugestão 5</button>
+    </dss-message-option>
+  </dss-message>
+</main>

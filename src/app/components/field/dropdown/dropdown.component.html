@@ -1,0 +1,277 @@
+<h2 dssTypography type="figure1">Dropdown</h2>
+<br />
+<br />
+<h3 dssTypography type="h3">Default</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeam" [options]="teams" [raw]="raw">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um time</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>Time selecionado: {{ !raw ? selectedTeam : (selectedTeam | json) }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Option Group</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="pokemon" [optionGroups]="pokemonGroups">
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um pokemon</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>Pokemon selecionado: {{ pokemon }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeams" [options]="teams" [multiple]="true" [raw]="raw">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários times</label>
+</dss-form-field>
+<br />
+<div>Times selecionados: {{ !raw ? selectedTeams : (selectedTeams | json) }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple Option Group</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedPokemon" [optionGroups]="pokemonGroups" [multiple]="true">
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários pokemon</label>
+</dss-form-field>
+<br />
+<div>Pokemon(s) selecionado(s): {{ selectedPokemon }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Disabled</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeam2" [options]="teams" [disabled]="true">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um time</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<br />
+<h3 dssTypography type="h3">Disabled and Selected</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeam1" [options]="teams" [disabled]="true" [raw]="true">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um time</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>Time selecionado: {{ selectedTeam1 | json }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Customized</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeamCustomized" [options]="teamsCustomized">
+    <span *dssSelectedOption="let team">
+      <span dssIcon [name]="team.icon"></span>
+      &nbsp;&nbsp;{{ team.viewValue }}
+    </span>
+    <span *dssOption="let team">
+      <span dssIcon [name]="team.icon"></span>
+      &nbsp;&nbsp;{{ team.viewValue }}
+    </span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um time</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>Time selecionado: {{ selectedTeamCustomized }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Form</h3>
+<br />
+<form [formGroup]="formGroup" (submit)="submit()">
+  <dss-form-field [isError]="formGroup.invalid" [isSuccess]="formGroup.valid">
+    <dss-dropdown formControlName="dropdownForm" [options]="teams" openDirection="up">
+      <span *dssOption="let team">{{ team.viewValue }}</span>
+    </dss-dropdown>
+    <label dssLabel>Selecione um time</label>
+    <span dssHint>Dica</span>
+    <span *ngIf="formGroup.get('dropdownForm').errors?.required" dssError>Campo obrigatório!</span>
+  </dss-form-field>
+  <br />
+  <button dssFilledButton>Enviar</button>
+</form>
+<br />
+<br />
+<h3 dssTypography type="h3">Iniciando com Valores Múltiplos</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeams3" [options]="teams" [multiple]="true">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários times</label>
+</dss-form-field>
+<br />
+<div>Times selecionados: {{ selectedTeams3 }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Com Option com Texto Muito Grande</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [formControl]="selectedOptionLarge" [options]="optionsLarge" openDirection="up">
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um Item</label>
+</dss-form-field>
+<br />
+<br />
+<h3 dssTypography type="figure2">Alteração de valor dinâmico</h3>
+<br />
+<h3 dssTypography type="h3">Option Dropdown</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedMonth" [options]="months$ | async" [raw]="raw">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>{{ textDropdown1 }}</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>{{ textDropdown1 }}: {{ selectedMonth | json }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple Option Dropdown</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedMonths" [options]="months$ | async" [multiple]="true" [raw]="raw">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>{{ textDropdown2 }}</label>
+</dss-form-field>
+<br />
+<div>{{ textDropdown2 }}: {{ selectedMonths | json }}</div>
+<br />
+<br />
+<button (click)="changeOptions()" dssFilledButton>Alterar options</button>
+<br />
+<br />
+<h3 dssTypography type="h3">Option Group Dropdown</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedMonthGroups" [optionGroups]="monthGroups$ | async">
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um mês</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>Mês selecionado: {{ selectedMonthGroups }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple Option Group Dropdown</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedMonthsGroups" [optionGroups]="monthGroups$ | async" [multiple]="true">
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários meses</label>
+</dss-form-field>
+<br />
+<div>Mes(es) selecionado(s): {{ selectedMonthsGroups }}</div>
+<br />
+<br />
+<h3 dssTypography type="figure2">Selecionar todos</h3>
+<br />
+<h3 dssTypography type="h3">Multiple com Check All</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedTeamsAll" [options]="teamsAll" [multiple]="true" [raw]="raw">
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários times</label>
+</dss-form-field>
+<br />
+<div>Times selecionados: {{ !raw ? selectedTeams : (selectedTeamsAll | json) }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple Option Group com Check All</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedPokemonAll" [optionGroups]="pokemonGroupsAll" [multiple]="true">
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários pokemon</label>
+</dss-form-field>
+<br />
+<div>Pokemon(s) selecionado(s): {{ selectedPokemonAll }}</div>
+<br />
+<br />
+<h3 dssTypography type="figure2">Filtros</h3>
+<br />
+<br />
+<h3 dssTypography type="h3">Default</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedFilterPokemon" [options]="optionsPokemonFilter">
+    <input type="text" dssDropdownFilter placeholder="Buscar" />
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um pokemon</label>
+</dss-form-field>
+<br />
+<div>Pokemon Selecionado: {{ selectedFilterPokemon }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Option Groups</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="pokemonFilter" [optionGroups]="optionGroupsPokemonFilter">
+    <input type="text" dssDropdownFilter placeholder="Buscar" />
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione um pokemon</label>
+  <span dssHint>*Campo obrigatório</span>
+</dss-form-field>
+<br />
+<div>Pokemon selecionado: {{ pokemonFilter }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedFilterTeams" [options]="optionsTeamsFilter" [multiple]="true" [raw]="raw">
+    <input type="text" dssDropdownFilter placeholder="Buscar" />
+    <span *dssOption="let team">{{ team.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários times</label>
+</dss-form-field>
+<br />
+<div>Times selecionados: {{ !raw ? selectedFilterTeams : (selectedFilterTeams | json) }}</div>
+<br />
+<br />
+<h3 dssTypography type="h3">Multiple Option Groups</h3>
+<br />
+<dss-form-field>
+  <dss-dropdown [(ngModel)]="selectedFilterGroupPokemon" [optionGroups]="optionGroupsPokemonFilter2" [multiple]="true">
+    <input type="text" dssDropdownFilter placeholder="Buscar" />
+    <span *dssOptionGroup="let optGroup">{{ optGroup }}</span>
+    <span *dssOption="let option">{{ option.viewValue }}</span>
+  </dss-dropdown>
+  <label dssLabel>Selecione vários pokemon</label>
+</dss-form-field>
+<br />
+<div>Pokemon(s) selecionado(s): {{ selectedFilterGroupPokemon }}</div>

@@ -1,0 +1,72 @@
+<h3 dssTypography type="h3">Page Loader</h3>
+<br />
+<br />
+<h3 dssTypography type="h3">Padrão</h3>
+<br />
+<button dssFilledButton (click)="openPageLoaderDefault()">Exibir o page-loader padrão</button>
+<dss-page-loader [show]="showDefault" [path]="'assets/' + theme + '/page-loader/default.json'"></dss-page-loader>
+<p dssTypography type="caption" class="dss-my-1 dss-text-italic">
+  Para encerrar o exemplo basta apertar a tecla
+  <strong>esc</strong>
+  .
+</p>
+<br />
+<br />
+<br />
+<h3 dssTypography type="h3">Com Texto Variável</h3>
+<br />
+<button dssFilledButton (click)="openPageLoaderVariableText()">Exibir o page-loader com Texto Variável</button>
+<dss-page-loader [show]="showVariableText" [path]="'assets/' + theme + '/page-loader/default.json'">
+  <dss-page-loader-text>Buscando as melhores ofertas</dss-page-loader-text>
+  <dss-page-loader-text>Preparando a melhor experiência</dss-page-loader-text>
+  <dss-page-loader-text>Organizando os resultados</dss-page-loader-text>
+</dss-page-loader>
+<p dssTypography type="caption" class="dss-my-1 dss-text-italic">
+  Para encerrar o exemplo basta apertar a tecla
+  <strong>esc</strong>
+  .
+</p>
+<br />
+<br />
+<br />
+<h3 dssTypography type="h3">Com Percentual</h3>
+<br />
+<button dssFilledButton (click)="openPageLoaderPercent()">Exibir o page-loader com Percentual</button>
+<dss-page-loader [show]="showPercent" [path]="'assets/' + theme + '/page-loader/default.json'">
+  <dss-page-loader-percent>{{ value / 100 | percent }}</dss-page-loader-percent>
+</dss-page-loader>
+<p dssTypography type="caption" class="dss-my-1 dss-text-italic">
+  Para encerrar o exemplo basta apertar a tecla
+  <strong>esc</strong>
+  .
+</p>
+<br />
+<br />
+<br />
+<h3 dssTypography type="h3">Com Decorator</h3>
+<br />
+<button dssOutlineButton (click)="openPageLoaderDecorator()" [disabled]="data.length === 4">Clique para carregar um herói</button>
+<dss-page-loader id="page-loader-with-decorator" [path]="'assets/' + theme + '/page-loader/default.json'">
+  <dss-page-loader-text>Buscando os melhores super heróis</dss-page-loader-text>
+  <dss-page-loader-text>Chamando os mais legais</dss-page-loader-text>
+</dss-page-loader>
+<br />
+<ul dssTypography type="body" class="dss-mb-1 dss-ml-1" aria-atomic="true" aria-live="polite" [attr.aria-busy]="ariaBusy">
+  <li class="dss-pl-1 dss-pt-1" *ngFor="let hero of data">{{ hero.id }} - {{ hero.name }}</li>
+</ul>
+<br />
+<h3 dssTypography type="h3">Customizados</h3>
+<br />
+<dss-radio-group [(ngModel)]="path">
+  <dss-radio-button *ngFor="let option of options" [value]="option">
+    {{ option }}
+  </dss-radio-button>
+</dss-radio-group>
+<br />
+<button dssFilledButton (click)="openPageLoaderCustom()" [disabled]="!path">Exibir o page-loader customizado</button>
+<dss-page-loader [show]="showCustom" [path]="'assets/' + theme + path"></dss-page-loader>
+<p dssTypography type="caption" class="dss-my-1 dss-text-italic">
+  Para encerrar o exemplo basta apertar a tecla
+  <strong>esc</strong>
+  .
+</p>

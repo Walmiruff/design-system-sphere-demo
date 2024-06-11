@@ -1,0 +1,91 @@
+<div class="example">
+  <h2 dssTypography type="figure1">Option Button</h2>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Default</h3>
+  <br>
+  <dss-option-button
+    label="Option Button"
+    [options]="options"
+    (optionButtonChange)="input1 = $event"
+  ></dss-option-button>
+  <br>
+  <br>
+  <div>Option: {{ input1 }}</div>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Sem ícones</h3>
+  <br>
+  <dss-option-button
+    label="Option Button"
+    [options]="optionsSimple"
+    (optionButtonChange)="input2 = $event"
+  ></dss-option-button>
+  <br>
+  <br>
+  <div>Option: {{ input2 }}</div>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Com label editável</h3>
+  <br>
+  <dss-option-button
+    label="Option Button"
+    [toggleSelection]="true"
+    [options]="options"
+    [option]="options[0].option"
+    (optionButtonChange)="input3 = $event"
+  ></dss-option-button>
+  <br>
+  <br>
+  <div>Option: {{ input3 }}</div>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Disabled</h3>
+  <br>
+  <dss-option-button
+    label="Option Button"
+    [disabled]="true"
+    [options]="options"
+  ></dss-option-button>
+  <dss-option-button
+    label="Option Button"
+    [disabled]="true"
+    [toggleSelection]="true"
+    [options]="options"
+    [option]="options[1].option"
+  ></dss-option-button>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Com Radio Group</h3>
+  <br>
+  <dss-option-button [toggleSelection]="true" [open]="optionButtonWithRadioOpen" (optionButtonOpen)="optionButtonWithRadioOpen = $event">
+    <dss-option-button-label>Lançamento</dss-option-button-label>
+    <dss-option-button-label-selection>{{ optionsRadio[radioGroup]?.option }}</dss-option-button-label-selection>
+    <dss-option-button-selection style="width: 250px">
+      <dss-option-button-selection-title>Tipo de lançamento</dss-option-button-selection-title>
+      <dss-radio-group [(ngModel)]="radioGroup">
+        <dss-radio-button *ngFor="let radio of optionsRadio; index as i" [value]="i">{{ radio.option }}</dss-radio-button>
+      </dss-radio-group>
+    </dss-option-button-selection>
+    <dss-option-button-action>
+      <button dssOutlineButton [disabled]="!optionsRadio[radioGroup]?.option" (click)="optionButtonWithRadioOpen = false">Aplicar</button>
+    </dss-option-button-action>
+  </dss-option-button>
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Com Checkbox</h3>
+  <br>
+  <dss-option-button [toggleSelection]="true" [open]="optionButtonWithCheckboxOpen" (optionButtonOpen)="optionButtonWithCheckboxOpen = $event">
+    <dss-option-button-label>Contrato</dss-option-button-label>
+    <dss-option-button-label-selection>Todos</dss-option-button-label-selection>
+    <dss-option-button-selection style="width: 250px">
+      <ng-container *ngFor="let checkbox of optionsCheckbox; index as i">
+        <dss-checkbox [checked]="checkbox.checked" (change)="checkbox.checked = $event.checked">{{ checkbox.option }}</dss-checkbox>
+      </ng-container>
+    </dss-option-button-selection>
+    <hr dssDivider>
+    <dss-option-button-action>
+      <button dssFilledButton [disabled]="disabled()" (click)="optionButtonWithCheckboxOpen = false">Aplicar</button>
+    </dss-option-button-action>
+  </dss-option-button>
+</div>
