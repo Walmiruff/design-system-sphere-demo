@@ -173,6 +173,31 @@ export const routes: Routes = [
         loadChildren: () => import('./field/upload/upload.module').then((m) => m.UploadModule),
         data: { label: 'Uploads' },
       },
+      {
+        path: 'flyout-menu',
+        loadChildren: () => import('./flyout-menu/flyout-menu.module').then((m) => m.FlyoutMenuModule),
+        data: { label: 'Flyout Menu' },
+      },
+      {
+        path: 'grid',
+        loadChildren: () => import('./grid/grid.module').then((m) => m.GridModule),
+        data: { label: 'Grid' },
+      },
+      {
+        path: 'header',
+        loadChildren: () => import('./header/header.module').then((m) => m.HeaderModule),
+        data: { label: 'Header' },
+      },
+      // {
+      //   path: 'icons',
+      //   loadChildren: () => import('./icon/icon.module').then((m) => m.IconModule),
+      //   data: { label: 'Icons' },
+      // },
+      {
+        path: 'list',
+        loadChildren: () => import('./list/list.module').then((m) => m.ListModule),
+        data: { label: 'List' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

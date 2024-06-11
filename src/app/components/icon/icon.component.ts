@@ -8,7 +8,7 @@ import { default as iconsList } from './icon.json';
   styleUrls: ['./icon.component.css'],
 })
 export class IconComponent {
-  public icons: typeof iconsList.icons;
+  public icons: typeof iconsList.icons | any;
 
   public search = '';
 

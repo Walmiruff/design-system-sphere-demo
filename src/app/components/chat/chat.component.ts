@@ -10,10 +10,14 @@ import {
   DssQuickReplyGroupComponent,
 } from '@dss/components/chat';
 
-import { ItemInterface } from '../home/item-interface';
 import { ROUTES_CHILDREN } from './chat.routes';
 import { ChatService } from './chat.service';
 
+interface ItemInterface {
+  link: string;
+  label: string;
+  pending: boolean;
+}
 @Component({
   templateUrl: './chat.component.html',
 })
