@@ -63,6 +63,16 @@ export const routes: Routes = [
         loadChildren: () => import('./card-option/card-option.module').then((m) => m.CardOptionModule),
         data: { label: 'Card Option (Option Select)' },
       },
+      {
+        path: 'carousel',
+        loadChildren: () => import('./carousel/carousel.module').then((m) => m.CarouselModule),
+        data: { label: 'Carousel' },
+      },
+      {
+        path: 'chat',
+        loadChildren: () => import('./chat/chat.module').then((m) => m.ChatModule),
+        data: { label: 'Chat' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

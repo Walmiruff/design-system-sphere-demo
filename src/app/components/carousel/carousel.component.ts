@@ -2,6 +2,8 @@ import { registerLocaleData } from '@angular/common';
 import pt from '@angular/common/locales/pt';
 import { Component, LOCALE_ID } from '@angular/core';
 
+import { DssIconNameType } from '@dss/components/icon';
+
 registerLocaleData(pt, 'pt');
 
 @Component({
@@ -20,7 +22,7 @@ export class CarouselComponent {
     {
       cards: [
         {
-          icon: 'edit',
+          icon: 'edit' as DssIconNameType,
           title: 'Monte do seu jeito',
           description: 'Escolha os valores das coberturas para montar o seguro ideal',
           subtitle: 'Monte o seguro ideal para você',
@@ -35,7 +37,7 @@ export class CarouselComponent {
           button: 'Personalizar',
         },
         {
-          icon: 'housing',
+          icon: 'housing' as DssIconNameType,
           title: 'Essencial',
           description: 'Por apenas',
           value: 19.9,
@@ -48,7 +50,7 @@ export class CarouselComponent {
           button: 'Continuar',
         },
         {
-          icon: 'financing',
+          icon: 'financing' as DssIconNameType,
           title: 'Mais',
           description: 'Por apenas',
           value: 29.9,
@@ -68,7 +70,7 @@ export class CarouselComponent {
     {
       cards: [
         {
-          icon: 'housing',
+          icon: 'housing' as DssIconNameType,
           title: 'Super',
           description: 'Por apenas',
           value: 49.9,
@@ -81,7 +83,7 @@ export class CarouselComponent {
           button: 'Continuar',
         },
         {
-          icon: 'financing',
+          icon: 'financing' as DssIconNameType,
           title: 'Premium',
           description: 'Por apenas',
           value: 99.9,

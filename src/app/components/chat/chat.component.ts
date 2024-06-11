@@ -25,9 +25,9 @@ export class ChatComponent implements OnDestroy, OnInit {
 
   public input = '';
 
-  public selectedOptionMessage: number;
+  public selectedOptionMessage: number | any;
 
-  public selectedOptionQuickReply: string | number;
+  public selectedOptionQuickReply: string | number | any;
 
   public components: Array<DssChatAddItem> = [];
 
@@ -37,11 +37,11 @@ export class ChatComponent implements OnDestroy, OnInit {
 
   public loadingMessages: boolean = true;
 
-  @ViewChild(DssChatContainerBodyComponent, { static: true }) public dssChatContainerBody: DssChatContainerBodyComponent;
+  @ViewChild(DssChatContainerBodyComponent, { static: true }) public dssChatContainerBody: DssChatContainerBodyComponent | any;
 
-  private _subscription: Subscription;
+  private _subscription: Subscription | any;
 
-  private _hour: string;
+  private _hour: string | any;
 
   constructor(private _service: ChatService) { }
 
@@ -109,7 +109,7 @@ export class ChatComponent implements OnDestroy, OnInit {
     } else {
       data = {
         sent: true,
-        nameAndHourUser: `Cisne Negro - ${hour}`,
+        nameAndHourUser: `Wolverine - ${hour}`,
         content: this.input,
       };
     }
@@ -164,7 +164,7 @@ export class ChatComponent implements OnDestroy, OnInit {
 
   private sortLinks(): void {
     this.items = ROUTES_CHILDREN
-      .map((route: Route) => ({
+      .map((route: Route | any) => ({
         link: route.path,
         label: route.data.label,
         pending: route.data.pending,

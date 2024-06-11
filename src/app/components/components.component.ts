@@ -10,6 +10,6 @@ export class ComponentsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.routes = routes[0].children?.sort((a, b) => (a.path || '').localeCompare(b.path || ''));
+    this.routes = routes[0].children
   }
 }

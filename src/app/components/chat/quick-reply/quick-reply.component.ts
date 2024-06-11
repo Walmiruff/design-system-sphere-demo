@@ -28,13 +28,13 @@ export class QuickReplyComponent implements OnInit {
 
   public options: Array<OptionsInterface> = [];
 
-  public input1: number;
+  public input1: number | any;
 
-  public input2: string;
+  public input2: string | any;
 
-  public input4: string;
+  public input4: string | any;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private _builder: FormBuilder) { }
 

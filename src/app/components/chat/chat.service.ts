@@ -73,7 +73,7 @@ export class ChatService {
         DssMessageComponent,
         {
           sent: false,
-          nameAndHourUser: 'Cisne Negro - 16:21',
+          nameAndHourUser: 'Wolverine - 16:21',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem esse omnis rem repellat rerum, sunt vitae? Aliquid animi culpa distinctio id labore laboriosam nisi non perferendis quo quos repellendus, sequi?',
         },
       ),
@@ -93,7 +93,7 @@ export class ChatService {
       new DssChatAddItem(
         DssMessageComponent,
         {
-          nameAndHourUser: 'Cisne Negro - 16:25',
+          nameAndHourUser: 'Wolverine - 16:25',
           content: '<div class="dss-display-flex dss-align-items-center"><span class="dss-icon-document-pdf"></span>&nbsp;&nbsp;documento.pdf</div><div class="dss-ml-2" style="font-size: 14px;">30mb</div>',
         },
       ),
