@@ -8,7 +8,7 @@ import { DssCountdownComponent } from '@dss/components/countdown';
 })
 export class CountdownComponent {
 
-  @ViewChild('countdown') public countdown: DssCountdownComponent;
+  @ViewChild('countdown') public countdown: DssCountdownComponent | any;
 
   public minute = 1;
 

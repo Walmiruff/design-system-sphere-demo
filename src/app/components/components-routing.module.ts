@@ -73,6 +73,21 @@ export const routes: Routes = [
         loadChildren: () => import('./chat/chat.module').then((m) => m.ChatModule),
         data: { label: 'Chat' },
       },
+      {
+        path: 'containers',
+        loadChildren: () => import('./container/container.module').then((m) => m.ContainerModule),
+        data: { label: 'Containers' },
+      },
+      {
+        path: 'countdown',
+        loadChildren: () => import('./countdown/countdown.module').then((m) => m.CountdownModule),
+        data: { label: 'Countdown' },
+      },
+      {
+        path: 'data-table',
+        loadChildren: () => import('./data-table/data-table.module').then((m) => m.DataTableModule),
+        data: { label: 'Data Table' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }
