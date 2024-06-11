@@ -18,6 +18,11 @@ const routes: Routes = [
         loadChildren: () => import('./alert-banner/alert-banner.module').then((m) => m.AlertBannerModule),
         data: { label: 'Alert Banner' },
       },
+      {
+        path: 'alert-toast',
+        loadChildren: () => import('./alert-toast/alert-toast.module').then((m) => m.AlertToastModule),
+        data: { label: 'Alert Toast' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

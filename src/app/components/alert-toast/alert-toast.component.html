@@ -1,0 +1,62 @@
+<h2 dssTypography type="figure1">Alert Toast</h2>
+<section class="js-container-alert-toast-info">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Informativo</h3>
+  <br>
+  <br>
+  <button dssFilledButton (click)="openInfo = true">Info</button>
+  <br>
+  <br>
+  <dss-alert-toast type="info" [open]="openInfo" (closeAlertToast)="openInfo = $event">
+    Feedback Alert Information. Text goes right here.
+  </dss-alert-toast>
+</section>
+<section class="js-container-alert-toast-warning">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Aviso</h3>
+  <br>
+  <br>
+  <button dssFilledButton (click)="openWarning = true">Aviso</button>
+  <br>
+  <br>
+  <dss-alert-toast type="warning" [open]="openWarning" (closeAlertToast)="openWarning = $event">
+    Feedback Alert Warning. Text goes right here.
+    <dss-alert-toast-actions>
+      <button dssButton>Action</button>
+    </dss-alert-toast-actions>
+  </dss-alert-toast>
+</section>
+<section class="js-container-alert-toast-danger">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Perigo</h3>
+  <br>
+  <br>
+  <button dssFilledButton (click)="openDanger = true">Perigo</button>
+  <br>
+  <br>
+  <dss-alert-toast type="danger" [open]="openDanger" (closeAlertToast)="openDanger = $event">
+    Feedback Alert Danger. Text goes right here.
+    <dss-alert-toast-actions>
+      <button dssButton>Action</button>
+    </dss-alert-toast-actions>
+  </dss-alert-toast>
+</section>
+<section class="js-container-alert-toast-success">
+  <br>
+  <br>
+  <h3 dssTypography type="h3">Success</h3>
+  <br>
+  <br>
+  <button dssFilledButton (click)="openSuccess = true">Success</button>
+  <br>
+  <br>
+  <dss-alert-toast type="success" [open]="openSuccess" (closeAlertToast)="openSuccess = $event">
+    Feedback Alert Success. Text goes right here.
+    <dss-alert-toast-actions>
+      <button dssButton>Action</button>
+    </dss-alert-toast-actions>
+  </dss-alert-toast>
+</section>
