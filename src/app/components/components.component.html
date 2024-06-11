@@ -2,14 +2,10 @@
     <div class="dss-grid">
         <aside dssscrollbar class="dss-position-fixed dss-col-2 dss-py-1.5 app-aside dss-scollbar">
             <ul>
-                <li class="dss-py-0.5 app-li-custom"><a class="dss-body dss-color-blue app-link-custom"
-                        routerLink="/components/accordion">Accordion</a></li>
-                <li class="dss-py-0.5 app-li-custom"><a class="dss-body dss-color-blue app-link-custom"
-                        routerLink="/components/alert-banner">Alert
-                        Banner</a></li>
-                <li class="dss-py-0.5 app-li-custom"><a class="dss-body dss-color-blue app-link-custom"
-                        routerLink="/components/alert-toast">Alert
-                        Toast</a></li>
+                <li *ngFor="let route of routes" class="dss-py-0.5 app-li-custom">
+                    <a class="dss-body dss-color-blue app-link-custom"
+                    [routerLink]="['/components', route.path]">{{ route?.data?.label }}</a>
+                </li>
             </ul>
         </aside>
         <main class="dss-col-10 dss-offset-2">

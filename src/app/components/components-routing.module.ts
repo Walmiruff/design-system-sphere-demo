@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComponentsComponent } from './components.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: ComponentsComponent,
@@ -22,6 +22,11 @@ const routes: Routes = [
         path: 'alert-toast',
         loadChildren: () => import('./alert-toast/alert-toast.module').then((m) => m.AlertToastModule),
         data: { label: 'Alert Toast' },
+      },
+      {
+        path: 'avatar',
+        loadChildren: () => import('./avatar/avatar.module').then((m) => m.AvatarModule),
+        data: { label: 'Avatar' },
       },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
