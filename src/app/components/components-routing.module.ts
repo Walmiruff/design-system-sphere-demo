@@ -88,6 +88,26 @@ export const routes: Routes = [
         loadChildren: () => import('./data-table/data-table.module').then((m) => m.DataTableModule),
         data: { label: 'Data Table' },
       },
+      {
+        path: 'dialog',
+        loadChildren: () => import('./dialog/dialog.module').then((m) => m.DialogModule),
+        data: { label: 'Dialog' },
+      },
+      {
+        path: 'dividers',
+        loadChildren: () => import('./divider/divider.module').then((m) => m.DividerModule),
+        data: { label: 'Dividers' },
+      },
+      {
+        path: 'download',
+        loadChildren: () => import('./download/download.module').then((m) => m.DownloadModule),
+        data: { label: 'Download' },
+      },
+      {
+        path: 'drawer',
+        loadChildren: () => import('./drawer/drawer.module').then((m) => m.DrawerModule),
+        data: { label: 'Drawer' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

@@ -41,7 +41,7 @@ export class ChatService {
         DssMessageComponent,
         {
           avatar: {
-            name: 'santander',
+            name: 'account-user',
             type: 'default',
           },
           nameAndHourAttendant: 'Deadpool - 16:20',
@@ -81,7 +81,7 @@ export class ChatService {
         DssMessageComponent,
         {
           avatar: {
-            name: 'santander',
+            name: 'account-user',
             type: 'default',
           },
           iconColor: 'warning',
@@ -101,7 +101,7 @@ export class ChatService {
         DssMessageComponent,
         {
           avatar: {
-            name: 'santander',
+            name: 'account-user',
             type: 'default',
           },
           iconColor: 'warning',
@@ -114,7 +114,7 @@ export class ChatService {
         DssMessageComponent,
         {
           avatar: {
-            name: 'santander',
+            name: 'account-user',
             type: 'default',
           },
           iconName: 'factoring',
@@ -135,7 +135,7 @@ export class ChatService {
         DssMessageComponent,
         {
           avatar: {
-            name: 'santander',
+            name: 'account-user',
             type: 'default',
           },
           type: 'loading',
@@ -154,7 +154,7 @@ export class ChatService {
         DssMessageComponent,
         {
           avatar: {
-            name: 'santander',
+            name: 'account-user',
             type: 'default',
           },
           nameAndHourAttendant: 'Deadpool - 16:40',
