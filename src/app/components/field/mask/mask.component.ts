@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 const cryptography = (character: string): string => {
-  const crypto = { 1: 'U', 2: 'D', 3: 'T', 4: 'Q', 5: 'C', 6: 'S', 7: '$', 8: 'O', 9: 'N', 0: 'Z' };
+  const crypto: any = { 1: 'U', 2: 'D', 3: 'T', 4: 'Q', 5: 'C', 6: 'S', 7: '$', 8: 'O', 9: 'N', 0: 'Z' };
 
   // Se for digitado uma opção válida
   if (crypto[character]) {
@@ -48,7 +48,7 @@ export class MaskComponent implements OnInit {
 
   public pattern = { p: { pattern: /[a-zA-Z0-9$]/, transform: cryptography } };
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private readonly formBuilder: FormBuilder) {}
 

@@ -7,11 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './upload.component.html',
 })
 export class UploadComponent implements OnInit {
-  public files1: Array<File>;
+  public files1: Array<File> | any;
 
-  public files2: Array<File>;
+  public files2: Array<File> | any;
 
-  public files3: Array<File>;
+  public files3: Array<File> | any;
 
   get files4(): Array<File> {
     const arrayFiles: Array<File> = [];
@@ -25,7 +25,7 @@ export class UploadComponent implements OnInit {
     return arrayFiles;
   }
 
-  public filesList1: FileList;
+  public filesList1: FileList | any;
 
   get files5(): Array<File> {
     const arrayFiles: Array<File> = [];
@@ -39,7 +39,7 @@ export class UploadComponent implements OnInit {
     return arrayFiles;
   }
 
-  public filesList2: FileList;
+  public filesList2: FileList | any;
 
   get files6(): Array<File> {
     const arrayFiles: Array<File> = [];
@@ -53,11 +53,11 @@ export class UploadComponent implements OnInit {
     return arrayFiles;
   }
 
-  public filesList3: FileList;
+  public filesList3: FileList | any;
 
-  public files7: Array<File>;
+  public files7: Array<File> | any;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private readonly _builder: FormBuilder) {}
 
@@ -70,21 +70,12 @@ export class UploadComponent implements OnInit {
     });
   }
 
-  public onKeyup(event: KeyboardEvent, index: number, arrayName: string): void {
-    if (event.keyCode === ENTER || event.keyCode === SPACE) {
-      this.removeFile(index, arrayName);
-    }
+
+  public removeFile(index: number, arrayName: Array<File> ): void {
+     arrayName.splice(index, 1);
   }
 
-  public removeFile(index: number, arrayName: string): void {
-    this[arrayName].splice(index, 1);
-
-    if (this[arrayName].length === 0) {
-      this[arrayName] = null;
-    }
-  }
-
-  public removeFileList(index: number, fileListName: string): void {
+  public removeFileList(index: number, fileListName: string | FileList): FileList {
     const dataTransfer = new DataTransfer();
 
     if (fileListName === 'upload') {
@@ -96,14 +87,13 @@ export class UploadComponent implements OnInit {
 
       this.formGroup.controls.upload.setValue(dataTransfer.files);
     } else {
-      for (let i = 0; i < this[fileListName].length; i += 1) {
+      for (let i = 0; i < fileListName.length; i += 1) {
         if (i !== index) {
-          dataTransfer.items.add(this[fileListName].item(i));
+          dataTransfer.items.add(fileListName[i] as File);
         }
       }
-
-      this[fileListName] = dataTransfer.files;
     }
+   return fileListName = dataTransfer.files;
   }
 
   public submit(): void {

@@ -13,7 +13,7 @@ export class TextAreaComponent {
   public textArea6 = '';
   public textArea7 = '';
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private formBuilder: FormBuilder) {
     this.formGroup = this.formBuilder.group({

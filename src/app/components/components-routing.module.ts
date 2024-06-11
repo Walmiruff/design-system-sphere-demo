@@ -128,6 +128,51 @@ export const routes: Routes = [
         loadChildren: () => import('./field/dropdown/dropdown.module').then((m) => m.DropdownModule),
         data: { label: 'Dropdown' },
       },
+      {
+        path: 'inputs',
+        loadChildren: () => import('./field/input/input.module').then((m) => m.InputModule),
+        data: { label: 'Form Field' },
+      },
+      {
+        path: 'input-clear',
+        loadChildren: () => import('./field/input-clear/input-clear.module').then((m) => m.InputClearModule),
+        data: { label: 'Form Field - Clear' },
+      },
+      {
+        path: 'input-number',
+        loadChildren: () => import('./field/input-number/input-number.module').then((m) => m.InputNumberModule),
+        data: { label: 'Input Number' },
+      },
+      {
+        path: 'mask',
+        loadChildren: () => import('./field/mask/mask.module').then((m) => m.MaskModule),
+        data: { label: 'Mask' },
+      },
+      {
+        path: 'radio-group',
+        loadChildren: () => import('./field/radio-group/radio-group.module').then((m) => m.RadioGroupModule),
+        data: { label: 'Radio' },
+      },
+      {
+        path: 'slider',
+        loadChildren: () => import('./field/slider/slider.module').then((m) => m.SliderModule),
+        data: { label: 'Slider' },
+      },
+      {
+        path: 'textarea',
+        loadChildren: () => import('./field/text-area/text-area.module').then((m) => m.TextAreaModule),
+        data: { label: 'Text Area' },
+      },
+      {
+        path: 'toggles',
+        loadChildren: () => import('./field/toggle/toggle.module').then((m) => m.ToggleModule),
+        data: { label: 'Toggles (Switch)' },
+      },
+      {
+        path: 'uploads',
+        loadChildren: () => import('./field/upload/upload.module').then((m) => m.UploadModule),
+        data: { label: 'Uploads' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

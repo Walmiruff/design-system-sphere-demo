@@ -18,15 +18,15 @@ export class InputNumberComponent implements OnInit {
 
   public input1 = 100.99;
 
-  public inputClear;
+  public inputClear: any;
 
-  public input2;
+  public input2: any;
 
   public input3 = 42;
 
   public input4 = 23.45;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   public input6 = 0;
 
@@ -34,7 +34,7 @@ export class InputNumberComponent implements OnInit {
 
   public input8 = -100;
 
-  public input9;
+  public input9: any;
 
   constructor(private _formBuilder: FormBuilder) { }
 

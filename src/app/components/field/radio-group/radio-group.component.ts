@@ -15,11 +15,11 @@ export class RadioGroupComponent implements OnInit {
     { label: 'radio C', value: 'C' },
   ];
 
-  public value1: string | number;
+  public value1: string | number | any;
 
   public value2 = 'B';
 
-  public value3: string;
+  public value3: string | any;
 
   public value4 = '1';
 
@@ -27,7 +27,7 @@ export class RadioGroupComponent implements OnInit {
 
   public value6 = '';
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private _formBuild: FormBuilder) { }
 

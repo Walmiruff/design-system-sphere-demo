@@ -13,7 +13,7 @@ export class InputClearComponent {
 
   public disabled = true;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private formBuilder: FormBuilder) {
     this.formGroup = this.formBuilder.group({

@@ -13,9 +13,9 @@ export class InputComponent {
 
   public disabled = true;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
-  public selectedOpt: Array<string>;
+  public selectedOpt: Array<string> | any;
 
   public optGroups: Array<DssOptionGroupInterface> = [
     {

@@ -29,7 +29,7 @@ export class SliderComponent implements OnInit {
 
   public value6 = 50;
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   public min = 1000;
 
