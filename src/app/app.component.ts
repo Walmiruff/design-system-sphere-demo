@@ -35,7 +35,7 @@ export class AppComponent {
     }
   }
 
-  public onOptionSelected(event: any): void {
+  public onOptionSelected(event: DssOptionInterface | any): void {
       this.i18n.setLocale(event.value);
   }
 

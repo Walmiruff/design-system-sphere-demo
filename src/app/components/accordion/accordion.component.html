@@ -1,1 +1,231 @@
-<p>accordion works!</p>
+<h2 dssTypography type="figure1">Accordion</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">Default</h3>
+<dss-accordion>
+  <dss-accordion-item *ngFor="let item of items; let i = index" (opened)="opened(i)" (closed)="closed()">
+    <h1 dssAccordionItemTitle>Accordion 0{{ i + 1 }}</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Ícones e Abrindo mais de um por vez</h3>
+<dss-accordion [openSeveral]="true">
+  <dss-accordion-item>
+    <span dssIcon name="debt" size="medium"></span>
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <ng-container dssAccordionItemBody>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.</p>
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <span dssIcon name="exhange" size="medium"></span>
+    <h1 dssAccordionItemTitle>Accordion 02</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <span dssIcon name="modify-liquidation-method" size="medium"></span>
+    <h1 dssAccordionItemTitle>Accordion 03</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Numeração</h3>
+<dss-accordion [itemsNumber]="true" digitsInfo="2.0-0">
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 02</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 03</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">Iniciando com um Item Aberto</h3>
+<dss-accordion>
+  <dss-accordion-item [isExpanded]="true">
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 02</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 03</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">Com Subtítulo</h3>
+<dss-accordion>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <h2 dssAccordionItemSubTitle>Subtitle 01</h2>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 02</h1>
+    <h2 dssAccordionItemSubTitle>Subtitle 02</h2>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+  <dss-accordion-item>
+    <h1 dssAccordionItemTitle>Accordion 03</h1>
+    <h2 dssAccordionItemSubTitle>Subtitle 03</h2>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h2 dssTypography type="figure2">Change Padding Y</h2>
+<br>
+<br>
+<h3 dssTypography type="h3">PY-1 - 8px</h3>
+<br>
+<dss-accordion class="dss-accordion--py-1">
+  <dss-accordion-item *ngFor="let item of items; let i = index" (opened)="opened(i)" (closed)="closed()">
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">PY-2 - 16px - Default</h3>
+<br>
+<dss-accordion>
+  <dss-accordion-item *ngFor="let item of items; let i = index" (opened)="opened(i)" (closed)="closed()">
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">PY-3 - 24px</h3>
+<br>
+<dss-accordion class="dss-accordion--py-3">
+  <dss-accordion-item *ngFor="let item of items; let i = index" (opened)="opened(i)" (closed)="closed()">
+    <h1 dssAccordionItemTitle>Accordion 01</h1>
+    <ng-container dssAccordionItemBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus id ratione voluptatem. Cumque fugiat pariatur sequi vero! A accusantium ad dolore dolorum molestias quis unde? Alias modi molestias officiis tenetur.
+    </ng-container>
+  </dss-accordion-item>
+</dss-accordion>
+<br>
+<br>
+<h3 dssTypography type="h3">Filter</h3>
+<div style="margin-bottom: 300px;">
+  <dss-accordion>
+    <dss-accordion-item [isFilter]="true">
+      <h1 dssAccordionItemTitle>Accordion de Filter</h1>
+      <ng-container dssAccordionItemBody>
+        <div class="dss-grid dss-no-gutter">
+          <div class="dss-col-4 dss-col-no-gutter">
+            <dss-option-button [toggleSelection]="true" [open]="optionButtonWithRadioOpen" (optionButtonOpen)="optionButtonWithRadioOpen = $event">
+              <dss-option-button-label>Pagamento</dss-option-button-label>
+              <dss-option-button-label-selection>{{ optionsRadio[radioGroup]?.option }}</dss-option-button-label-selection>
+              <dss-option-button-selection style="width: 250px;">
+                <dss-option-button-selection-title>Tipo de Pagamento</dss-option-button-selection-title>
+                <dss-radio-group [(ngModel)]="radioGroup">
+                  <dss-radio-button *ngFor="let radio of optionsRadio; index as i" [value]="i">{{ radio.option }}</dss-radio-button>
+                </dss-radio-group>
+              </dss-option-button-selection>
+              <dss-option-button-action>
+                <button dssOutlineButton [disabled]="!optionsRadio[radioGroup]?.option" (click)="optionButtonWithRadioOpen = false">Aplicar</button>
+              </dss-option-button-action>
+            </dss-option-button>
+          </div>
+          <div class="dss-col-4 dss-col-no-gutter">
+            <dss-option-button [toggleSelection]="true" [open]="optionButtonWithCheckboxOpen" (optionButtonOpen)="optionButtonWithCheckboxOpen = $event">
+              <dss-option-button-label>Contrato</dss-option-button-label>
+              <dss-option-button-label-selection>Todos</dss-option-button-label-selection>
+              <dss-option-button-selection style="width: 250px;">
+                <ng-container *ngFor="let checkbox of optionsCheckbox; index as i">
+                  <dss-checkbox [checked]="checkbox.checked ?? false" (change)="checkbox.checked = $event.checked">{{ checkbox.option }}</dss-checkbox>
+                </ng-container>
+              </dss-option-button-selection>
+              <hr dssDivider>
+              <dss-option-button-action>
+                <button dssFilledButton (click)="optionButtonWithCheckboxOpen = false">Aplicar</button>
+              </dss-option-button-action>
+            </dss-option-button>
+          </div>
+          <div class="dss-col-3 dss-col-no-gutter">
+            <dss-form-field>
+              <dss-dropdown [(ngModel)]="selectedTeam" [options]="teams">
+                <span *dssOption="let team">{{ team.viewValue }}</span>
+              </dss-dropdown>
+              <label dssLabel>Selecione um time</label>
+            </dss-form-field>
+          </div>
+        </div>
+      </ng-container>
+    </dss-accordion-item>
+  </dss-accordion>
+</div>
