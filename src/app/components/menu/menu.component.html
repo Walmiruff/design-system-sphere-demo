@@ -15,7 +15,7 @@
   <dss-menu [expanded]="expanded">
     <dss-menu-item
       *ngFor="let item of menu"
-      [disabled]="item?.disabled"
+      [disabled]="item.disabled"
       [selected]="page === item.title"
       (click)="open($event, item.title, item.link)"
     >

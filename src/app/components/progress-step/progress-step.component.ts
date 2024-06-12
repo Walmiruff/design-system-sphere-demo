@@ -10,12 +10,29 @@ export class ProgressStepComponent {
   public activeSteps2 = 1;
   public activeSteps3 = 1;
 
-  public progress(step: string): void {
-    this[step] += 1;
+  public progress1(): number {
+    return this.activeSteps1 += 1;
   }
 
-  public goBack(step: string): void {
-    this[step] -= 1;
+  public goBack1(): number {
+    return this.activeSteps1 -= 1;
+  }
+
+  public progress2(): number {
+    return this.activeSteps2 += 1;
+  }
+
+  public goBack2(): number {
+    return this.activeSteps2 -= 1;
+  }
+
+
+  public progress3(): number {
+    return this.activeSteps3 += 1;
+  }
+
+  public goBack3(): number {
+    return this.activeSteps3 -= 1;
   }
 
 }

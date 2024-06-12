@@ -59,10 +59,10 @@
   <h3 dssTypography type="h3">Com Radio Group</h3>
   <br>
   <dss-option-button [toggleSelection]="true" [open]="optionButtonWithRadioOpen" (optionButtonOpen)="optionButtonWithRadioOpen = $event">
-    <dss-option-button-label>Lançamento</dss-option-button-label>
+    <dss-option-button-label>Pagamento</dss-option-button-label>
     <dss-option-button-label-selection>{{ optionsRadio[radioGroup]?.option }}</dss-option-button-label-selection>
     <dss-option-button-selection style="width: 250px">
-      <dss-option-button-selection-title>Tipo de lançamento</dss-option-button-selection-title>
+      <dss-option-button-selection-title>Tipo de pagamento</dss-option-button-selection-title>
       <dss-radio-group [(ngModel)]="radioGroup">
         <dss-radio-button *ngFor="let radio of optionsRadio; index as i" [value]="i">{{ radio.option }}</dss-radio-button>
       </dss-radio-group>
@@ -80,7 +80,7 @@
     <dss-option-button-label-selection>Todos</dss-option-button-label-selection>
     <dss-option-button-selection style="width: 250px">
       <ng-container *ngFor="let checkbox of optionsCheckbox; index as i">
-        <dss-checkbox [checked]="checkbox.checked" (change)="checkbox.checked = $event.checked">{{ checkbox.option }}</dss-checkbox>
+        <dss-checkbox [checked]="checkbox.checked ?? false" (change)="checkbox.checked = $event.checked">{{ checkbox.option }}</dss-checkbox>
       </ng-container>
     </dss-option-button-selection>
     <hr dssDivider>

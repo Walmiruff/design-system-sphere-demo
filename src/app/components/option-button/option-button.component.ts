@@ -30,24 +30,24 @@ export class OptionButtonComponent {
   public input2 = '';
 
   public optionsRadio: Array<DssOptionButtonOptionsInterface> = [
-    { option: 'Pix recebido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
-    { option: 'Pix devolvido' },
+    { option: 'Recebido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
+    { option: 'Devolvido' },
   ];
 
-  public radioGroup: string;
+  public radioGroup: string | any;
 
   public optionButtonWithRadioOpen = false;
 

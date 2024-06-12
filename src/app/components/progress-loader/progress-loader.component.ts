@@ -26,7 +26,7 @@ export class ProgressLoaderComponent {
 
   public isSuccess = false;
 
-  private _idInterval;
+  private _idInterval: any;
 
   public upload(): void {
     this._idInterval = setInterval(() => {

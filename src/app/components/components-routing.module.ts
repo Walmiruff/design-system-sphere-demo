@@ -208,6 +208,46 @@ export const routes: Routes = [
         loadChildren: () => import('./logo/logo.module').then((m) => m.LogoModule),
         data: { label: 'Logo' },
       },
+      {
+        path: 'notify',
+        loadChildren: () => import('./notify/notify.module').then((m) => m.NotifyModule),
+        data: { label: 'Notify' },
+      },
+      {
+        path: 'option-button',
+        loadChildren: () => import('./option-button/option-button.module').then((m) => m.OptionButtonModule),
+        data: { label: 'Option Button' },
+      },
+      {
+        path: 'page-menu',
+        loadChildren: () => import('./page-menu/page-menu.module').then((m) => m.PageMenuModule),
+        data: { label: 'Page Menu' },
+      },
+      {
+        path: 'pagination',
+        loadChildren: () => import('./pagination/pagination.module').then((m) => m.PaginationModule),
+        data: { label: 'Pagination' },
+      },
+      {
+        path: 'position',
+        loadChildren: () => import('./position/position.module').then((m) => m.PositionModule),
+        data: { label: 'Position' },
+      },
+      {
+        path: 'product-card',
+        loadChildren: () => import('./product-card/product-card.module').then((m) => m.ProductCardModule),
+        data: { label: 'Product Card' },
+      },
+      {
+        path: 'progress-loader',
+        loadChildren: () => import('./progress-loader/progress-loader.module').then((m) => m.ProgressLoaderModule),
+        data: { label: 'Progress Loader' },
+      },
+      {
+        path: 'progress-step',
+        loadChildren: () => import('./progress-step/progress-step.module').then((m) => m.ProgressStepModule),
+        data: { label: 'Progress Step' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }
