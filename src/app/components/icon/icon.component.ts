@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { default as iconsList } from './icon.json';
+import { iconsList } from './icon';
 
 @Component({
   selector: 'app-icon',
@@ -8,7 +8,7 @@ import { default as iconsList } from './icon.json';
   styleUrls: ['./icon.component.css'],
 })
 export class IconComponent {
-  public icons: typeof iconsList.icons | any;
+  public icons: typeof iconsList.icons;
 
   public search = '';
 

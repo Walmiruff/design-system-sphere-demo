@@ -188,11 +188,11 @@ export const routes: Routes = [
         loadChildren: () => import('./header/header.module').then((m) => m.HeaderModule),
         data: { label: 'Header' },
       },
-      // {
-      //   path: 'icons',
-      //   loadChildren: () => import('./icon/icon.module').then((m) => m.IconModule),
-      //   data: { label: 'Icons' },
-      // },
+      {
+        path: 'icons',
+        loadChildren: () => import('./icon/icon.module').then((m) => m.IconModule),
+        data: { label: 'Icons' },
+      },
       {
         path: 'list',
         loadChildren: () => import('./list/list.module').then((m) => m.ListModule),

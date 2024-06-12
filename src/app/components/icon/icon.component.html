@@ -9,19 +9,19 @@
     <li *ngFor="let icon of icons" class="icons__item">
       <div dssTypography type="body">{{ icon.name }}</div>
       <div>
-        <span dssIcon name="{{ icon.name }}" size="small"></span>
+        <span dssIcon [name]="icon.name" size="small"></span>
       </div>
       <div>
-        <span dssIcon name="{{ icon.name }}"></span>
+        <span dssIcon [name]="icon.name"></span>
       </div>
       <div>
-        <span dssIcon name="{{ icon.name }}" size="medium"></span>
+        <span dssIcon [name]="icon.name" size="medium"></span>
       </div>
       <div>
-        <span dssIcon name="{{ icon.name }}" size="large"></span>
+        <span dssIcon [name]="icon.name" size="large"></span>
       </div>
       <div>
-        <span dssIcon name="{{ icon.name }}" size="extra-large"></span>
+        <span dssIcon [name]="icon.name" size="extra-large"></span>
       </div>
     </li>
   </ul>
