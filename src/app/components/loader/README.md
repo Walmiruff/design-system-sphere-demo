@@ -1,6 +1,6 @@
 <h1 align="center">Bem vindo ao @dss/components/loader 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/adicionado%20na%20versão-1.39.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/adicionado%20na%20versão-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > Componente Loader.
@@ -25,33 +25,11 @@ _A estrutura de pastas dos JSONs:_
 │   │   │   ├── default.json
 │   │   │   ├── error.json
 │   │   │   ├── success.json
-│   │   ├── page-loader/
-│   │   │   ├── custom/
-│   │   │   │   ├── cards.json
-│   │   │   │   ├── consulting-data.json
-│   │   │   │   ├── investments.json
-│   │   │   │   ├── money-movement.json
-│   │   │   │   ├── savings.json
-│   │   │   │   ├── uploading-verifying-docs.json
-│   │   │   │   ├── vehicles.json
-│   │   │   ├── default.json
-│   │   │   ├── static.json
 │   ├── light/
 │   │   ├── content-loader/
 │   │   │   ├── default.json
 │   │   │   ├── error.json
 │   │   │   ├── success.json
-│   │   ├── page-loader/
-│   │   │   ├── custom/
-│   │   │   │   ├── cards.json
-│   │   │   │   ├── consulting-data.json
-│   │   │   │   ├── investments.json
-│   │   │   │   ├── money-movement.json
-│   │   │   │   ├── savings.json
-│   │   │   │   ├── uploading-verifying-docs.json
-│   │   │   │   ├── vehicles.json
-│   │   │   ├── default.json
-│   │   │   ├── static.json
 ```
 
 A maneira mais simples é usar o `glob` no arquivo `angular.json`. O exemplo abaixo copia todos os arquivos da pasta _light_ (tema padrão do Sphere)
