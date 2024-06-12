@@ -198,6 +198,16 @@ export const routes: Routes = [
         loadChildren: () => import('./list/list.module').then((m) => m.ListModule),
         data: { label: 'List' },
       },
+      // {
+      //   path: 'loader',
+      //   loadChildren: () => import('./loader/loader.module').then((m) => m.LoaderModule),
+      //   data: { label: 'Loader' },
+      // },
+      {
+        path: 'logo',
+        loadChildren: () => import('./logo/logo.module').then((m) => m.LogoModule),
+        data: { label: 'Logo' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

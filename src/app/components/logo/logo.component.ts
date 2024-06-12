@@ -38,6 +38,7 @@ export class LogoComponent {
     'banco-psa',
     'banco-rci',
     'bb',
+    'santander',
     'bradesco',
     'caceis',
     'caixa',
@@ -53,13 +54,6 @@ export class LogoComponent {
     'sim',
     'toro',
     'votorantim',
-  ];
-
-  public santanderLogos: Array<DssLogoType> = [
-    'santander-icon',
-    'santander-icon-secondary',
-    'santander-primary',
-    'santander-secondary',
   ];
 
   public sizes: Array<DssLogoSize> = [
