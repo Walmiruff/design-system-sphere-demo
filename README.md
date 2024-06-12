@@ -112,7 +112,7 @@ Componentes da lib usando Angular 12.
 ...
 ```
 
-> Use only-style.min.css para o CSS padrão [Visite o link para saber mais sobre as folhas de estilo do Sphere](https://).
+> Use only-style.min.css para o CSS padrão.
 
 ## Componentes
 
@@ -184,6 +184,6 @@ Componentes da lib usando Angular 12.
 - [Typography](./src/app/components/typography/README.md)
 - [Upload](./src/app/components/upload/README.md)
 
-> [Clique aqui para visualizar os componentes](https).
+> [Clique aqui para visualizar os componentes]().
 
-> [Clique aqui para acessar o portal de documentação](https).
+> [Clique aqui para acessar o portal de documentação](https://github.com/Walmiruff/design-system-sphere-demo?tab=readme-ov-file).
