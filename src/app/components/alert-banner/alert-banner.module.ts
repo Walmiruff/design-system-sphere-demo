@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DssAlertBannerModule } from '@dss/components/alert-banner';
 import { DssButtonModule } from '@dss/components/button';
 import { DssTypographyModule } from '@dss/components/typography';
+import { DssIconModule } from '@dss/components';
 
 import { AlertBannerComponent } from './alert-banner.component';
 
@@ -20,6 +21,7 @@ const ROUTES: Routes = [
     DssAlertBannerModule,
     DssButtonModule,
     DssTypographyModule,
+    DssIconModule,
   ],
 })
 export class AlertBannerModule { }

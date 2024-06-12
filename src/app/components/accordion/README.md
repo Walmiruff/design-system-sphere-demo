@@ -1,6 +1,6 @@
 <h1 align="center">Bem vindo ao @dss/components/accordion 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/adicionado%20na%20versão-1.2.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/adicionado%20na%20versão-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > Componente Accordion.
