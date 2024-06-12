@@ -7,9 +7,9 @@ export class RateComponent {
 
   public items = new Array(3);
 
-  public itemActive: number;
+  public itemActive: number | any;
 
-  public numberRate: number;
+  public numberRate: number | any;
 
   public countRate(): void {
     console.log(this.numberRate);

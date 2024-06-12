@@ -22,7 +22,7 @@ export class SearchBarComponent {
     { title: 'Three', subtitle: '3' },
   ];
 
-  public filteredOptions1: Array<OptionInterface>;
+  public filteredOptions1: Array<OptionInterface> | any;
 
   public options2: Array<OptionInterface> = [
     { title: 'One', subtitle: '1' },
@@ -31,7 +31,7 @@ export class SearchBarComponent {
     { title: 'Four', subtitle: '4' },
   ];
 
-  public filteredOptions2: Array<OptionInterface>;
+  public filteredOptions2: Array<OptionInterface> | any;
 
   public options3: Array<OptionInterface> = [
     { title: 'One', subtitle: '1' },
@@ -40,9 +40,9 @@ export class SearchBarComponent {
     { title: 'Four', subtitle: '4' },
   ];
 
-  public filteredOptions3: Array<OptionInterface>;
+  public filteredOptions3: Array<OptionInterface> | any;
 
-  public selectedItem3: OptionInterface;
+  public selectedItem3: OptionInterface | any;
 
   public filter1(value: string): void {
     const filterValue = value.toLowerCase();

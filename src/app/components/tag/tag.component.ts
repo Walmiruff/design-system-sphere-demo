@@ -22,7 +22,7 @@ export class TagComponent implements OnInit {
 
   public fruits: Array<FruitInterface> = [];
 
-  public formGroup: FormGroup;
+  public formGroup: FormGroup | any;
 
   constructor(private _formBuilder: FormBuilder) { }
 

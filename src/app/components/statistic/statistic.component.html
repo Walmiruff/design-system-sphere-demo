@@ -19,10 +19,10 @@
 <h3 dssTypography type="h3">List</h3>
 <br>
 <dss-statistic>
-  <dss-statistic-item *ngFor="let item of items2" status="{{ item.value < 0 ? 'negative' : 'positive' }}">
+  <dss-statistic-item *ngFor="let item of items2" [status]="getStatus(item.value)">
     <dss-statistic-item-label>{{ item.label }}</dss-statistic-item-label>
     <dss-statistic-item-value>
-      {{ item.value | percent: '2.2' }} <span dssStatusArrow status="{{ item.value < 0 ? 'negative' : 'positive' }}" direction="{{ item.value < 0 ? 'bottom' : 'top' }}"></span>
+      {{ item.value | percent: '2.2' }} <span dssStatusArrow [status]="getStatus(item.value)" [direction]="getDirection(item.value)"></span>
     </dss-statistic-item-value>
   </dss-statistic-item>
 </dss-statistic>
@@ -35,10 +35,10 @@
     <dss-statistic-title>Statistic Title</dss-statistic-title>
     <dss-statistic-value>99.000,00</dss-statistic-value>
   </dss-statistic-header>
-  <dss-statistic-item *ngFor="let item of items3" status="{{ item.value < 0 ? 'negative' : 'positive' }}">
+  <dss-statistic-item *ngFor="let item of items3" [status]="getStatus(item.value)">
     <dss-statistic-item-label>{{ item.label }}</dss-statistic-item-label>
     <dss-statistic-item-value>
-      {{ item.value | percent: '2.2' }} <span dssStatusArrow status="{{ item.value < 0 ? 'negative' : 'positive' }}" direction="{{ item.value < 0 ? 'bottom' : 'top' }}"></span>
+      {{ item.value | percent: '2.2' }} <span dssStatusArrow [status]="getStatus(item.value)" [direction]="getDirection(item.value)"></span>
     </dss-statistic-item-value>
   </dss-statistic-item>
 </dss-statistic>

@@ -248,6 +248,71 @@ export const routes: Routes = [
         loadChildren: () => import('./progress-step/progress-step.module').then((m) => m.ProgressStepModule),
         data: { label: 'Progress Step' },
       },
+      {
+        path: 'rate',
+        loadChildren: () => import('./rate/rate.module').then((m) => m.RateModule),
+        data: { label: 'Rate' },
+      },
+      {
+        path: 'result-state',
+        loadChildren: () => import('./result-state/result-state.module').then((m) => m.ResultStateModule),
+        data: { label: 'Result State' },
+      },
+      {
+        path: 'search-bar',
+        loadChildren: () => import('./search-bar/search-bar.module').then((m) => m.SearchBarModule),
+        data: { label: 'Search Bar' },
+      },
+      {
+        path: 'segment-control',
+        loadChildren: () => import('./segment-control/segment-control.module').then((m) => m.SegmentControlModule),
+        data: { label: 'Segment Control' },
+      },
+      {
+        path: 'skeleton',
+        loadChildren: () => import('./skeleton/skeleton.module').then((m) => m.SkeletonModule),
+        data: { label: 'Skeleton' },
+      },
+      {
+        path: 'statistic',
+        loadChildren: () => import('./statistic/statistic.module').then((m) => m.StatisticModule),
+        data: { label: 'Statistic' },
+      },
+      {
+        path: 'status-arrow',
+        loadChildren: () => import('./status-arrow/status-arrow.module').then((m) => m.StatusArrowModule),
+        data: { label: 'Status Arrow' },
+      },
+      {
+        path: 'status-bar',
+        loadChildren: () => import('./status-bar/status-bar.module').then((m) => m.StatusBarModule),
+        data: { label: 'Status Bar' },
+      },
+      {
+        path: 'status-circle',
+        loadChildren: () => import('./status-circle/status-circle.module').then((m) => m.StatusCircleModule),
+        data: { label: 'Status Circle' },
+      },
+      {
+        path: 'tag',
+        loadChildren: () => import('./tag/tag.module').then((m) => m.TagModule),
+        data: { label: 'Tag' },
+      },
+      {
+        path: 'tooltip',
+        loadChildren: () => import('./tooltip/tooltip.module').then((m) => m.TooltipModule),
+        data: { label: 'Tooltip' },
+      },
+      {
+        path: 'treeview',
+        loadChildren: () => import('./treeview/treeview.module').then((m) => m.TreeviewModule),
+        data: { label: 'TreeView' },
+      },
+      {
+        path: 'typography',
+        loadChildren: () => import('./typography/typography.module').then((m) => m.TypographyModule),
+        data: { label: 'Typography' },
+      },
       { path: '', redirectTo: 'accordion', pathMatch: 'full' }
     ]
   }

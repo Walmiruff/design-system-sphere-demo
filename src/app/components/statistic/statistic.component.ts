@@ -2,6 +2,8 @@ import { registerLocaleData } from '@angular/common';
 import pt from '@angular/common/locales/pt';
 import { Component, LOCALE_ID } from '@angular/core';
 
+import { DssStatusArrowDirection, DssStatusArrowStatus } from '@dss/components';
+
 registerLocaleData(pt, 'pt');
 
 @Component({
@@ -40,4 +42,11 @@ export class StatisticComponent {
     { label: 'Regular data', value: 0.24 },
   ];
 
+  public getStatus(value: number):  DssStatusArrowStatus{
+  return  value < 0 ? 'negative' as DssStatusArrowStatus : 'positive' as DssStatusArrowStatus;
+  }
+
+  public getDirection(value: number): DssStatusArrowDirection {
+    return value < 0 ? 'bottom' as DssStatusArrowDirection : 'top' as DssStatusArrowDirection;
+  }
 }

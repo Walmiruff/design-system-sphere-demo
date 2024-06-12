@@ -48,7 +48,7 @@
       <input dssTagInput type="text" (tagEnd)="addAnime($event)" [separatorKeyCodes]="separatorKeysCodes">
     </dss-tag-list>
     <label dssLabel>Animes</label>
-    <span dssIcon name="santander"></span>
+    <span dssIcon name="cinema"></span>
     <span dssHint>Escreva seus animes preferidos</span>
     <span *ngIf="formGroup.get('animes').errors?.required" dssError>Campo obrigatório!</span>
     <span *ngIf="formGroup.get('animes').errors?.minlength" dssError>É necessário no mínimo 2 animes</span>
