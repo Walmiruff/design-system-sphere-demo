@@ -1,27 +1,189 @@
-# DesignSystemSphereDemo
+<div align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-2.4.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Documentation" src="https://img.shields.io/badge/documentation-no-red.svg" />
+  <a href="https://lerna.js.org/" target="_blank">
+      <img alt="Maintained with Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-orange.svg" />
+  </a>
+</div>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+> Design System Sphere
 
-## Development server
+## Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O projeto usa Lerna, TypeScript, CSS, Gulp e Angular 12.
 
-## Code scaffolding
+- <a href="https://lerna.js.org/" target="_blank">Lerna</a>
+- <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
+- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>
+- <a href="https://gulpjs.com/" target="_blank">Gulp</a>
+- <a href="https://v12.angular.io/docs" target="_blank">Angular 12</a>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Comandos
 
-## Build
+#### Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+npm install @dss/components
+```
 
-## Running unit tests
+#### Testes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute o comando abaixo para buildar os estilos:
 
-## Running end-to-end tests
+```shell
+npm run style:build
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+E então execute os testes da aplicação:
 
-## Further help
+```shell
+npm run test
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Desenvolvimento do Style
+
+```shell
+npm run dev:style
+```
+
+#### Desenvolvimento da Lib
+
+```shell
+npm run start
+```
+
+#### Build da Lib
+
+```shell
+npm run build
+```
+
+#### Publicação da Lib
+
+```shell
+npm run release
+```
+
+#### Gerando README dos componentes
+
+> No diretório do componente.
+
+```shell
+npx readme-md-generator
+```
+
+## Geral
+
+Pastas do projeto:
+
+##### `projects/demo`
+
+App para testar os componentes.
+
+##### `projects/style`
+
+Style CSS para os componentes.
+
+##### `projects/ui`
+
+Componentes da lib usando Angular 12.
+
+## Usando
+
+##### `angular.json`
+
+```json
+...
+"assets": [
+  "src/favicon.ico",
+  "src/assets",
+  {
+    "glob": "**/*",
+    "input": "./node_modules/@dss/style",
+    "output": "assets"
+  }
+],
+"styles": [
+  "./node_modules/@dss/style/css/fonts.min.css",
+  "./node_modules/@dss/style/css/icons.min.css",
+  "./node_modules/@dss/style/css/only-style.min.css",
+  "./src/styles.css"
+],
+...
+```
+
+> Use only-style.min.css para o CSS padrão [Visite o link para saber mais sobre as folhas de estilo do Sphere](https://).
+
+## Componentes
+
+- [Accordion](./src/app/components/accordion/README.md)
+- [Alert Banner](./src/app/components/alert-banner/README.md)
+- [Alert Toast](./src/app/components/alert-toast/README.md)
+- [Avatar](./src/app/components/avatar/README.md)
+- [Background Status](./src/app/components/background-status/README.md)
+- [Badge](./src/app/components/badge/README.md)
+- [Breadcrumb](./src/app/components/breadcrumb/README.md)
+- [Button](./src/app/components/button/README.md)
+- [Calendar](./src/app/components/calendar/README.md)
+- [Card (Base)](./src/app/components/card/README.md)
+- [Card Option](./src/app/components/card-option/README.md)
+- [Carousel](./src/app/components/carousel/README.md)
+- [Cascader](./src/app/components/cascader/README.md)
+- [Chat](./src/app/components/chat/README.md)
+- [Checkbox](./src/app/components/checkbox/README.md)
+- [Container](./src/app/components/container/README.md)
+- [Countdown](./src/app/components/countdown/README.md)
+- [Data Table](./src/app/components/data-table/README.md)
+- [Datepicker/Datepicker Range](./src/app/components/datepicker/README.md)
+- [Dialog](./src/app/components/dialog/README.md)
+- [Divider](./src/app/components/divider/README.md)
+- [Download](./src/app/components/download/README.md)
+- [Drawer](./src/app/components/drawer/README.md)
+- [Dropdown](./src/app/components/dropdown/README.md)
+- [Flyout Menu](./src/app/components/flyout-menu/README.md)
+- [Form Field](./src/app/components/form-field/README.md)
+  - [Input](./src/app/components/form-field/README.md#input)
+  - [Textarea](./src/app/components/form-field/README.md#textarea)
+  - [Dropdown (Select)](./src/app/components/dropdown/README.md)
+- [Grid](./src/app/components/grid/README.md)
+- [Header](./src/app/components/header/README.md)
+- [I18n](./src/app/components/i18n/README.md)
+- [Icon](./src/app/components/icon/README.md)
+- [Input Number](./src/app/components/input-number/README.md)
+- [List](./src/app/components/list/README.md)
+- [Loader](./src/app/components/loader/README.md)
+- [Logo](./src/app/components/logo/README.md)
+- [Mask](./src/app/components/mask/README.md)
+- [Menu](./src/app/components/menu/README.md)
+- [Notify](./src/app/components/notify/README.md)
+- [Option](./src/app/components/option/README.md)
+- [Option Button](./src/app/components/option-button/README.md)
+- [Page Menu](./src/app/components/page-menu/README.md)
+- [Pagination](./src/app/components/pagination/README.md)
+- [Position](./src/app/components/position/README.md)
+- [Product Card](./src/app/components/product-card/README.md)
+- [Progress Loader](./src/app/components/progress-loader/README.md)
+- [Progress Step](./src/app/components/progress-step/README.md)
+- [Radio Group](./src/app/components/radio-group/README.md)
+- [Rate](./src/app/components/rate/README.md)
+- [Result State](./src/app/components/result-state/README.md)
+- [Scrollbar](./src/app/components/scrollbar/README.md)
+- [Search Bar](./src/app/components/search-bar/README.md)
+- [Segment Control (tab)](./src/app/components/segment-control/README.md)
+- [Skeleton](./src/app/components/skeleton/README.md)
+- [Slider](./src/app/components/slider/README.md)
+- [Statistic](./src/app/components/statistic/README.md)
+- [Status Arrow](./src/app/components/status-arrow/README.md)
+- [Status Bar](./src/app/components/status-bar/README.md)
+- [Status Circle](./src/app/components/status-circle/README.md)
+- [Status Icon](./src/app/components/status-icon/README.md)
+- [Tag](./src/app/components/tag/README.md)
+- [Toggle](./src/app/components/toggle/README.md)
+- [Tooltip](./src/app/components/tooltip/README.md)
+- [Treeview](./src/app/components/treeview/README.md)
+- [Typography](./src/app/components/typography/README.md)
+- [Upload](./src/app/components/upload/README.md)
+
+> [Clique aqui para visualizar os componentes](https).
+
+> [Clique aqui para acessar o portal de documentação](https).
