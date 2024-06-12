@@ -122,4 +122,4 @@ npm install @dss/components
 
 > [Clique aqui para visualizar os componentes]().
 
-> [Clique aqui para acessar o portal de documentação](https://github.com/Walmiruff/design-system-sphere-demo?tab=readme-ov-file).
+> [Clique aqui para acessar o portal de documentação](https://github.com/Walmiruff/design-system-sphere-demo/blob/main/README.md).
