@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-2.4.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.0-blue.svg?cacheSeconds=2592000" />
   <img alt="Documentation" src="https://img.shields.io/badge/documentation-no-red.svg" />
   <a href="https://lerna.js.org/" target="_blank">
       <img alt="Maintained with Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-orange.svg" />
@@ -7,16 +7,6 @@
 </div>
 
 > Design System Sphere
-
-## Stack
-
-O projeto usa Lerna, TypeScript, CSS, Gulp e Angular 12.
-
-- <a href="https://lerna.js.org/" target="_blank">Lerna</a>
-- <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
-- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>
-- <a href="https://gulpjs.com/" target="_blank">Gulp</a>
-- <a href="https://v12.angular.io/docs" target="_blank">Angular 12</a>
 
 ## Comandos
 
@@ -26,67 +16,10 @@ O projeto usa Lerna, TypeScript, CSS, Gulp e Angular 12.
 npm install @dss/components
 ```
 
-#### Testes
+#### Pacote @angular/cdk
 
-Execute o comando abaixo para buildar os estilos:
-
-```shell
-npm run style:build
-```
-
-E então execute os testes da aplicação:
-
-```shell
-npm run test
-```
-
-#### Desenvolvimento do Style
-
-```shell
-npm run dev:style
-```
-
-#### Desenvolvimento da Lib
-
-```shell
-npm run start
-```
-
-#### Build da Lib
-
-```shell
-npm run build
-```
-
-#### Publicação da Lib
-
-```shell
-npm run release
-```
-
-#### Gerando README dos componentes
-
-> No diretório do componente.
-
-```shell
-npx readme-md-generator
-```
-
-## Geral
-
-Pastas do projeto:
-
-##### `projects/demo`
-
-App para testar os componentes.
-
-##### `projects/style`
-
-Style CSS para os componentes.
-
-##### `projects/ui`
-
-Componentes da lib usando Angular 12.
+> Alguns componentes precisam do pacote **_@angular/cdk_**,
+> então é necessário instalar a versão conforme a versão do angular que estiver usando.
 
 ## Usando
 
@@ -112,7 +45,10 @@ Componentes da lib usando Angular 12.
 ...
 ```
 
-> Use only-style.min.css para o CSS padrão.
+> Use only-style.min.css para o CSS padrão
+> Você pode importar o estilo e as fontes em uma única importação,
+> basta usar style.min.css
+> (o arquivo fonts.min.css não é necessário)
 
 ## Componentes
 
