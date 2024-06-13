@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\design-system-sphere-demo",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
