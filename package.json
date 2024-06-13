@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "install-dss-style-local": "npm install ../design-system-sphere-2.x.x/dist/style/dss-style-2.0.0.tgz --legacy-peer-deps --ignore-scripts --verbose",
-    "install-dss-components-local": "npm install ../design-system-sphere-2.x.x/dist/components/dss-components-2.0.0.tgz --legacy-peer-deps --ignore-scripts --verbose"
+    "install-dss-style-local": "npm install ../design-system-sphere-2.x.x/dist/style/dss-style-2.0.0.tgz --verbose",
+    "install-dss-components-local": "npm install ../design-system-sphere-2.x.x/dist/components/dss-components-2.0.0.tgz --verbose"
   },
   "private": true,
   "dependencies": {
