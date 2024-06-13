@@ -22,7 +22,7 @@ chrome-profiler-events*.json
 .settings/
 *.sublime-workspace
 .firebaserc
-
+.firebase
 
 # IDE - VSCode
 .vscode/*
