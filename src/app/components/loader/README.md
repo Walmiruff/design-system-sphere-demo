@@ -231,13 +231,6 @@ export class ContentLoaderFeedbackComponent {
 | isError    | boolean        | false   | No content-loader. Exibe o feedback de erro                                        |
 | isSuccess  | boolean        | false   | No content-loader. Exibe o feedback de sucesso                                     |
 
-###### `Componentes Estruturais/Decorator do dss-page-loader`
-
-| Name                    | Type | Default | Obs                                                                                                                                |
-| ----------------------- | ---- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| dss-page-loader-percent | -    | -       | Exibe o percentual de carregamento                                                                                                 |
-| dss-page-loader-text    | -    | -       | Para adicionar textos extras ao loader. Use no máximo 3. Se o usuário ativar a redução de movimento apenas o primeiro será exibido |
-| DssPageLoaderDecorator  | -    | -       |                                                                                                                                    |
 
 ###### `Componentes Estruturais do dss-content-loader`
 
