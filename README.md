@@ -120,6 +120,6 @@ npm install @dss/components
 - [Typography](./src/app/components/typography/README.md)
 - [Upload](./src/app/components/upload/README.md)
 
-> [Clique aqui para visualizar os componentes]().
+> [Clique aqui para visualizar os componentes](https://design-system-sphere.web.app/).
 
 > [Clique aqui para acessar o portal de documentação](https://github.com/Walmiruff/design-system-sphere-demo/blob/main/README.md).

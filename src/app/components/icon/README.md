@@ -55,7 +55,7 @@ export class IconComponent {}
 
 | Name   | Type    | Default | Obs                                                                     |
 | ------ | ------- | ------- | ----------------------------------------------------------------------- |
-| name   | string  | -       | [click here](https://) para procurar por nomes                          |
+| name   | string  | -       | [click here](https://design-system-sphere.web.app/components/icons) para procurar por nomes |
 | size   | string  | 24px    | opções: small (16px), medium (32px), large (40px) ou extra-large (48px) |
 | rtlt   | string  | right   | opções: right ou left                                                   |
 | action | boolean | false   | altera o cursor para pointer                                            |
