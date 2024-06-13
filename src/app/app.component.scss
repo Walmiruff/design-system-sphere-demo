@@ -10,3 +10,9 @@
     font-weight: bold;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    #divControl {
+        display: none !important;
+    }
+}
