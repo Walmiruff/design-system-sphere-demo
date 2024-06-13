@@ -5,6 +5,7 @@ import { DssOptionInterface } from '@dss/components/dropdown';
 import { DssI18nService } from '@dss/components/i18n';
 
 import { environment } from '../environments/environment';
+import { StateService } from './state.service';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ export class AppComponent {
   constructor(
     @Optional() private readonly i18n: DssI18nService,
     @Inject(DOCUMENT) private document: Document,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private stateService: StateService
   ) {}
 
   public ngOnInit(): void {
@@ -64,5 +66,9 @@ export class AppComponent {
     style.href = href;
     head?.appendChild(style);
 
+  }
+
+  public onBurguerMenuSwitcher() {
+    this.stateService.toggleSwitch();
   }
 }

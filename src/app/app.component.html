@@ -1,9 +1,16 @@
 <header class="dss-display-flex dss-align-items-center dss-header dss-position-relative">
-  <div class="dss-m-2">
+  <div id="logo" class="dss-m-2">
     <h1 class="dss-display-flex dss-align-items-center dss-m-0" dssTypography type="h1" color="white">
       <span dssIcon name="dynamics" size="medium" dssTypography color="white" class="dss-mr-0.5"></span>Sphere
     </h1>
   </div>
+
+  <div id="burguerMenu" class="dss-m-2" style="display: none;" (click)="onBurguerMenuSwitcher()">
+        <h1 class="dss-display-flex dss-align-items-center dss-m-0" dssTypography type="h1" color="white">
+        <span dssIcon name="burger-menu-1px" size="medium" dssTypography color="white" class="dss-mr-0.5"></span>
+        </h1>
+  </div>
+
   <nav class="dss-ml-auto">
     <ul class="dss-display-flex dss-align-items-center app-ul-custom">
       <li><a class="dss-display-inline-flex dss-align-items-center dss-mr-1 dss-color-white app-link-custom" routerLink="/home" routerLinkActive="active" >Home</a></li>
