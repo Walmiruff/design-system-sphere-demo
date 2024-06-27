@@ -12,6 +12,8 @@
 
 #### Instalação
 
+Após publicar o pacotes do Design System em seu repositorio privado.
+
 ```shell
 npm install @dss/components
 ```
