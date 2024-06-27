@@ -16,6 +16,10 @@
 npm install @dss/components
 ```
 
+```shell
+npm install @dss/style
+```
+
 #### Pacote @angular/cdk
 
 > Alguns componentes precisam do pacote **_@angular/cdk_**,
