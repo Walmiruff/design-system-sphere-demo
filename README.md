@@ -12,7 +12,7 @@
 
 #### Instalação
 
-Após publicar o pacotes do Design System Sphere em seu repositório privado.
+Após publicar os pacotes do Design System Sphere em seu repositório privado.
 
 ```shell
 npm install @dss/components
